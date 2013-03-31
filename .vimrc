@@ -3,6 +3,7 @@
 set nocompatible
 
 
+
 " neobundleの設定 ==============================================================
 filetype plugin indent off
 if has('vim_starting')
@@ -10,6 +11,10 @@ if has('vim_starting')
 	call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 filetype plugin indent on
+
+" 設定ファイルを読み込む
+set runtimepath+=~/.vim/
+runtime! setting.vim
 
 " カラースキーマ
 NeoBundle 'git://github.com/tomasr/molokai.git'
@@ -35,6 +40,7 @@ NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 
 " DBへの接続
 NeoBundle 'git://github.com/vim-scripts/dbext.vim.git'
+
 
 
 " ファイル設定 =================================================================
@@ -102,6 +108,7 @@ noremap L 10l
 noremap H 10h
 
 
+
 " キーマッピング ===============================================================
 " [,]を<LEADER>にする
 let mapleader = ','
@@ -143,7 +150,6 @@ function! s:toggleSimpleDisplay()
 	endif
 endfunction
 command! MyToggleSimpleDisplay call s:toggleSimpleDisplay()
-
 
 
 
@@ -194,16 +200,8 @@ let g:ctrlp_working_path_mode = 0
 
 
 " quick-run  -------------------------------------------------------------------
+" 設定情報は.vim/setting.vimに記載する
 " SQLファイルの設定
-
-" ============= 個別設定
-"let g:mysql_config_host = ''
-"let g:mysql_config_port = ''
-"let g:mysql_config_db   = ''
-"let g:mysql_config_user = ''
-"let g:mysql_config_pass = ''
-" ============= 個別設定
-
 let g:quickrun_config = {}
 let g:quickrun_config['sql'] = {
 	\ 'command': 'mysql',
@@ -250,12 +248,7 @@ endfunction
 
 
 " dbext  -------------------------------------------------------------------
-
-" ============= 個別設定
-" let g:dbext_default_profile_mysql = 'type=MYSQL:user=:passwd=:dbname='
-" let g:dbext_default_profile = 'mysql'
-" ============= 個別設定
-
+" 設定情報は.vim/setting.vimに記載する
 
 " 実行結果は上に、30行出す。
 let g:dbext_default_buffer_lines = 30

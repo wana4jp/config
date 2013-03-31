@@ -44,8 +44,9 @@ NeoBundle 'git://github.com/vim-scripts/dbext.vim.git'
 
 
 " ファイル設定 =================================================================
-set ambiwidth=double
-
+" カラースキーマ
+colorscheme molokai
+syntax on
 " 文字エンコード
 set encoding=utf-8
 " 文字エンコードの認識優先度
@@ -54,59 +55,45 @@ set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,cp932,utf-16,utf-16le
 set fileformat=unix
 " 改行コードの認識優先度
 set fileformats=unix,dos,mac
-
 " 不可視文字の表示
 set list
 set listchars=tab:>-,trail:_,extends:<,precedes:>
-
-" 表示行単位移動
-nnoremap j gj
-nnoremap k gk
-
+" 高速ターミナル接続する
+set ttyfast
 " タブの表示幅
 set tabstop=4
-
 " タブ挿入の幅
 set shiftwidth=4
-
 " タブをスペースとしない
 set noexpandtab
-
+" バッファの編集を保持したまま、別バッファの展開を可能にする
+set hidden
 " ターミナルのカラー化
 if has('unix')
 	set ttytype=builtin_linux
 	set term=builtin_linux
 	set t_Co=256
 endif
-
+" 改行コードの認識優先度
 set fileformats=unix,dos,mac
-
-" カラースキーマ
-colorscheme molokai
-"colorscheme solarized
-syntax on
-
+" ステータスライン
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+" ステータスラインを常に表示
+set laststatus=2
+" コマンドを表示する
+set showcmd
 " 行番号を表示する
 set number
-
 " 検索を循環させない
 set nowrapscan
-
 " エラーの音を消す
 set vb t_vb=
-
 " 検索文字をハイライト
 set hlsearch
-
 " 大文字小文字を区別しない
 set ic
-
-" シフトで多めに移動
-noremap J 30j
-noremap K 30k
-noremap L 10l
-noremap H 10h
-
+" 全角文字の表示が潰れるのを回避
+set ambiwidth=double
 
 
 " キーマッピング ===============================================================
@@ -146,6 +133,15 @@ function! s:toggleSimpleDisplay()
 endfunction
 command! MyToggleSimpleDisplay call s:toggleSimpleDisplay()
 
+" 表示行単位移動
+nnoremap j gj
+nnoremap k gk
+
+" シフトで多めに移動
+noremap J 30j
+noremap K 30k
+noremap L 10l
+noremap H 10h
 
 
 " nerd_tree --------------------------------------------------------------------
@@ -240,6 +236,7 @@ function! MakeMySQLCommandOptions()
 	call add(optlist, g:mysql_config_db)
 	return join(optlist, ' ')
 endfunction
+
 
 
 " dbext  -------------------------------------------------------------------

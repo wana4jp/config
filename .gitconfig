@@ -1,0 +1,19 @@
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+	grep = auto
+[core]
+	editor = /usr/local/bin/vim
+[merge]
+	tool = vimdiff
+[alias]
+	co = checkout
+	cob = checkout -b
+	bD = branch -d
+	com = checkout master
+	a = add
+	chep = cherry-pick
+[gc]
+	auto = 0

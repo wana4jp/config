@@ -141,13 +141,8 @@ inoremap jk <ESC>
 nnoremap <F11> :<C-u>MyToggleSimpleDisplay<CR>
 
 function! s:toggleSimpleDisplay()
-	if &list
-		set nonumber
-		set nolist
-	else
-		set number
-		set list
-	endif
+	set number!
+	set list!
 endfunction
 command! MyToggleSimpleDisplay call s:toggleSimpleDisplay()
 

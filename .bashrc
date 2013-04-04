@@ -7,7 +7,14 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-export PS1='\[\033[01;32m\]\u@\H\[\033[01;34m\] \w \$\[\033[00m\]'
+# Source git-completion
+if [ -f $HOME/.git-completion.sh ]; then
+	source $HOME/.git-completion.sh
+fi
+
+# export PS1='[\u@\h \h \W$(__git_ps1 " (%s)")]\$ '
+export PS1='\[\033[01;32m\]\u@\H\[\033[01;34m\] \w \$\[\033[00m\] $(__git_ps1 " (%s)") '
+
 
 # Ailias
 alias ll='ls -la'

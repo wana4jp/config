@@ -137,12 +137,6 @@ command! MyToggleSimpleDisplay call s:toggleSimpleDisplay()
 nnoremap j gj
 nnoremap k gk
 
-" シフトで多めに移動
-noremap J 30j
-noremap K 30k
-noremap L 10l
-noremap H 10h
-
 
 " nerd_tree --------------------------------------------------------------------
 " カラー表示する

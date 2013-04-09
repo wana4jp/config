@@ -1,7 +1,10 @@
 dotfiles
 ========
 
-git submodule update --init .vim/neobundle.vim/
+git submodule init
+
+git submodule update
+
 ./init.sh
 
 vimを開いて

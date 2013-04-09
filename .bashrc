@@ -18,6 +18,7 @@ export PS1='\[\033[01;32m\]\u@\H\[\033[01;34m\] \w \$\[\033[00m\] $(__git_ps1 " 
 
 # Ailias
 alias ll='ls -la'
+alias vi='vim'
 
 # Git Ailias
 alias   gap='git add -p'

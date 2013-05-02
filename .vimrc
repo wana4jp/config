@@ -124,6 +124,9 @@ nnoremap sn :<C-u>bn<CR>
 " インサートモード抜ける
 inoremap jk <ESC>
 
+" ペーストモード切り替え
+set pastetoggle=<C-E>
+
 " コピーするときには表示切り替えてインデントとか入らないようにする
 nnoremap <F11> :<C-u>MyToggleSimpleDisplay<CR>
 
@@ -137,6 +140,29 @@ command! MyToggleSimpleDisplay call s:toggleSimpleDisplay()
 nnoremap j gj
 nnoremap k gk
 
+" <C-l>でEscする
+vnoremap <C-l> <Esc>
+inoremap <C-l> <Esc>
+cnoremap <C-l> <C-c>
+nnoremap <C-l> <Esc>
+
+" 小文字になるのがうざいので潰す
+vnoremap u <Esc>
+vnoremap U <Esc>
+vnoremap gu <Esc>
+vnoremap gU <Esc>
+
+" ノーマルモードで改行
+nnoremap <CR> o<Esc>
+
+" シフトで多めに移動
+noremap J 20j
+noremap K 20k
+noremap L 10l
+noremap H 10h
+
+" 行マージ
+vnoremap M J
 
 " nerd_tree --------------------------------------------------------------------
 " カラー表示する

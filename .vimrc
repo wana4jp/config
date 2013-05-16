@@ -43,6 +43,24 @@ NeoBundle 'git://github.com/vim-scripts/dbext.vim.git'
 
 
 
+" OS別の設定 see [:help has] " =================================================
+if has("mac")
+	" mac用の設定
+
+	" Use ClipBoard
+	vnoremap <silent> sy :!pbcopy; pbpaste<CR>
+	noremap  <silent> sp <esc>o<esc>v:!pbpaste<CR>
+
+elseif has("unix")
+	" " unix固有の設定
+elseif has("win64")
+	" " 64bit_windows固有の設定
+elseif has("win32unix")
+	" " Cygwin固有の設定
+elseif has("win32")
+	" " 32bit_windows固有の設定
+endif
+
 " ファイル設定 =================================================================
 " カラースキーマ
 colorscheme molokai
@@ -128,7 +146,7 @@ inoremap jk <ESC>
 set pastetoggle=<C-E>
 
 " コピーするときには表示切り替えてインデントとか入らないようにする
-nnoremap <F11> :<C-u>MyToggleSimpleDisplay<CR>
+nnoremap <C-y> :<C-u>MyToggleSimpleDisplay<CR>
 
 function! s:toggleSimpleDisplay()
 	set number!
@@ -163,6 +181,7 @@ noremap H 10h
 
 " 行マージ
 vnoremap M J
+
 
 " nerd_tree --------------------------------------------------------------------
 " カラー表示する

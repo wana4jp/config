@@ -164,11 +164,16 @@ inoremap <C-l> <Esc>
 cnoremap <C-l> <C-c>
 nnoremap <C-l> <Esc>
 
-" 小文字になるのがうざいので潰す
-vnoremap u <Esc>
-vnoremap U <Esc>
-vnoremap gu <Esc>
-vnoremap gU <Esc>
+" 誤爆防止
+vnoremap u <Nop>
+vnoremap U <Nop>
+vnoremap gu <Nop>
+vnoremap gU <Nop>
+
+nnoremap ZZ <Nop>
+nnoremap ZQ <Nop>
+
+nnoremap Q <Nop>
 
 " ノーマルモードで改行
 nnoremap <CR> o<Esc>

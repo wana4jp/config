@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<root>
+	<symbol_map type="KeyCode" name="[" value="0x1e" />
+	<appdef>
+		<appname>iTERM2</appname>
+		<equal>com.googlecode.iterm2</equal>
+	</appdef>
+	<list>
+		<item>
+			<name>PC Setting(except iTerm2)</name>
+			<identifier>remap.wanashi.pcSetting</identifier>
+			<not>iTERM2</not>
+			<autogen>--KeyToKey-- KeyCode::X, VK_CONTROL, KeyCode::X, ModifierFlag::COMMAND_R</autogen>
+			<autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, ModifierFlag::COMMAND_R</autogen>
+			<autogen>--KeyToKey-- KeyCode::V, VK_CONTROL, KeyCode::V, ModifierFlag::COMMAND_R</autogen>
+			<autogen>--KeyToKey-- KeyCode::T, VK_CONTROL, KeyCode::T, ModifierFlag::COMMAND_R</autogen>
+			<autogen>--KeyToKey-- KeyCode::W, VK_CONTROL, KeyCode::W, ModifierFlag::COMMAND_R</autogen>
+			<autogen>--KeyToKey-- KeyCode::F, VK_CONTROL, KeyCode::F, ModifierFlag::COMMAND_R</autogen>
+		</item>
+		<item>
+			<name>Tab Setting(only iTerm2)</name>
+			<identifier>remap.wanashi.iterm2TabSetting</identifier>
+			<only>iTERM2</only>
+			<autogen>
+				--KeyToKey--
+				KeyCode::T, VK_CONTROL,
+				KeyCode::T, ModifierFlag::COMMAND_L
+			</autogen>
+		</item>
+		<item>
+			<name>Esc With Eisuu for vim(only iTerm2)</name>
+			<identifier>remap.wanashi.vimEscWithEisuu</identifier>
+			<only>iTERM2</only>
+			<autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
+			<autogen>--KeyToKey-- KeyCode::[, VK_CONTROL, KeyCode::[, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
+			<autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
+		</item>
+		<item>
+			<name>Tab Switch(only Chrome)</name>
+			<identifier>remap.wanashi.chromeTabSwitch</identifier>
+			<only>GOOGLE_CHROME</only>
+			<autogen>
+				__KeyToKey__
+				KeyCode::J, ModifierFlag::COMMAND_L,
+				KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::K, ModifierFlag::COMMAND_L,
+				KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
+			</autogen>
+		</item>
+	</list>
+</root>

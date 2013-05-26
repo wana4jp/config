@@ -47,18 +47,19 @@ NeoBundle 'git://github.com/vim-scripts/dbext.vim.git'
 if has("mac")
 	" mac用の設定
 
+elseif has("unix")
+	" unix固有の設定
+
 	" Use ClipBoard
 	vnoremap <silent> sy :!pbcopy; pbpaste<CR>
 	noremap  <silent> sp <esc>o<esc>v:!pbpaste<CR>
 
-elseif has("unix")
-	" " unix固有の設定
 elseif has("win64")
-	" " 64bit_windows固有の設定
+	" 64bit_windows固有の設定
 elseif has("win32unix")
-	" " Cygwin固有の設定
+	" Cygwin固有の設定
 elseif has("win32")
-	" " 32bit_windows固有の設定
+	" 32bit_windows固有の設定
 endif
 
 " ファイル設定 =================================================================
@@ -188,7 +189,7 @@ noremap H 10h
 vnoremap M J
 
 " 打ちにくい文字
-inoremap <Space>l  $
+"inoremap <Space>l  $
 
 " nerd_tree --------------------------------------------------------------------
 " カラー表示する

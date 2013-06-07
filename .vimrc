@@ -114,6 +114,12 @@ set ic
 " 全角文字の表示が潰れるのを回避
 set ambiwidth=double
 
+" コメントの自動挿入をやめる
+augroup noAutoComment
+	autocmd!
+	autocmd FileType * setlocal fo=cq
+augroup END
+
 
 " キーマッピング ===============================================================
 " [,]を<LEADER>にする

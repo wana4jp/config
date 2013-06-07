@@ -14,6 +14,11 @@ fi
 
 #export PS1='\[\033[01;32m\]\u@\H\[\033[01;34m\] \w \$\[\033[00m\] $(__git_ps1 " (%s)") '
 
+# 事故防止 http://blog.livedoor.jp/dankogai/archives/51863725.html
+alias rm='rm -i'
+set -o noclobber
+
+
 # Ailias
 case "${OSTYPE}" in
 darwin*)

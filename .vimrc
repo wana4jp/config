@@ -23,8 +23,13 @@ NeoBundle 'git://github.com/tomasr/molokai.git'
 " ファイラー
 NeoBundle 'git://github.com/scrooloose/nerdtree.git'
 
+" 非同期処理
+" After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+NeoBundle 'git://github.com/Shougo/vimproc'
+
 " ファイルセレクタ
-NeoBundle 'git://github.com/kien/ctrlp.vim'
+" NeoBundle 'git://github.com/kien/ctrlp.vim'
+NeoBundle 'git://github.com/Shougo/unite.vim'
 
 " シンタックスチェック
 NeoBundle 'git://github.com/scrooloose/syntastic.git'
@@ -42,11 +47,12 @@ NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 NeoBundle 'git://github.com/vim-scripts/dbext.vim.git'
 
 " 補完
-NeoBundle "git://github.com/Shougo/neocomplcache.git"
+NeoBundle "Shougo/neocomplcache.git"
 
 " スニペット
-NeoBundle "git://github.com/Shougo/neosnippet.git"
+NeoBundle "Shougo/neosnippet.git"
 
+NeoBundle 'kana/vim-smartchr'
 
 " OS別の設定 see [:help has] " =================================================
 if has("mac")
@@ -244,7 +250,27 @@ let g:ref_phpmanual_path=$HOME . '/.vim/php-chunked-xhtml'
 
 " ctrlp   ----------------------------------------------------------------------
 " 検索開始を現在のディレクトリからにする
-let g:ctrlp_working_path_mode = 0
+" let g:ctrlp_working_path_mode = 0
+
+
+
+" unite   ----------------------------------------------------------------------
+" 最近使ったファイルの一覧
+noremap <C-U><C-H> :Unite file_mru<CR>
+
+" ESCキーを2回押すと終了する
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
+au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+
+
+" Unite-grep
+" unite-grepのバックエンドをagに切り替える
+" http://qiita.com/items/c8962f9325a5433dc50d
+"let g:unite_source_grep_command = 'ag'
+"let g:unite_source_grep_recursive_opt = ''
+"let g:unite_source_grep_max_candidates = 200
+
+nnoremap <C-U><C-G> :<C-u>Unite grep<CR><CR>
 
 
 
@@ -344,3 +370,19 @@ inoremap <expr><C-h> neocomplcache#smart_close_popup().”\<C-h>”
 
 inoremap <expr><C-y> neocomplcache#close_popup()
 inoremap <expr><C-e> neocomplcache#cancel_popup()
+
+
+" NeoSnippet
+
+" スニペットを展開する。スニペットが関係しないところでは行末まで削除
+imap <expr><C-k> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<C-o>D"
+smap <expr><C-k> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<C-o>D"
+
+let g:neosnippet#snippets_directory='~/Dropbox/vim/snippet'
+let g:neosnippet#disable_runtime_snippets = {
+\   'php' : 1,
+\ }
+
+
+" smartctr
+inoremap <buffer><expr> = smartchr#one_of(' = ', ' == ', '=')

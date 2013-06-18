@@ -47,12 +47,12 @@ NeoBundle 'git://github.com/thinca/vim-quickrun.git'
 NeoBundle 'git://github.com/vim-scripts/dbext.vim.git'
 
 " 補完
-NeoBundle "Shougo/neocomplcache.git"
+" NeoBundle "Shougo/neocomplcache.git"
 
 " スニペット
-NeoBundle "Shougo/neosnippet.git"
+" NeoBundle "Shougo/neosnippet.git"
 
-NeoBundle 'kana/vim-smartchr'
+" NeoBundle 'kana/vim-smartchr'
 
 " OS別の設定 see [:help has] " =================================================
 if has("mac")
@@ -335,55 +335,56 @@ let g:dbext_default_window_use_bottom = 0
 " neocomplcache ------------------------------------------------------------
 " 参考) http://vim-users.jp/2010/10/hack177/
 
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplcache.
-let g:neocomplcache_enable_at_startup = 1
-" Use smartcase.
-let g:neocomplcache_enable_smart_case = 1
-" Use camel case completion.
-let g:neocomplcache_enable_camel_case_completion = 1
-" Use underbar completion.
-let g:neocomplcache_enable_underbar_completion = 1
-" Set minimum syntax keyword length.
-let g:neocomplcache_min_syntax_length = 3
-
-" Define dictionary.
-let g:neocomplcache_dictionary_filetype_lists = {
-	\ 'default' : '',
-	\ 'vimshell' : $HOME.'/.vimshell_hist',
-	\ 'scheme' : $HOME.'/.gosh_completions'
-	\ }
-
-" Define keyword.
-if !exists('g:neocomplcache_keyword_patterns')
-    let g:neocomplcache_keyword_patterns = {}
-endif
-let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neocomplcache_snippets_expand)
-smap <C-k>     <Plug>(neocomplcache_snippets_expand)
-inoremap <expr><C-g>     neocomplcache#undo_completion()
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
-
-inoremap <expr><C-h> neocomplcache#smart_close_popup().”\<C-h>”
-
-inoremap <expr><C-y> neocomplcache#close_popup()
-inoremap <expr><C-e> neocomplcache#cancel_popup()
-
-
-" NeoSnippet
-
-" スニペットを展開する。スニペットが関係しないところでは行末まで削除
-imap <expr><C-k> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<C-o>D"
-smap <expr><C-k> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<C-o>D"
-
-let g:neosnippet#snippets_directory='~/Dropbox/vim/snippet'
-let g:neosnippet#disable_runtime_snippets = {
-\   'php' : 1,
-\ }
+" " Disable AutoComplPop.
+" let g:acp_enableAtStartup = 0
+" " Use neocomplcache.
+" let g:neocomplcache_enable_at_startup = 1
+" " Use smartcase.
+" let g:neocomplcache_enable_smart_case = 1
+" " Use camel case completion.
+" let g:neocomplcache_enable_camel_case_completion = 1
+" " Use underbar completion.
+" let g:neocomplcache_enable_underbar_completion = 1
+" " Set minimum syntax keyword length.
+" let g:neocomplcache_min_syntax_length = 3
+" 
+" " Define dictionary.
+" let g:neocomplcache_dictionary_filetype_lists = {
+" 	\ 'default' : '',
+" 	\ 'vimshell' : $HOME.'/.vimshell_hist',
+" 	\ 'scheme' : $HOME.'/.gosh_completions'
+" 	\ }
+" 
+" " Define keyword.
+" if !exists('g:neocomplcache_keyword_patterns')
+"     let g:neocomplcache_keyword_patterns = {}
+" endif
+" let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
+" 
+" " Plugin key-mappings.
+" imap <C-k>     <Plug>(neocomplcache_snippets_expand)
+" smap <C-k>     <Plug>(neocomplcache_snippets_expand)
+" inoremap <expr><C-g>     neocomplcache#undo_completion()
+" inoremap <expr><C-l>     neocomplcache#complete_common_string()
+" 
+" inoremap <expr><C-h> neocomplcache#smart_close_popup().”\<C-h>”
+" 
+" inoremap <expr><C-y> neocomplcache#close_popup()
+" inoremap <expr><C-e> neocomplcache#cancel_popup()
+" 
+" 
+" " NeoSnippet
+" 
+" " スニペットを展開する。スニペットが関係しないところでは行末まで削除
+" imap <expr><C-k> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<C-o>D"
+" smap <expr><C-k> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<C-o>D"
+" 
+" let g:neosnippet#snippets_directory='~/Dropbox/vim/snippet'
+" let g:neosnippet#disable_runtime_snippets = {
+" \   'php' : 1,
+" \ }
 
 
 " smartctr
-inoremap <buffer><expr> = smartchr#one_of(' = ', ' == ', '=')
+" inoremap <buffer><expr> = smartchr#one_of(' = ', ' == ', '=')
+

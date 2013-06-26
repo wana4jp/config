@@ -57,7 +57,7 @@ slate.bind(util.key('o'), function(win) {
 });
 
 // o+shift .. 別のスクリーンへ飛ばす
-slate.bind(util.key('o', 'shift'), function(win) {
+slate.bind(util.key('space'), function(win) {
 	if (!win) return;
 	var next = util.nextScreen(win.screen());
 

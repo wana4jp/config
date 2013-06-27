@@ -44,8 +44,8 @@ slate.bind(util.key('j'), slate.operation('focus', { direction: 'down' }));
 slate.bind(util.key('k'), slate.operation('focus', { direction: 'up' }));
 slate.bind(util.key('l'), slate.operation('focus', { direction: 'right' }));
 
-// i .. 下に隠れているウィンドウをフォーカス
-slate.bind(util.key('i'), slate.operation('focus', { direction: 'behind' }));
+// tab .. 下に隠れているウィンドウをフォーカス
+slate.bind(util.key('tab'), slate.operation('focus', { direction: 'behind' }));
 
 // o .. スクリーン間でフォーカスを移動
 slate.bind(util.key('o'), function(win) {

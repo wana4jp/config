@@ -1,4 +1,4 @@
-dotfiles
+My Config
 ========
 
 git submodule init

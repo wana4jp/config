@@ -8,3 +8,6 @@ done
 
 # git がインストールされたら、git complehentionを持ってくる
 cp /etc/bash_completion.d/git $HOME/.git-completion.sh
+
+# macの場合は、KeyRemap4MacBookの設定もする
+# ln -s $PWD/private.xml $HOME/Library/Application\ Support/KeyRemap4MacBook/

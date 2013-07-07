@@ -9,9 +9,3 @@ git submodule update
 
 vimを開いて
 :NeoBundleInstall!
-
-
-
-KeyRemap4MacBook
-private.xmlを下記にコピー
-Library/Application\ Support/KeyRemap4MacBook/private.xml

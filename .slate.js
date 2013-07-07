@@ -44,8 +44,8 @@ slate.bind(util.key('j'), slate.operation('focus', { direction: 'down' }));
 slate.bind(util.key('k'), slate.operation('focus', { direction: 'up' }));
 slate.bind(util.key('l'), slate.operation('focus', { direction: 'right' }));
 
-// tab .. 下に隠れているウィンドウをフォーカス
-slate.bind(util.key('tab'), slate.operation('focus', { direction: 'behind' }));
+// space .. 下に隠れているウィンドウをフォーカス
+slate.bind(util.key('space'), slate.operation('focus', { direction: 'behind' }));
 
 // o .. スクリーン間でフォーカスを移動
 slate.bind(util.key('o'), function(win) {
@@ -56,17 +56,16 @@ slate.bind(util.key('o'), function(win) {
 	});
 });
 
-// o+shift .. 別のスクリーンへ飛ばす
-slate.bind(util.key('space'), function(win) {
+// tab .. 別のスクリーンへ飛ばす
+slate.bind(util.key('tab'), function(win) {
 	if (!win) return;
 	var next = util.nextScreen(win.screen());
 
 	win.move(next.visibleRect());
 });
 
-// j+shift .. 4隅に飛ばす
-/*
-var corners = slate.bind(util.key('j', 'shift'), slate.operation('chain', {
+// ↓ 4隅に飛ばす
+var corners = slate.bind(util.key('down'), slate.operation('chain', {
 	operations: _.map(['top-right', 'bottom-right', 'bottom-left', 'top-left'], function(d) {
 		return slate.operation('corner', {
 			direction: d,
@@ -75,7 +74,6 @@ var corners = slate.bind(util.key('j', 'shift'), slate.operation('chain', {
 		});
 	})
 }));
-*/
 
 // k+shift .. 左右に飛ばす
 /*

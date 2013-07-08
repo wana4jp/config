@@ -15,6 +15,7 @@ if [ -f $HOME/.git-completion.sh ]; then
 fi
 
 #export PS1='\[\033[01;32m\]\u@\H\[\033[01;34m\] \w \$\[\033[00m\] $(__git_ps1 " (%s)") '
+export  PS1='\e[0;31m\h:\W \u\$ \e[0m'
 
 # 事故防止 http://blog.livedoor.jp/dankogai/archives/51863725.html
 alias rm='rm -i'

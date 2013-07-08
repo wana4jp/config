@@ -9,7 +9,7 @@
 		<item>
 			<name>PC Setting(except iTerm2)</name>
 			<identifier>remap.wanashi.pcSetting</identifier>
-			<not>iTERM2</not>
+			<not>EMACS, iTERM2</not>
 			<autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, ModifierFlag::COMMAND_R</autogen>
 			<autogen>--KeyToKey-- KeyCode::V, VK_CONTROL, KeyCode::V, ModifierFlag::COMMAND_R</autogen>
 			<autogen>--KeyToKey-- KeyCode::A, VK_CONTROL, KeyCode::A, ModifierFlag::COMMAND_R</autogen>

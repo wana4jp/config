@@ -1,0 +1,17 @@
+if has('multi byte ime')
+	highlight Cursor guifg=NONE guibg=Green
+	highlight CursorIM guifg=NONE guibg=Purple
+endif
+
+
+
+set encoding=utf-8
+source $VIMRUNTIME/delmenu.vim
+set langmenu=ja_jp.utf-8
+source $VIMRUNTIME/menu.vim
+
+
+
+
+
+nnoremap <silent> <LEADER>gvim :<C-u>edit $MYGVIMRC<CR>

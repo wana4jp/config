@@ -15,6 +15,9 @@
 			<autogen>--KeyToKey-- KeyCode::A, VK_CONTROL, KeyCode::A, ModifierFlag::COMMAND_R</autogen>
 			<autogen>--KeyToKey-- KeyCode::X, VK_CONTROL, KeyCode::X, ModifierFlag::COMMAND_R</autogen>
 
+			<autogen>--KeyToKey-- KeyCode::Z, VK_CONTROL, KeyCode::X, ModifierFlag::COMMAND_R</autogen>
+			<autogen>--KeyToKey-- KeyCode::R, VK_CONTROL, KeyCode::X, ModifierFlag::COMMAND_R</autogen>
+
 			<autogen>--KeyToKey-- KeyCode::T, VK_CONTROL, KeyCode::T, ModifierFlag::COMMAND_R</autogen>
 			<autogen>--KeyToKey-- KeyCode::W, VK_CONTROL, KeyCode::W, ModifierFlag::COMMAND_R</autogen>
 

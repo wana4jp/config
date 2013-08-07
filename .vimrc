@@ -54,6 +54,10 @@ NeoBundle 'git://github.com/vim-scripts/dbext.vim.git'
 
 " NeoBundle 'kana/vim-smartchr'
 
+" zencoding emmet
+NeoBundle "git://github.com/mattn/zencoding-vim.git"
+
+
 " OS別の設定 see [:help has] " =================================================
 if has("mac")
 	" mac用の設定
@@ -61,9 +65,9 @@ if has("mac")
 elseif has("unix")
 	" unix固有の設定
 
-	" Use ClipBoard
-	vnoremap <silent> sy :!pbcopy; pbpaste<CR>
-	noremap  <silent> sp <esc>o<esc>v:!pbpaste<CR>
+" Use ClipBoard
+vnoremap <silent> sy :!pbcopy; pbpaste<CR>
+noremap  <silent> sp <esc>o<esc>v:!pbpaste<CR>
 
 elseif has("win64")
 	" 64bit_windows固有の設定
@@ -207,6 +211,9 @@ vnoremap M J
 
 " *で検索時に、いきなり移動しないように
 nnoremap * *N
+
+
+nnoremap ,t :!phpunit<cr>
 
 
 " nerd_tree --------------------------------------------------------------------

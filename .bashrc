@@ -21,6 +21,8 @@ export  PS1='\e[0;31m\h:\W \u\$ \e[0m'
 alias rm='rm -i'
 set -o noclobber
 
+alias ..='cd ..'
+
 
 # Ailias
 case "${OSTYPE}" in

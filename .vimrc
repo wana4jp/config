@@ -28,7 +28,7 @@ NeoBundle 'git://github.com/scrooloose/nerdtree.git'
 NeoBundle 'git://github.com/Shougo/vimproc'
 
 " ファイルセレクタ
-" NeoBundle 'git://github.com/kien/ctrlp.vim'
+NeoBundle 'git://github.com/kien/ctrlp.vim'
 NeoBundle 'git://github.com/Shougo/unite.vim'
 
 " シンタックスチェック
@@ -197,10 +197,10 @@ nnoremap Q <Nop>
 nnoremap <CR> o<Esc>
 
 " シフトで多めに移動
-noremap J 20j
-noremap K 20k
-noremap L 10l
-noremap H 10h
+noremap J 10j
+noremap K 10k
+noremap L 7l
+noremap H 7h
 
 " 行マージ
 vnoremap M J
@@ -251,7 +251,7 @@ let g:ref_phpmanual_path=$HOME . '/.vim/php-chunked-xhtml'
 
 " ctrlp   ----------------------------------------------------------------------
 " 検索開始を現在のディレクトリからにする
-" let g:ctrlp_working_path_mode = 0
+let g:ctrlp_working_path_mode = 0
 
 
 

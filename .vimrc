@@ -1,3 +1,10 @@
+"                                 _     _
+"  __      ____ _ _ __   __ _ ___| |__ (_)
+"  \ \ /\ / / _` | '_ \ / _` / __| '_ \| |
+"   \ V  V / (_| | | | | (_| \__ \ | | | |
+"    \_/\_/ \__,_|_| |_|\__,_|___/_| |_|_|
+
+
 " 初期化 =======================================================================
 " vi互換にしない
 set nocompatible
@@ -53,6 +60,9 @@ NeoBundle 'git://github.com/vim-scripts/dbext.vim.git'
 " NeoBundle "Shougo/neosnippet.git"
 
 " NeoBundle 'kana/vim-smartchr'
+
+" java
+NeoBundle "git://github.com/moznion/jcommenter.vim"
 
 " OS別の設定 see [:help has] " =================================================
 if has("mac")
@@ -207,6 +217,25 @@ vnoremap M J
 
 " *で検索時に、いきなり移動しないように
 nnoremap * *N
+
+
+
+"----------------------------------------------------------------------------
+" Java
+"----------------------------------------------------------------------------
+augroup JavaAutoCmd
+	au!
+	au FileType java set shiftwidth=4 tabstop=4
+	au FileType java map <C-c><C-j> :call JCommentWriter()<CR> "Set key map for jcommenter
+augroup END
+
+" Syntax highlight
+let g:java_highlight_all=1
+let g:java_highlight_debug=1
+let g:java_allow_cpp_keywords=1
+let g:java_space_errors=1
+let g:java_highlight_functions=1
+
 
 
 " nerd_tree --------------------------------------------------------------------

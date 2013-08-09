@@ -22,7 +22,7 @@ alias rm='rm -i'
 set -o noclobber
 
 alias ..='cd ..'
-
+alias vi='vim'
 
 # Ailias
 case "${OSTYPE}" in
@@ -33,7 +33,7 @@ darwin*)
   ;;
 linux*)
   alias ls='ls --color'
-  alias ll='ls -l --color'
+  alias ll='ls -la --color'
   alias la='ls -la --color'
   ;;
 esac

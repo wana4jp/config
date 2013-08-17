@@ -67,6 +67,8 @@ NeoBundle "git://github.com/moznion/jcommenter.vim"
 " zencoding emmet
 NeoBundle "git://github.com/mattn/zencoding-vim.git"
 
+" テキストファイル
+NeoBundle 'HybridText'
 
 " OS別の設定 see [:help has] " =================================================
 if has("mac")
@@ -422,3 +424,5 @@ let g:dbext_default_window_use_bottom = 0
 " smartctr
 " inoremap <buffer><expr> = smartchr#one_of(' = ', ' == ', '=')
 
+" HybridText
+au BufRead,BufNewFile *.txt set syntax=hybrid

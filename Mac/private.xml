@@ -7,33 +7,6 @@
 	</appdef>
 	<list>
 		<item>
-			<name>PC Setting(except iTerm2)</name>
-			<identifier>remap.wanashi.pcSetting</identifier>
-			<not>EMACS, iTERM2</not>
-			<autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, ModifierFlag::COMMAND_R</autogen>
-			<autogen>--KeyToKey-- KeyCode::V, VK_CONTROL, KeyCode::V, ModifierFlag::COMMAND_R</autogen>
-			<autogen>--KeyToKey-- KeyCode::A, VK_CONTROL, KeyCode::A, ModifierFlag::COMMAND_R</autogen>
-			<autogen>--KeyToKey-- KeyCode::X, VK_CONTROL, KeyCode::X, ModifierFlag::COMMAND_R</autogen>
-
-			<autogen>--KeyToKey-- KeyCode::Z, VK_CONTROL, KeyCode::X, ModifierFlag::COMMAND_R</autogen>
-			<autogen>--KeyToKey-- KeyCode::R, VK_CONTROL, KeyCode::X, ModifierFlag::COMMAND_R</autogen>
-
-			<autogen>--KeyToKey-- KeyCode::T, VK_CONTROL, KeyCode::T, ModifierFlag::COMMAND_R</autogen>
-			<autogen>--KeyToKey-- KeyCode::W, VK_CONTROL, KeyCode::W, ModifierFlag::COMMAND_R</autogen>
-
-			<autogen>--KeyToKey-- KeyCode::F, VK_CONTROL, KeyCode::F, ModifierFlag::COMMAND_R</autogen>
-		</item>
-		<item>
-			<name>Tab Setting(only iTerm2)</name>
-			<identifier>remap.wanashi.iterm2TabSetting</identifier>
-			<only>iTERM2</only>
-			<autogen>
-				--KeyToKey--
-				KeyCode::T, VK_CONTROL,
-				KeyCode::T, ModifierFlag::COMMAND_L
-			</autogen>
-		</item>
-		<item>
 			<name>Esc With Eisuu for vim(only iTerm2)</name>
 			<identifier>remap.wanashi.vimEscWithEisuu</identifier>
 			<only>iTERM2</only>
@@ -42,23 +15,15 @@
 			<autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
 		</item>
 		<item>
-			<name>Tab Switch(only Chrome)</name>
-			<identifier>remap.wanashi.chromeTabSwitch</identifier>
+			<name>disable Cmd + Q(only Chrome)</name>
+			<identifier>remap.wanashi.chromeDisableCmdQ</identifier>
 			<only>GOOGLE_CHROME</only>
-			<autogen>
-				__KeyToKey__
-				KeyCode::J, ModifierFlag::COMMAND_L,
-				KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
-			</autogen>
-			<autogen>
-				__KeyToKey__
-				KeyCode::K, ModifierFlag::COMMAND_L,
-				KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
-			</autogen>
+			<autogen>__KeyToKey__ KeyCode::Q, VK_COMMAND | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+			<autogen>__KeyToKey__ KeyCode::Q, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::Q, ModifierFlag::COMMAND_L</autogen>
 		</item>
 		<item>
-			<name>英数+hjklで移動</name>
-			<identifier>remap.wanashi.jis_Emacs</identifier>
+			<name>Vim bind with Eisu</name>
+			<identifier>remap.wanashi.eisuVimBind</identifier>
 			<autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
 			<autogen>__KeyToKey__ KeyCode::H, ModifierFlag::EXTRA1, KeyCode::CURSOR_LEFT</autogen>
 			<autogen>__KeyToKey__ KeyCode::J, ModifierFlag::EXTRA1, KeyCode::CURSOR_DOWN</autogen>

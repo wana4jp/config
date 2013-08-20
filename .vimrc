@@ -70,6 +70,9 @@ NeoBundle "git://github.com/mattn/zencoding-vim.git"
 " テキストファイル
 NeoBundle 'HybridText'
 
+" ステータスライン
+NeoBundle 'bling/vim-airline'
+
 " OS別の設定 see [:help has] " =================================================
 if has("mac")
 	" mac用の設定
@@ -155,6 +158,11 @@ let mapleader = ','
 " vimrc編集
 nnoremap <silent> <LEADER>vim :<C-u>edit $MYVIMRC<CR>
 
+" 自分用メモを編集
+nnoremap <silent> <LEADER>lt :<C-u>edit ~/Dropbox/inbox/life.txt<CR>
+nnoremap <silent> <LEADER>lat  :<C-u>edit ~/Dropbox/inbox/life_all.txt<CR>
+nnoremap <silent> <LEADER>jt :<C-u>edit ~/Dropbox/inbox/job.txt<CR>
+
 " 行頭行末
 noremap <C-a> 0
 noremap <C-e> $
@@ -224,7 +232,8 @@ vnoremap M J
 " *で検索時に、いきなり移動しないように
 nnoremap * *N
 
-nnoremap ,t :!phpunit<cr>
+" テスト
+nnoremap <LEADER>t :!phpunit<cr>
 
 
 

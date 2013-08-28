@@ -21,8 +21,9 @@ export  PS1='\e[0;31m\h:\W \u\$ \e[0m'
 alias rm='rm -i'
 set -o noclobber
 
-alias ..='cd ..'
-alias vi='vim'
+export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/mvim "$@" '
+alias gvi='gvim --remote-tab-silent'
 
 # Ailias
 case "${OSTYPE}" in
@@ -38,6 +39,7 @@ linux*)
   ;;
 esac
 
+alias ..='cd ..'
 alias vi='vim'
 
 # Git Ailias

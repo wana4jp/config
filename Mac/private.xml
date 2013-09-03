@@ -9,7 +9,7 @@
 		<item>
 			<name>Esc With Eisuu for vim(only iTerm2)</name>
 			<identifier>remap.wanashi.vimEscWithEisuu</identifier>
-			<only>iTERM2</only>
+			<only>iTERM2, VI</only>
 			<autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
 			<autogen>--KeyToKey-- KeyCode::[, VK_CONTROL, KeyCode::[, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
 			<autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>

@@ -73,6 +73,9 @@ NeoBundle 'HybridText'
 " ステータスライン
 NeoBundle 'bling/vim-airline'
 
+" プロジェクト管理
+NeoBundle 'synboo/project.vim'
+
 " OS別の設定 see [:help has] " =================================================
 if has("mac")
 	" mac用の設定
@@ -142,6 +145,8 @@ set hlsearch
 set ic
 " 全角文字の表示が潰れるのを回避
 set ambiwidth=double
+" 自動改行を無効化
+set formatoptions=q
 
 " コメントの自動挿入をやめる
 augroup noAutoComment
@@ -158,12 +163,14 @@ let mapleader = ','
 nnoremap <silent> <LEADER>vim :<C-u>edit $MYVIMRC<CR>
 
 " 自分用メモを編集
-nnoremap <silent> <LEADER>lt  :<C-u>edit ~/Dropbox/inbox/life.txt<CR>
-nnoremap <silent> <LEADER>lat :<C-u>edit ~/Dropbox/inbox/life_all.txt<CR>
-nnoremap <silent> <LEADER>jt  :<C-u>edit ~/Dropbox/inbox/job.txt<CR>
-nnoremap <silent> <LEADER>jat :<C-u>edit ~/Dropbox/inbox/job_all.txt<CR>
+nnoremap <silent> <LEADER>lt  :<C-u>edit ~/Dropbox/text/life.txt<CR>
+nnoremap <silent> <LEADER>lat :<C-u>edit ~/Dropbox/text/life_all.txt<CR>
+nnoremap <silent> <LEADER>jt  :<C-u>edit ~/Dropbox/text/job.txt<CR>
+nnoremap <silent> <LEADER>jat :<C-u>edit ~/Dropbox/text/job_all.txt<CR>
 
 set clipboard=unnamed
+
+noremap <C-c> 0
 
 " 行頭行末
 noremap <C-a> 0
@@ -244,6 +251,33 @@ augroup source-vimrc
   autocmd BufWritePost *vimrc source $MYVIMRC
   autocmd BufWritePost *gvimrc if has('gui_running') source $MYGVIMRC
 augroup END
+
+
+function! s:closeBuffer()
+	let l:cur_buf = bufnr('%')	" カレントバッファの番号
+
+	if buflisted(bufnr('#'))
+		buf #	" 直前まで編集していたバッファに移動する
+	else
+		bn		" 次のバッファに移動する
+	endif
+
+	if bufnr('%') == l:cur_buf
+		" カレントバッファしかないとき
+		new
+	endif
+
+	" バッファを削除する
+	exe 'bd ' . l:cur_buf
+	if 0 != bufloaded(l:cur_buf)
+		" バッファ削除に失敗したとき
+		exe 'buf ' . l:cur_buf
+	endif
+endfunction
+command! MyCloseBuffer call s:closeBuffer()
+
+nnoremap sd :<C-u>MyCloseBuffer<CR>
+
 
 
 

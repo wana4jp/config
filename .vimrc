@@ -77,20 +77,24 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'synboo/project.vim'
 
 " OS別の設定 see [:help has] " =================================================
-if has("mac")
-	" mac用の設定
-
-	" Use ClipBoard
-	vnoremap <silent> sy :!pbcopy; pbpaste<CR>
-	noremap  <silent> sp <esc>o<esc>v:!pbpaste<CR>
-
-elseif has("unix")
+if has("unix")
 	" unix固有の設定
 
 	" ターミナルのカラー化
 	set ttytype=builtin_linux
 	set term=builtin_linux
 	set t_Co=256
+
+
+	" mac用の設定
+	let s:uname = system('uname')
+
+	if s:uname == "Darwin"
+
+		" Use ClipBoard
+		vnoremap <silent> sy :!pbcopy; pbpaste<CR>
+		noremap  <silent> sp <esc>o<esc>v:!pbpaste<CR>
+	endif
 
 elseif has("win64")
 	" 64bit_windows固有の設定

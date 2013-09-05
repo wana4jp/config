@@ -65,7 +65,7 @@ NeoBundle "Shougo/neosnippet.git"
 NeoBundle "git://github.com/moznion/jcommenter.vim"
 
 " zencoding emmet
-NeoBundle "git://github.com/mattn/zencoding-vim.git"
+NeoBundle "git://github.com/mattn/emmet-vim.git"
 
 " テキストファイル
 NeoBundle 'HybridText'

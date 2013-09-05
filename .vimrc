@@ -89,7 +89,7 @@ if has("unix")
 	" mac用の設定
 	let s:uname = system('uname')
 
-	if s:uname == "Darwin"
+	if s:uname == "Darwin\n"
 
 		" Use ClipBoard
 		vnoremap <silent> sy :!pbcopy; pbpaste<CR>

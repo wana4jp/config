@@ -76,6 +76,10 @@ NeoBundle 'bling/vim-airline'
 " プロジェクト管理
 NeoBundle 'synboo/project.vim'
 
+" js インデント
+NeoBundle "git://github.com/guileen/simple-javascript-indenter"
+
+
 " OS別の設定 see [:help has] " =================================================
 if has("unix")
 	" unix固有の設定
@@ -158,6 +162,14 @@ augroup noAutoComment
 	autocmd FileType * setlocal fo=cq
 augroup END
 
+function! InitJavaScript()
+	setlocal shiftwidth=2
+	setlocal tabstop=2
+	setlocal softtabstop=2
+	setlocal expandtab
+endfunction
+autocmd FileType javascript call InitJavaScript()
+
 
 " キーマッピング ===============================================================
 " [,]を<LEADER>にする
@@ -167,7 +179,9 @@ let mapleader = ','
 nnoremap <silent> <LEADER>vim :<C-u>edit $MYVIMRC<CR>
 
 " 自分用メモを編集
-nnoremap <silent> <LEADER>lt  :<C-u>edit ~/Dropbox/text/life.txt<CR>
+if glob('~/Dropbox/text/life.txt')
+	nnoremap <silent> <LEADER>lt  :<C-u>edit ~/Dropbox/text/life.txt<CR>
+endif
 nnoremap <silent> <LEADER>lat :<C-u>edit ~/Dropbox/text/life_all.txt<CR>
 nnoremap <silent> <LEADER>jt  :<C-u>edit ~/Dropbox/text/job.txt<CR>
 nnoremap <silent> <LEADER>jat :<C-u>edit ~/Dropbox/text/job_all.txt<CR>
@@ -248,12 +262,13 @@ nnoremap * *N
 " テスト
 nnoremap <LEADER>t :!phpunit<cr>
 
+" vim編集時に自動で再読み込み
 command! EditVimrc :edit ~/.vimrc
 command! EditGvimrc :edit ~/_gvimrc
 augroup source-vimrc
-  autocmd!
-  autocmd BufWritePost *vimrc source $MYVIMRC
-  autocmd BufWritePost *gvimrc if has('gui_running') source $MYGVIMRC
+	autocmd!
+	autocmd BufWritePost *vimrc source $MYVIMRC
+	autocmd BufWritePost *gvimrc if has('gui_running') source $MYGVIMRC
 augroup END
 
 

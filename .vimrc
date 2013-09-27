@@ -79,6 +79,12 @@ NeoBundle 'synboo/project.vim'
 " js インデント
 NeoBundle "git://github.com/guileen/simple-javascript-indenter"
 
+" ファイラー
+NeoBundle 'Shougo/vimfiler'
+
+" バッファ
+NeoBundle 'techlivezheng/vim-plugin-minibufexpl'
+
 
 " OS別の設定 see [:help has] " =================================================
 if has("unix")
@@ -179,9 +185,9 @@ let mapleader = ','
 nnoremap <silent> <LEADER>vim :<C-u>edit $MYVIMRC<CR>
 
 " 自分用メモを編集
-if glob('~/Dropbox/text/life.txt')
+" if glob('~/Dropbox/text/life.txt')
 	nnoremap <silent> <LEADER>lt  :<C-u>edit ~/Dropbox/text/life.txt<CR>
-endif
+" endif
 nnoremap <silent> <LEADER>lat :<C-u>edit ~/Dropbox/text/life_all.txt<CR>
 nnoremap <silent> <LEADER>jt  :<C-u>edit ~/Dropbox/text/job.txt<CR>
 nnoremap <silent> <LEADER>jat :<C-u>edit ~/Dropbox/text/job_all.txt<CR>
@@ -252,6 +258,9 @@ noremap J 10j
 noremap K 10k
 noremap L 7l
 noremap H 7h
+
+" inoremap <C-d> $
+" inoremap <C-a> @
 
 " 行マージ
 vnoremap M J
@@ -384,6 +393,9 @@ nnoremap <C-U><C-G> :<C-u>Unite grep<CR><CR>
 
 
 " quick-run  -------------------------------------------------------------------
+
+nmap <Leader>r <plug>(quickrun)
+
 " 設定情報は.vim/setting.vimに記載する
 " SQLファイルの設定
 let g:quickrun_config = {}
@@ -510,3 +522,30 @@ let g:neosnippet#disable_runtime_snippets = {
 
 " HybridText
 au BufRead,BufNewFile *.txt set syntax=hybrid
+
+
+
+
+
+" VimFiler
+nnoremap <LEADER>vf :VimFiler -buffer-name=explorer -split -winwidth=45 -toggle -no-quit<Cr>
+autocmd! FileType vimfiler call g:my_vimfiler_settings()
+function! g:my_vimfiler_settings()
+  nmap     <buffer><expr><Cr> vimfiler#smart_cursor_map("\<Plug>(vimfiler_expand_tree)", "\<Plug>(vimfiler_edit_file)")
+  nnoremap <buffer>s          :call vimfiler#mappings#do_action('my_split')<Cr>
+  nnoremap <buffer>v          :call vimfiler#mappings#do_action('my_vsplit')<Cr>
+endfunction
+
+let s:my_action = { 'is_selectable' : 1 }
+function! s:my_action.func(candidates)
+  wincmd p
+  exec 'split '. a:candidates[0].action__path
+endfunction
+call unite#custom_action('file', 'my_split', s:my_action)
+
+let s:my_action = { 'is_selectable' : 1 }
+function! s:my_action.func(candidates)
+  wincmd p
+  exec 'vsplit '. a:candidates[0].action__path
+endfunction
+call unite#custom_action('file', 'my_vsplit', s:my_action)

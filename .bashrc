@@ -4,6 +4,8 @@ export EDITOR=/usr/bin/vim
 export HISTSIZE=100000
 export HISTFILESIZE=100000
 
+
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
@@ -62,3 +64,6 @@ alias   gpl='git pull'
 alias   gst='git status'
 
 alias ggrep='git grep -i -I'
+
+allgrep() { find ./ -name "*" -exec grep $1 "{}" \;; }
+phpgrep() { find ./ -name "*.php" -exec grep $1 "{}" \;; }

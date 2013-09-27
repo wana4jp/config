@@ -56,8 +56,8 @@ slate.bind(util.key('o'), function(win) {
 	});
 });
 
-// tab .. 別のスクリーンへ飛ばす
-slate.bind(util.key('tab'), function(win) {
+// 9 .. 別のスクリーンへ飛ばす
+slate.bind(util.key('9'), function(win) {
 	if (!win) return;
 	var next = util.nextScreen(win.screen());
 

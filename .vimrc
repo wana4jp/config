@@ -92,8 +92,9 @@ NeoBundle 'Shougo/vimfiler'
 " バッファ
 NeoBundle 'techlivezheng/vim-plugin-minibufexpl'
 
-
 NeoBundle 'Shougo/unite-outline'
+
+NeoBundle 'supasorn/vim-easymotion'
 
 
 " OS別の設定 see [:help has] " =================================================
@@ -560,3 +561,20 @@ function! s:my_action.func(candidates)
   exec 'vsplit '. a:candidates[0].action__path
 endfunction
 call unite#custom_action('file', 'my_vsplit', s:my_action)
+
+
+
+" vim-easymotion
+"------------------------------------"{{{
+let g:EasyMotion_leader_key = ';'
+let g:EasyMotion_keys='hsdgyuiopqwertnmzxcvb;:f'
+
+hi link EasyMotionTarget ErrorMsg
+hi link EasyMotionShade  Comment
+
+" forked easymotion extention
+let g:EasyMotion_special_select_line = 0
+let g:EasyMotion_special_select_phrase = 0
+
+"}}}
+

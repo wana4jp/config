@@ -1,3 +1,10 @@
+" vim メモ
+" 現在編集中のファイルのあるディレクトリに、
+" カレントディレクトリを変更する。
+" :cd %:h
+
+
+
 "                                 _     _
 "  __      ____ _ _ __   __ _ ___| |__ (_)
 "  \ \ /\ / / _` | '_ \ / _` / __| '_ \| |
@@ -84,6 +91,9 @@ NeoBundle 'Shougo/vimfiler'
 
 " バッファ
 NeoBundle 'techlivezheng/vim-plugin-minibufexpl'
+
+
+NeoBundle 'Shougo/unite-outline'
 
 
 " OS別の設定 see [:help has] " =================================================
@@ -389,6 +399,7 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 "let g:unite_source_grep_max_candidates = 200
 
 nnoremap <C-U><C-G> :<C-u>Unite grep<CR><CR>
+nnoremap <silent> <LEADER>uo :<C-u>Unite<Space>outline<CR>
 
 
 

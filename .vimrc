@@ -73,12 +73,14 @@ set ic
 set laststatus=2
 set list
 set listchars=tab:>-,trail:_,extends:<,precedes:>
+set nobackup
 set noexpandtab
 set nowrapscan
 set number
 set shiftwidth=4
 set showcmd
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+set swapfile
 set tabstop=4
 set ttyfast
 set vb t_vb=

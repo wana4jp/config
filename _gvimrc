@@ -1,17 +1,22 @@
 if has('multi byte ime')
-	highlight Cursor guifg=NONE guibg=Green
-	highlight CursorIM guifg=NONE guibg=Purple
+  highlight Cursor guifg=NONE guibg=Green
+  highlight CursorIM guifg=NONE guibg=Purple
 endif
-
-set encoding=utf-8
 source $VIMRUNTIME/delmenu.vim
-set langmenu=ja_jp.utf-8
 source $VIMRUNTIME/menu.vim
 
-nnoremap <silent> <LEADER>gvim :<C-u>edit $MYGVIMRC<CR>
 
-
+" --------
+" settings
+" --------
 colorscheme molokai
-set showtabline=2  " タブを常に表示
-set imdisable " IMを無効化
-set transparency=5 " 透明度を指定
+set encoding=utf-8
+set langmenu=ja_jp.utf-8
+set showtabline=2
+set imdisable
+
+
+" --------
+" mappings
+" --------
+nnoremap <silent> <LEADER>gvim :<C-u>edit $MYGVIMRC<CR>

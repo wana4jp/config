@@ -4,8 +4,6 @@
 	branch = auto
 	interactive = auto
 	grep = auto
-[core]
-	editor = /usr/local/bin/vim
 [merge]
 	tool = vimdiff
 [alias]

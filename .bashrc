@@ -47,7 +47,7 @@ prompt_setup() {
     local t_shlvl=''
   fi
 
-  PS1=" $t_host $t_cwd$t_shlvl"
+  PS1=" $t_host $t_cwd$t_shlvl "
 }
 prompt_setup
 unset -f prompt_setup
@@ -67,13 +67,16 @@ linux*)
   ;;
 esac
 
-alias cd='pushd > /dev/null'
+alias cd="pushd > /dev/null"
+alias bd="popd"
+alias up='cd ..'
 alias cp='cp -iv'
-alias g='git'
-alias v='vim'
 alias mv='mv -iv'
 alias rm='rm -iv'
-alias up='cd ..'
+
+alias vi='vim'
+alias v='vi'
+alias g='git'
 
 alias gap='git add -p'
 alias gb='git branch'

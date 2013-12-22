@@ -1,45 +1,14 @@
-
-alias sl="ls -la"
-
-alias ll="ls -la"
-
-export LSCOLORS=gxfxxxxxcxxxxxxxxxxxxx
-
-
-
-# source : https://gist.github.com/mollifier/4964803
-
-# 補完機能を有効にする
+# settings
 autoload -Uz compinit
+bindkey -e
+export LANG=ja_JP.UTF-8
+setopt auto_pushd
+setopt interactive_comments
+setopt print_eight_bit
+setopt pushd_ignore_dups
 compinit
 
-# cd したら自動的にpushdする
-setopt auto_pushd
-# 重複したディレクトリを追加しない
-setopt pushd_ignore_dups
-
-# グローバルエイリアス
-alias -g L='| less'
-alias -g G='| grep'
-
-# ヒストリの設定
+# params
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
-
-# emacs 風キーバインドにする
-bindkey -e
-
-# その他とりあえずいるもの
-export LANG=ja_JP.UTF-8
-
-# 日本語ファイル名を表示可能にする
-setopt print_eight_bit
-
-# フローコントロールを無効にする
-setopt no_flow_control
-
-# '#' 以降をコメントとして扱う
-setopt interactive_comments
-
-# vim:set ft=zsh :

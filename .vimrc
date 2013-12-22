@@ -10,8 +10,8 @@ set nocompatible
 " -------
 filetype plugin indent off
 if has('vim_starting')
-	set runtimepath+=~/.vim/neobundle.vim/
-	call neobundle#rc(expand('~/.vim/bundle/'))
+  set runtimepath+=~/.vim/neobundle.vim/
+  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 filetype plugin indent on
 
@@ -32,7 +32,8 @@ NeoBundle 'git://github.com/kien/ctrlp.vim'
 NeoBundle 'git://github.com/mattn/emmet-vim.git'
 NeoBundle 'git://github.com/scrooloose/nerdtree.git'
 NeoBundle 'git://github.com/scrooloose/syntastic.git'
-NeoBundle 'git://github.com/tomasr/molokai.git'
+NeoBundle 'pyte'
+NeoBundle 'phd'
 NeoBundle 'supasorn/vim-easymotion'
 
 
@@ -53,9 +54,10 @@ endif
 " --------
 " settings
 " --------
-colorscheme molokai
+colorscheme phd
 syntax on
 set ambiwidth=double
+set background=light
 set clipboard=unnamed
 set completeopt=menuone
 set encoding=utf-8

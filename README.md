@@ -1,11 +1,11 @@
 My Config
 ========
 
+Set Up
+-------
+```
 git submodule init
-
 git submodule update
-
 ./init.sh
-
-vimを開いて
-:NeoBundleInstall!
+v -c ":NeoBundleInstall"
+```

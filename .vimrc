@@ -173,7 +173,6 @@ let g:ctrlp_working_path_mode = 0
 let g:neocomplcache_plugin_disable = {
   \ 'syntax_complete' : 1,
   \ }
-let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 let g:neocomplcache_enable_camel_case_completion = 0
 let g:neocomplcache_enable_underbar_completion = 0
 let g:neocomplcache_enable_at_startup = 1

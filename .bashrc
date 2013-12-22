@@ -78,14 +78,12 @@ popd()
 # aliases
 case "${OSTYPE}" in
   darwin*)
-    alias ls="ls -G"
-    alias ll="ls -lG"
-    alias la="ls -laG"
+    alias ls="ls -laG"
+    alias ll="ls"
     ;;
   linux*)
-    alias ls='ls --color'
-    alias ll='ls -la --color'
-    alias la='ls -la --color'
+    alias ls='ls -la --color'
+    alias ll='ls'
     ;;
 esac
 

@@ -60,6 +60,7 @@ set ambiwidth=double
 set background=dark
 set clipboard=unnamed
 set completeopt=menuone
+set directory=$HOME/vswap
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,cp932,utf-16,utf-16le
 set fileformat=unix
@@ -91,10 +92,10 @@ au BufNewFile,BufRead *.bashrc setl sw=2 sts=2 ts=2 et
 " mappings
 " --------
 let g:mapleader = ','
-nnoremap <silent> <LEADER>vim  :<C-u>edit $MYVIMRC<CR>
-nnoremap <silent> <LEADER>lt   :<C-u>edit ~/Dropbox/text/life.mkd<CR>
-nnoremap <silent> <LEADER>jt   :<C-u>edit ~/Dropbox/text/job.mkd<CR>
-nnoremap <silent> <LEADER>bash :<C-u>edit ~/.bashr<CR>
+nnoremap <silent> <LEADER>id :<C-u>edit ~/Dropbox/text/idea.mkd<CR>
+nnoremap <silent> <LEADER>td   :<C-u>edit ~/Dropbox/text/todo.mkd<CR>
+nnoremap <silent> <LEADER>bsh :<C-u>edit ~/.bashrc<CR>
+nnoremap <silent> <LEADER>vrc :<C-u>edit $MYVIMRC<CR>
 nnoremap <LEADER>v :<C-u>vsp<CR>
 nnoremap sh <C-w>h
 nnoremap sj <C-w>j

@@ -7,6 +7,4 @@ do
 done
 
 source ~/.bashrc
-
-# git がインストールされたら、git complehentionを持ってくる
-cp /etc/bash_completion.d/git $HOME/.git-completion.sh
+mkdir ~/vswap

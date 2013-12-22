@@ -1,5 +1,6 @@
-// 参考 https://gist.github.com/tcptr/f77ca0b20f946b64f9fb
-
+// ---------
+// functions
+// ---------
 var util = {
 	eachAppWindow: function(f) {
 		slate.eachApp(function(app) {
@@ -16,7 +17,6 @@ var util = {
 		if (rect.y + rect.height > bounds.y + bounds.height)
 			rect.height = bounds.y + bounds.height - rect.y;
 	},
-	// altキーを起点にする
 	key: function(k, mod) {
 		return k + ':alt' + (mod ? ',' + mod : '');
 	},
@@ -38,34 +38,20 @@ var util = {
 	}
 };
 
-// hjkl .. その方向へフォーカス移動
-slate.bind(util.key('h'), slate.operation('focus', { direction: 'left' }));
-slate.bind(util.key('j'), slate.operation('focus', { direction: 'down' }));
-slate.bind(util.key('k'), slate.operation('focus', { direction: 'up' }));
-slate.bind(util.key('l'), slate.operation('focus', { direction: 'right' }));
 
-// space .. 下に隠れているウィンドウをフォーカス
+
+// --------
+// bindings
+// --------
 slate.bind(util.key('space'), slate.operation('focus', { direction: 'behind' }));
 
-// o .. スクリーン間でフォーカスを移動
-slate.bind(util.key('o'), function(win) {
-	var next = util.nextScreen(slate.screen());
-	util.focusWindow(function(win) {
-		return win.screen().id() == next.id() &&
-		VirtualDesktop.isCurrent(win);
-	});
-});
-
-// 9 .. 別のスクリーンへ飛ばす
 slate.bind(util.key('9'), function(win) {
 	if (!win) return;
 	var next = util.nextScreen(win.screen());
-
 	win.move(next.visibleRect());
 });
 
-// ↓ 4隅に飛ばす
-var corners = slate.bind(util.key('down'), slate.operation('chain', {
+slate.bind(util.key('down'), slate.operation('chain', {
 	operations: _.map(['top-right', 'bottom-right', 'bottom-left', 'top-left'], function(d) {
 		return slate.operation('corner', {
 			direction: d,
@@ -75,35 +61,17 @@ var corners = slate.bind(util.key('down'), slate.operation('chain', {
 	})
 }));
 
-// k+shift .. 左右に飛ばす
-/*
-slate.bind(util.key('k', 'shift'), slate.operation('chain', {
-	operations: _.map(['left', 'right'], function(d) {
-		return slate.operation('push', {
-		direction: d,
-		style: 'bar-resize:screenSizeX/2'
-		});
-	})
-}));
-*/
-
-// ↑ .. 全画面で最大化
 slate.bind(util.key('up'), function(win) {
 	if (!win) return;
 	var bounds = win.screen().visibleRect();
 	win.doOperation('move', bounds);
 });
 
-
-// ---- 追加した設定 ----
-
-//  ←.. 左へ最大化
 slate.bind(util.key('left'), slate.operation('push', {
 	direction: 'left',
 	style: 'bar-resize:screenSizeX/2'
 }));
 
-// → .. 右へ最大化
 slate.bind(util.key('right'), slate.operation('push', {
 	direction: 'right',
 	style: 'bar-resize:screenSizeX/2'

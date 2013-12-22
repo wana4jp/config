@@ -1,10 +1,10 @@
 # global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+  . /etc/bashrc
 fi
 
 if [ -f ~/.git-completion.sh ]; then
-	source ~/.git-completion.sh
+  source ~/.git-completion.sh
 fi
 
 
@@ -28,47 +28,69 @@ prompt_setup() {
   local c_user
   case "$USER" in
     root) c_user="$c_red" ;;
-    *) c_user="$c_green" ;;
-  esac
+  *) c_user="$c_green" ;;
+esac
 
-  local c_host
-  if [ -n "$SSH_CONNECTION" ]; then
-    c_host="$c_cyan"
-  else
-    c_host="$c_green"
-  fi
+local c_host
+if [ -n "$SSH_CONNECTION" ]; then
+  c_host="$c_cyan"
+else
+  c_host="$c_green"
+fi
 
-  local t_host="$c_user\\u$c_reset$c_host@\\h$c_reset"
-  local t_cwd="$c_yellow\\w$c_reset"
+local t_host="$c_user\\u$c_reset$c_host@\\h$c_reset"
+local t_cwd="$c_yellow\\w$c_reset"
 
-  if [ $SHLVL -gt 1 ]; then
-    local t_shlvl=" $c_gray($SHLVL)$c_reset"
-  else
-    local t_shlvl=''
-  fi
+if [ $SHLVL -gt 1 ]; then
+  local t_shlvl=" $c_gray($SHLVL)$c_reset"
+else
+  local t_shlvl=''
+fi
 
-  PS1=" $t_host $t_cwd$t_shlvl "
+PS1=" $t_host $t_cwd$t_shlvl "
 }
 prompt_setup
 unset -f prompt_setup
 
 
+# functions
+pushd()
+{
+  if [ $# -eq 0 ]; then
+    DIR="${HOME}"
+  else
+    DIR="$1"
+  fi
+
+  builtin pushd "${DIR}" > /dev/null
+  echo -n "DIRSTACK: "
+  dirs
+}
+
+popd()
+{
+  builtin popd > /dev/null
+  echo -n "DIRSTACK: "
+  dirs
+}
+
+
 # aliases
 case "${OSTYPE}" in
-darwin*)
-  alias ls="ls -G"
-  alias ll="ls -lG"
-  alias la="ls -laG"
-  ;;
-linux*)
-  alias ls='ls --color'
-  alias ll='ls -la --color'
-  alias la='ls -la --color'
-  ;;
+  darwin*)
+    alias ls="ls -G"
+    alias ll="ls -lG"
+    alias la="ls -laG"
+    ;;
+  linux*)
+    alias ls='ls --color'
+    alias ll='ls -la --color'
+    alias la='ls -la --color'
+    ;;
 esac
 
 alias cd="pushd > /dev/null"
-alias bd="popd"
+alias back="popd"
 alias up='cd ..'
 alias cp='cp -iv'
 alias mv='mv -iv'
@@ -94,5 +116,5 @@ phpgrep() { find ./ -name "*.php" -exec grep $1 "{}" \;; }
 
 # local settings
 if [ -f ~/.bashrc.local ]; then
-	source ~/.bashrc.local
+  source ~/.bashrc.local
 fi

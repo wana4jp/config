@@ -19,11 +19,18 @@
 			<autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
 		</item>
 		<item>
-			<name>Disable Cmd + Q For Chrome</name>
-			<identifier>remap.wanashi.chromeDisableCmdQ</identifier>
-			<only>GOOGLE_CHROME</only>
+			<name>Disable Cmd + Q</name>
+			<identifier>remap.wanashi.disableCmdQ</identifier>
+			<only>GOOGLE_CHROME, TERMINAL</only>
 			<autogen>__KeyToKey__ KeyCode::Q, VK_COMMAND | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
 			<autogen>__KeyToKey__ KeyCode::Q, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::Q, ModifierFlag::COMMAND_L</autogen>
+		</item>
+		<item>
+			<name>Disable Cmd + W</name>
+			<identifier>remap.wanashi.disableCmdW</identifier>
+			<only>TERMINAL</only>
+			<autogen>__KeyToKey__ KeyCode::W, VK_COMMAND | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+			<autogen>__KeyToKey__ KeyCode::W, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::W, ModifierFlag::COMMAND_L</autogen>
 		</item>
 		<item>
 			<name>Move Vim KeyBind With Eisu</name>

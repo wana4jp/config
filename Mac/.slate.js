@@ -83,3 +83,7 @@ slate.bind(util.key('right'), slate.operation('push', {
   style: 'bar-resize:screenSizeX/2'
 }));
 
+slate.bind(util.key('h'), slate.operation('focus', { direction: 'left' }));
+slate.bind(util.key('j'), slate.operation('focus', { direction: 'down' }));
+slate.bind(util.key('k'), slate.operation('focus', { direction: 'up' }));
+slate.bind(util.key('l'), slate.operation('focus', { direction: 'right' }));

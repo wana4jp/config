@@ -49,7 +49,9 @@ var util = {
 // --------
 // bindings
 // --------
-slate.bind(util.key('space'), slate.operation('focus', { direction: 'behind' }));
+slate.bind(util.key('space'), slate.operation('focus', {
+  direction: 'behind'
+}));
 
 slate.bind(util.key('9'), function(win) {
   if (!win) return;
@@ -87,3 +89,28 @@ slate.bind(util.key('h'), slate.operation('focus', { direction: 'left' }));
 slate.bind(util.key('j'), slate.operation('focus', { direction: 'down' }));
 slate.bind(util.key('k'), slate.operation('focus', { direction: 'up' }));
 slate.bind(util.key('l'), slate.operation('focus', { direction: 'right' }));
+
+
+// -------
+// layouts
+// -------
+
+var focusITerm = slate.operation("focus", { "app" : "iTerm" });
+
+var leftBottomLeft = slate.operation("move", {
+    "x" : "screenOriginX",
+    "y" : "screenOriginY+(screenSizeY/2)",
+    "width" : "screenSizeX/2",
+    "height": "screenSizeY/2"
+  });
+
+var firstMonitorLayout = slate.layout("threeMonitors", {
+    "_after_" : {
+      "operations" : focusITerm
+    },
+   "MacVim" : {
+    "operations" : leftBottomLeft
+    }
+});
+
+slate.bind(util.key('a'), slate.operation("layout", {"name" : firstMonitorLayout}));

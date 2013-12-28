@@ -88,7 +88,7 @@ au BufNewFile,BufRead * setl fo=cq
 au BufNewFile,BufRead *.js setl sw=2 sts=2 ts=2 et
 au BufNewFile,BufRead *.vimrc setl sw=2 sts=2 ts=2 et
 au BufNewFile,BufRead *.bashrc setl sw=2 sts=2 ts=2 et
-
+au FileType php :set dictionary=~/.vim/dict/php.dict
 
 " --------
 " mappings

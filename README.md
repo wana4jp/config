@@ -4,8 +4,7 @@ My Config
 Set Up
 -------
 ```
-git submodule init
-git submodule update
+git submodule update --init
 ./init.sh
 v -c ":NeoBundleInstall"
 ```

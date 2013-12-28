@@ -7,11 +7,10 @@
 [merge]
 	tool = vimdiff
 [alias]
+	a = add
+	ap = add -p
 	co = checkout
 	cob = checkout -b
-	bD = branch -d
 	com = checkout master
-	a = add
-	chep = cherry-pick
 [gc]
 	auto = 0

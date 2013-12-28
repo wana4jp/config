@@ -60,7 +60,8 @@ set ambiwidth=double
 set background=dark
 set clipboard=unnamed
 set completeopt=menuone
-set directory=$HOME/vswap
+set directory=$HOME/vimswap
+
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,cp932,utf-16,utf-16le
 set fileformat=unix

@@ -3,12 +3,6 @@ if [ -f /etc/bashrc ]; then
   . /etc/bashrc
 fi
 
-# global definitions
-if [ -f ~/.shrc ]; then
-  source ~/.shrc
-fi
-
-
 if [ -f ~/.git-completion.sh ]; then
   source ~/.git-completion.sh
 fi
@@ -92,6 +86,13 @@ case "${OSTYPE}" in
     alias ll='ls'
     ;;
 esac
+
+alias cd="pushd > /dev/null"
+alias back="popd"
+alias up='cd ..'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
 
 alias vi='vim'
 alias v='vi'

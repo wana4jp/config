@@ -1,9 +1,3 @@
-# global definitions
-if [ -f ~/.shrc ]; then
-  source ~/.shrc
-fi
-
-
 # settings
 autoload -Uz compinit
 bindkey -e

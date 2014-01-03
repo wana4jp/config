@@ -17,3 +17,6 @@
 	auto = 0
 [core]
 	editor = /usr/bin/vim
+[user]
+	name = wanashi
+	email = info@wanashi.com

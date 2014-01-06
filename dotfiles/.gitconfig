@@ -17,3 +17,6 @@
 	auto = 0
 [core]
 	editor = vim -c \"set fenc=utf-8\"
+[user]
+	name = wanashi
+	email = info@wanashi.com

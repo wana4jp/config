@@ -16,4 +16,4 @@
 [gc]
 	auto = 0
 [core]
-	editor = /usr/bin/vim
+	editor = vim -c \"set fenc=utf-8\"

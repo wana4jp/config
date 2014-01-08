@@ -9,13 +9,17 @@
 		<appname>MACVIM</appname>
 		<equal>org.vim.MacVim</equal>
 	</appdef>
+	<appdef>
+		<appname>PhpStorm</appname>
+		<equal>com.jetbrains.PhpStorm</equal>
+	</appdef>
 	<list>
 		<item>
 			<name>Leave InsertMode With Eisuu For Vim</name>
 			<identifier>remap.wanashi.vimEscWithEisuu</identifier>
-			<only>TERMINAL,iTERM2,MACVIM</only>
+			<only>TERMINAL,iTERM2,MACVIM,PhpStorm</only>
 			<autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
-			<autogen>--KeyToKey-- KeyCode::[, VK_CONTROL, KeyCode::[, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
+			<autogen>--KeyToKey-- KeyCode::[, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
 			<autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
 		</item>
 		<item>
@@ -45,6 +49,12 @@
 			<name>Map F19 To Hyper</name>
 			<identifier>remap.wanashi.f19ToHyper</identifier>
 			<autogen>--KeyToKey-- KeyCode::F19, KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L</autogen>
+		</item>
+		<item>
+			<name>Disable Cmd + Tab</name>
+			<identifier>remap.wanashi.disableCmdTab</identifier>
+			<autogen>__KeyToKey__ KeyCode::TAB, VK_COMMAND | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+			<autogen>__KeyToKey__ KeyCode::TAB, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
 		</item>
 	</list>
 </root>

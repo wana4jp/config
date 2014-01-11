@@ -26,3 +26,5 @@
 	frag = cyan
 	old = red
 	new = cyan
+[core]
+	editor = vim -c \"set fenc=utf-8\"

@@ -35,6 +35,7 @@ NeoBundle 'git://github.com/scrooloose/syntastic.git'
 NeoBundle 'pyte'
 NeoBundle 'phd'
 NeoBundle 'supasorn/vim-easymotion'
+NeoBundle 'tomasr/molokai'
 
 
 " -----------
@@ -50,11 +51,16 @@ elseif OSTYPE == "Linux\n"
   set t_Co=256
 endif
 
+if has("gui_running")
+  source ~/.gvimrc
+  autocmd GUIEnter * set visualbell t_vb=
+endif
+
 
 " --------
 " settings
 " --------
-colorscheme phd
+colorscheme molokai
 syntax on
 set ambiwidth=double
 set background=dark
@@ -122,7 +128,7 @@ nnoremap ZQ <Nop>
 nnoremap Q <Nop>
 nnoremap <CR> o<Esc>
 command! EditVimrc :e ~/.vimrc
-command! EditGvimrc :e ~/_gvimrc
+command! EditGvimrc :e ~/.gvimrc
 augroup source-vimrc
   autocmd!
   autocmd BufWritePost *vimrc source $MYVIMRC

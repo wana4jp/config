@@ -5,6 +5,11 @@ endif
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 
+set noerrorbells
+set novisualbell
+set t_vb=
+autocmd! GUIEnter * set vb t_vb=
+
 
 " --------
 " settings

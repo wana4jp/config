@@ -4,6 +4,7 @@
 	branch = auto
 	interactive = auto
 	grep = auto
+	ui = true
 [merge]
 	tool = vimdiff
 [alias]
@@ -20,3 +21,8 @@
 	email = info@wanashi.com
 [core]
 	editor = vim -c \"set fenc=utf-8\"
+[color "diff"]
+	meta = white bold
+	frag = cyan
+	old = red
+	new = cyan

@@ -36,6 +36,7 @@ NeoBundle 'pyte'
 NeoBundle 'phd'
 NeoBundle 'supasorn/vim-easymotion'
 NeoBundle 'tomasr/molokai'
+NeoBundle 'altercation/vim-colors-solarized'
 
 
 " -----------
@@ -60,10 +61,12 @@ endif
 " --------
 " settings
 " --------
-colorscheme molokai
-syntax on
-set ambiwidth=double
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+syntax enable
 set background=dark
+colorscheme solarized
+set ambiwidth=double
 set clipboard=unnamed
 set completeopt=menuone
 set directory=$HOME/vswap

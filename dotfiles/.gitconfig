@@ -19,12 +19,15 @@
 [user]
 	name = wanashi
 	email = info@wanashi.com
-[core]
-	editor = vim -c \"set fenc=utf-8\"
 [color "diff"]
-	meta = white bold
+	meta = yellow
 	frag = cyan
 	old = red
-	new = cyan
+	new = green
+[color "status"]
+	meta = yellow
+	frag = cyan
+	old = pink
+	new = green
 [core]
 	editor = vim -c \"set fenc=utf-8\"

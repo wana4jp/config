@@ -103,9 +103,7 @@ au FileType php :set dictionary=~/.vim/dict/php.dict
 " mappings
 " --------
 let g:mapleader = ','
-nnoremap <silent> <LEADER>id :<C-u>edit ~/Dropbox/text/idea.mkd<CR>
-nnoremap <silent> <LEADER>td   :<C-u>edit ~/Dropbox/text/todo.mkd<CR>
-nnoremap <silent> <LEADER>bsh :<C-u>edit ~/.bashrc<CR>
+nnoremap <silent> <LEADER>memo :<C-u>edit ~/Dropbox/text/memo.mkd<CR>
 nnoremap <silent> <LEADER>vrc :<C-u>edit $MYVIMRC<CR>
 nnoremap <LEADER>v :<C-u>vsp<CR>
 nnoremap sh <C-w>h

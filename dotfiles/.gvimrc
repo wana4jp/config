@@ -14,8 +14,7 @@ autocmd! GUIEnter * set vb t_vb=
 " --------
 " settings
 " --------
-colorscheme pyte
-set background=light
+set background=dark
 set encoding=utf-8
 set langmenu=ja_jp.utf-8
 set showtabline=2

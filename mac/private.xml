@@ -37,6 +37,13 @@
 			<autogen>__KeyToKey__ KeyCode::W, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::W, ModifierFlag::COMMAND_L</autogen>
 		</item>
 		<item>
+			<name>Disable Cmd + T</name>
+			<identifier>remap.wanashi.disableCmdT</identifier>
+			<only>TERMINAL</only>
+			<autogen>__KeyToKey__ KeyCode::T, VK_COMMAND | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+			<autogen>__KeyToKey__ KeyCode::T, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
+		</item>
+		<item>
 			<name>Move Vim KeyBind With Eisu</name>
 			<identifier>remap.wanashi.eisuVimBind</identifier>
 			<autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>

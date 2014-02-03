@@ -9,6 +9,7 @@
 	tool = vimdiff
 [alias]
 	co = checkout
+	lg = log --stat
 	cob = checkout -b
 	bD = branch -d
 	com = checkout master

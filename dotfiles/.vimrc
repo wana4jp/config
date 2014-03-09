@@ -37,7 +37,7 @@ NeoBundle 'phd'
 NeoBundle 'supasorn/vim-easymotion'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'altercation/vim-colors-solarized'
-
+NeoBundle 'eagletmt/ghcmod-vim'
 
 " -----------
 " environment
@@ -208,6 +208,14 @@ hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade  Comment
 let g:EasyMotion_special_select_line = 0
 let g:EasyMotion_special_select_phrase = 0
+
+
+" ----------------------
+" plugin : ghcmod-vim
+" ----------------------
+let g:haskell_jmacro  = 0
+let g:haskell_conceal = 0
+let g:haskell_multiline_strings = 1
 
 
 " -------------

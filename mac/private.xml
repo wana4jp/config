@@ -37,6 +37,13 @@
 			<autogen>__KeyToKey__ KeyCode::W, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::W, ModifierFlag::COMMAND_L</autogen>
 		</item>
 		<item>
+			<name>Disable Cmd + P</name>
+			<identifier>remap.wanashi.disableCmdP</identifier>
+			<only>GOOGLE_CHROME, TERMINAL, SKYPE</only>
+			<autogen>__KeyToKey__ KeyCode::P, VK_COMMAND | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+			<autogen>__KeyToKey__ KeyCode::P, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::P, ModifierFlag::COMMAND_L</autogen>
+		</item>
+		<item>
 			<name>Disable Cmd + D</name>
 			<identifier>remap.wanashi.disableCmdD</identifier>
 			<only>TERMINAL</only>

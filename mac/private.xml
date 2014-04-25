@@ -17,11 +17,15 @@
 		<appname>Atom</appname>
 		<equal>com.github.atom</equal>
 	</appdef>
+	<appdef>
+		<appname>SublimeText3</appname>
+		<equal>com.sublimetext.3</equal>
+	</appdef>
 	<list>
 		<item>
 			<name>Leave InsertMode With Eisuu For Vim</name>
 			<identifier>remap.wanashi.vimEscWithEisuu</identifier>
-			<only>TERMINAL,iTERM2,MACVIM,PhpStorm,Atom</only>
+			<only>TERMINAL,iTERM2,MACVIM,PhpStorm,Atom,SublimeText3</only>
 			<autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
 			<autogen>--KeyToKey-- KeyCode::[, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
 			<autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>

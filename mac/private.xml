@@ -79,11 +79,5 @@
 			<identifier>remap.wanashi.f19ToHyper</identifier>
 			<autogen>--KeyToKey-- KeyCode::F19, KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L</autogen>
 		</item>
-		<item>
-			<name>Disable Cmd + Tab</name>
-			<identifier>remap.wanashi.disableCmdTab</identifier>
-			<autogen>__KeyToKey__ KeyCode::TAB, VK_COMMAND | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
-			<autogen>__KeyToKey__ KeyCode::TAB, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
-		</item>
 	</list>
 </root>

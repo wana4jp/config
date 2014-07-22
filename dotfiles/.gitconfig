@@ -18,8 +18,8 @@
 [gc]
 	auto = 0
 [user]
-	name = wanashi
-	email = info@wanashi.com
+	name = Shinji Kaneko
+	email = contact@wanashi.com
 [color "diff"]
 	meta = yellow
 	frag = cyan
@@ -33,5 +33,5 @@
 [core]
 	editor = vim -c \"set fenc=utf-8\"
 [user]
-	name = wanashi
-	email = info@wanashi.com
+	name = Shinji Kaneko
+	email = contact@wanashi.com

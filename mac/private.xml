@@ -82,13 +82,57 @@
 		<item>
 			<name>[filco minila]Swap Command_L and Option_L</name>
 			<identifier>remap.wanashi.swapCommandLAndOptionL</identifier>
-			<autogen>--KeyToKey-- KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
-			<autogen>--KeyToKey-- KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+			<autogen>
+				--KeyToKey--
+				KeyCode::COMMAND_L,
+				KeyCode::OPTION_L
+			</autogen>
+			<autogen>
+				--KeyToKey--
+				KeyCode::OPTION_L,
+				KeyCode::COMMAND_L
+			</autogen>
 		</item>
 		<item>
 			<name>[filco minila]Toggle Ime</name>
 			<identifier>remap.wanashi.minilaToggleIME</identifier>
-			<autogen>__KeyToKey__ KeyCode::SHIFT_R, ModifierFlag::SHIFT_L | ModifierFlag::SHIFT_R, KeyCode::VK_JIS_TOGGLE_EISUU_KANA</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::SHIFT_R, ModifierFlag::SHIFT_L,
+				KeyCode::VK_JIS_TOGGLE_EISUU_KANA
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::SPACE, ModifierFlag::COMMAND_L,
+				KeyCode::VK_JIS_TOGGLE_EISUU_KANA
+			</autogen>
+		</item>
+		<item>
+			<name>[filco minila]Volume Mute</name>
+			<identifier>remap.wanashi.minilaVolumeMute</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEY_0, ModifierFlag::OPTION_R,
+				ConsumerKeyCode::VOLUME_DOWN
+			</autogen>
+		</item>
+		<item>
+			<name>[filco minila]Volume Down</name>
+			<identifier>remap.wanashi.minilaVolumeDown</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::EQUAL, ModifierFlag::OPTION_R,
+				ConsumerKeyCode::VOLUME_UP
+			</autogen>
+		</item>
+		<item>
+			<name>[filco minila]Volume Up</name>
+			<identifier>remap.wanashi.minilaVolumeUp</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::MINUS, ModifierFlag::OPTION_R,
+				ConsumerKeyCode::VOLUME_DOWN
+			</autogen>
 		</item>
 	</list>
 </root>

@@ -79,5 +79,16 @@
 			<identifier>remap.wanashi.f19ToHyper</identifier>
 			<autogen>--KeyToKey-- KeyCode::F19, KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L</autogen>
 		</item>
+		<item>
+			<name>[filco minila]Swap Command_L and Option_L</name>
+			<identifier>remap.wanashi.swapCommandLAndOptionL</identifier>
+			<autogen>--KeyToKey-- KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+			<autogen>--KeyToKey-- KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+		</item>
+		<item>
+			<name>[filco minila]Toggle Ime</name>
+			<identifier>remap.wanashi.minilaToggleIME</identifier>
+			<autogen>__KeyToKey__ KeyCode::SHIFT_R, ModifierFlag::SHIFT_L | ModifierFlag::SHIFT_R, KeyCode::VK_JIS_TOGGLE_EISUU_KANA</autogen>
+		</item>
 	</list>
 </root>

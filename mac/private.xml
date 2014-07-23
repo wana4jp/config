@@ -134,5 +134,14 @@
 				ConsumerKeyCode::VOLUME_DOWN
 			</autogen>
 		</item>
+		<item>
+			<name>[filco minila]Show Desktop</name>
+			<identifier>remap.wanashi.minilaShowDesktop</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEY_5, ModifierFlag::OPTION_R,
+				KeyCode::F11
+			</autogen>
+		</item>
 	</list>
 </root>

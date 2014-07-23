@@ -66,7 +66,7 @@
 			<autogen>__KeyToKey__ KeyCode::T, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
 		</item>
 		<item>
-			<name>Move Vim KeyBind With Eisu</name>
+			<name>Vim KeyBind With Eisu</name>
 			<identifier>remap.wanashi.eisuVimBind</identifier>
 			<autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
 			<autogen>__KeyToKey__ KeyCode::H, ModifierFlag::EXTRA1, KeyCode::CURSOR_LEFT</autogen>
@@ -113,7 +113,7 @@
 			<autogen>
 				__KeyToKey__
 				KeyCode::KEY_0, ModifierFlag::OPTION_R,
-				ConsumerKeyCode::VOLUME_DOWN
+				ConsumerKeyCode::VOLUME_MUTE
 			</autogen>
 		</item>
 		<item>
@@ -142,6 +142,14 @@
 				KeyCode::KEY_5, ModifierFlag::OPTION_R,
 				KeyCode::F11
 			</autogen>
+		</item>
+		<item>
+			<name>[filco minila]Vim KeyBind With Ctrl</name>
+			<identifier>remap.wanashi.minilVimKeyBindWithCtrl</identifier>
+			<autogen>__KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::CURSOR_LEFT</autogen>
+			<autogen>__KeyToKey__ KeyCode::J, ModifierFlag::CONTROL_L, KeyCode::CURSOR_DOWN</autogen>
+			<autogen>__KeyToKey__ KeyCode::K, ModifierFlag::CONTROL_L, KeyCode::CURSOR_UP</autogen>
+			<autogen>__KeyToKey__ KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::CURSOR_RIGHT</autogen>
 		</item>
 	</list>
 </root>

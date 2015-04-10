@@ -101,11 +101,6 @@
 				KeyCode::SHIFT_R, ModifierFlag::SHIFT_L,
 				KeyCode::VK_JIS_TOGGLE_EISUU_KANA
 			</autogen>
-			<autogen>
-				__KeyToKey__
-				KeyCode::SPACE, ModifierFlag::COMMAND_L,
-				KeyCode::VK_JIS_TOGGLE_EISUU_KANA
-			</autogen>
 		</item>
 		<item>
 			<name>[filco minila]Volume Mute</name>

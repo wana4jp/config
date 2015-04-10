@@ -8,6 +8,7 @@ source $VIMRUNTIME/menu.vim
 set noerrorbells
 set novisualbell
 set t_vb=
+set noundofile
 autocmd! GUIEnter * set vb t_vb=
 
 

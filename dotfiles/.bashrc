@@ -95,7 +95,7 @@ alias mv='mv -iv'
 alias rm='rm -iv'
 alias mvi='/Applications/MacVim.app/Contents/MacOS/mvim'
 
-alias vi='mvi'
+#alias vi='mvi'
 alias v='vi'
 alias g='git'
 

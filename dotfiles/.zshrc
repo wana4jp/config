@@ -34,6 +34,8 @@ case ${OSTYPE} in
 esac
 
 alias up='cd ..'
+alias upup='cd ../..'
+alias upupup='cd ../../../'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
@@ -47,7 +49,7 @@ alias gb='git branch'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias ggrep='git grep -i -I'
-alias gl='git log'
+alias gl='git log --stat'
 alias glo='git log --oneline'
 alias gpl='git pull'
 alias gst='git status'

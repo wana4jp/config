@@ -93,8 +93,9 @@ alias up='cd ..'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
+alias mvi='/Applications/MacVim.app/Contents/MacOS/mvim'
 
-alias vi='vim'
+alias vi='mvi'
 alias v='vi'
 alias g='git'
 

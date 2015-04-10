@@ -9,19 +9,31 @@
 		<appname>MACVIM</appname>
 		<equal>org.vim.MacVim</equal>
 	</appdef>
+	<appdef>
+		<appname>PhpStorm</appname>
+		<equal>com.jetbrains.PhpStorm</equal>
+	</appdef>
+	<appdef>
+		<appname>Atom</appname>
+		<equal>com.github.atom</equal>
+	</appdef>
+	<appdef>
+		<appname>SublimeText3</appname>
+		<equal>com.sublimetext.3</equal>
+	</appdef>
 	<list>
 		<item>
 			<name>Leave InsertMode With Eisuu For Vim</name>
 			<identifier>remap.wanashi.vimEscWithEisuu</identifier>
-			<only>TERMINAL,iTERM2,MACVIM</only>
+			<only>TERMINAL,iTERM2,MACVIM,PhpStorm,Atom,SublimeText3</only>
 			<autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
-			<autogen>--KeyToKey-- KeyCode::[, VK_CONTROL, KeyCode::[, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
+			<autogen>--KeyToKey-- KeyCode::[, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
 			<autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
 		</item>
 		<item>
 			<name>Disable Cmd + Q</name>
 			<identifier>remap.wanashi.disableCmdQ</identifier>
-			<only>GOOGLE_CHROME, TERMINAL</only>
+			<only>GOOGLE_CHROME, TERMINAL, SKYPE</only>
 			<autogen>__KeyToKey__ KeyCode::Q, VK_COMMAND | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
 			<autogen>__KeyToKey__ KeyCode::Q, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::Q, ModifierFlag::COMMAND_L</autogen>
 		</item>
@@ -33,7 +45,28 @@
 			<autogen>__KeyToKey__ KeyCode::W, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::W, ModifierFlag::COMMAND_L</autogen>
 		</item>
 		<item>
-			<name>Move Vim KeyBind With Eisu</name>
+			<name>Disable Cmd + P</name>
+			<identifier>remap.wanashi.disableCmdP</identifier>
+			<only>GOOGLE_CHROME, TERMINAL, SKYPE</only>
+			<autogen>__KeyToKey__ KeyCode::P, VK_COMMAND | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+			<autogen>__KeyToKey__ KeyCode::P, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::P, ModifierFlag::COMMAND_L</autogen>
+		</item>
+		<item>
+			<name>Disable Cmd + D</name>
+			<identifier>remap.wanashi.disableCmdD</identifier>
+			<only>TERMINAL</only>
+			<autogen>__KeyToKey__ KeyCode::D, VK_COMMAND | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+			<autogen>__KeyToKey__ KeyCode::D, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::D, ModifierFlag::COMMAND_L</autogen>
+		</item>
+		<item>
+			<name>Disable Cmd + T</name>
+			<identifier>remap.wanashi.disableCmdT</identifier>
+			<only>TERMINAL</only>
+			<autogen>__KeyToKey__ KeyCode::T, VK_COMMAND | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+			<autogen>__KeyToKey__ KeyCode::T, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
+		</item>
+		<item>
+			<name>Vim KeyBind With Eisu</name>
 			<identifier>remap.wanashi.eisuVimBind</identifier>
 			<autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
 			<autogen>__KeyToKey__ KeyCode::H, ModifierFlag::EXTRA1, KeyCode::CURSOR_LEFT</autogen>
@@ -45,6 +78,73 @@
 			<name>Map F19 To Hyper</name>
 			<identifier>remap.wanashi.f19ToHyper</identifier>
 			<autogen>--KeyToKey-- KeyCode::F19, KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L</autogen>
+		</item>
+		<item>
+			<name>[filco minila]Swap Command_L and Option_L</name>
+			<identifier>remap.wanashi.swapCommandLAndOptionL</identifier>
+			<autogen>
+				--KeyToKey--
+				KeyCode::COMMAND_L,
+				KeyCode::OPTION_L
+			</autogen>
+			<autogen>
+				--KeyToKey--
+				KeyCode::OPTION_L,
+				KeyCode::COMMAND_L
+			</autogen>
+		</item>
+		<item>
+			<name>[filco minila]Toggle Ime</name>
+			<identifier>remap.wanashi.minilaToggleIME</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::SHIFT_R, ModifierFlag::SHIFT_L,
+				KeyCode::VK_JIS_TOGGLE_EISUU_KANA
+			</autogen>
+		</item>
+		<item>
+			<name>[filco minila]Volume Mute</name>
+			<identifier>remap.wanashi.minilaVolumeMute</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEY_0, ModifierFlag::OPTION_R,
+				ConsumerKeyCode::VOLUME_MUTE
+			</autogen>
+		</item>
+		<item>
+			<name>[filco minila]Volume Down</name>
+			<identifier>remap.wanashi.minilaVolumeDown</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::EQUAL, ModifierFlag::OPTION_R,
+				ConsumerKeyCode::VOLUME_UP
+			</autogen>
+		</item>
+		<item>
+			<name>[filco minila]Volume Up</name>
+			<identifier>remap.wanashi.minilaVolumeUp</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::MINUS, ModifierFlag::OPTION_R,
+				ConsumerKeyCode::VOLUME_DOWN
+			</autogen>
+		</item>
+		<item>
+			<name>[filco minila]Show Desktop</name>
+			<identifier>remap.wanashi.minilaShowDesktop</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::KEY_5, ModifierFlag::OPTION_R,
+				KeyCode::F11
+			</autogen>
+		</item>
+		<item>
+			<name>[filco minila]Vim KeyBind With Ctrl</name>
+			<identifier>remap.wanashi.minilVimKeyBindWithCtrl</identifier>
+			<autogen>__KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::CURSOR_LEFT</autogen>
+			<autogen>__KeyToKey__ KeyCode::J, ModifierFlag::CONTROL_L, KeyCode::CURSOR_DOWN</autogen>
+			<autogen>__KeyToKey__ KeyCode::K, ModifierFlag::CONTROL_L, KeyCode::CURSOR_UP</autogen>
+			<autogen>__KeyToKey__ KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::CURSOR_RIGHT</autogen>
 		</item>
 	</list>
 </root>

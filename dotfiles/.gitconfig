@@ -4,10 +4,12 @@
 	branch = auto
 	interactive = auto
 	grep = auto
+	ui = true
 [merge]
 	tool = vimdiff
 [alias]
 	co = checkout
+	lg = log --stat
 	cob = checkout -b
 	bD = branch -d
 	com = checkout master
@@ -15,8 +17,21 @@
 	chep = cherry-pick
 [gc]
 	auto = 0
+[user]
+	name = Shinji Kaneko
+	email = contact@wanashi.com
+[color "diff"]
+	meta = yellow
+	frag = cyan
+	old = red
+	new = green
+[color "status"]
+	meta = yellow
+	frag = cyan
+	old = pink
+	new = green
 [core]
 	editor = vim -c \"set fenc=utf-8\"
 [user]
-	name = wanashi
-	email = info@wanashi.com
+	name = Shinji Kaneko
+	email = contact@wanashi.com

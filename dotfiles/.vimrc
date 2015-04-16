@@ -179,7 +179,7 @@ let g:syntastic_mode_map = {
 " --------------
 " plugin : ctrlp
 " --------------
-let g:ctrlp_working_path_mode = 0
+"let g:ctrlp_working_path_mode = 0
 
 
 " ----------------------

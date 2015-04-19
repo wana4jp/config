@@ -79,11 +79,9 @@ popd()
 case "${OSTYPE}" in
   darwin*)
     alias ls="ls -laG"
-    alias ll="ls"
     ;;
   linux*)
     alias ls='ls -la --color'
-    alias ll='ls'
     ;;
 esac
 
@@ -98,6 +96,9 @@ alias mvi='/Applications/MacVim.app/Contents/MacOS/mvim'
 #alias vi='mvi'
 alias v='vi'
 alias g='git'
+alias c='cd'
+alias ll='ls'
+alias l='ls'
 
 alias gap='git add -p'
 alias gb='git branch'

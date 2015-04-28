@@ -7,4 +7,4 @@ do
 done
 
 # KeyRemap4MacBook
-ln -Fis $PWD/private.xml $HOME/Library/Application\ Support/KeyRemap4MacBook/
+ln -Fis $PWD/private.xml $HOME/Library/Application\ Support/Karabiner

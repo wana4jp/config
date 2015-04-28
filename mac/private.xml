@@ -25,7 +25,7 @@
 		<item>
 			<name>Leave InsertMode With Eisuu For Vim</name>
 			<identifier>remap.wanashi.vimEscWithEisuu</identifier>
-			<only>TERMINAL,iTERM2,MACVIM,PhpStorm,Atom,SublimeText3</only>
+			<only>TERMINAL,MACVIM,PhpStorm,Atom,SublimeText3</only>
 			<autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
 			<autogen>--KeyToKey-- KeyCode::[, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
 			<autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
@@ -80,71 +80,19 @@
 			<autogen>--KeyToKey-- KeyCode::F19, KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L</autogen>
 		</item>
 		<item>
-			<name>[filco minila]Swap Command_L and Option_L</name>
-			<identifier>remap.wanashi.swapCommandLAndOptionL</identifier>
+			<name>Switch Tab For Terminal</name>
+			<identifier>remap.wanashi.switchTabForTerminal</identifier>
+			<only>TERMINAL</only>
 			<autogen>
 				--KeyToKey--
-				KeyCode::COMMAND_L,
-				KeyCode::OPTION_L
+				KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+				KeyCode::BACKSLASH, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_R
 			</autogen>
 			<autogen>
 				--KeyToKey--
-				KeyCode::OPTION_L,
-				KeyCode::COMMAND_L
+				KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_R,
+				KeyCode::[, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_R
 			</autogen>
-		</item>
-		<item>
-			<name>[filco minila]Toggle Ime</name>
-			<identifier>remap.wanashi.minilaToggleIME</identifier>
-			<autogen>
-				__KeyToKey__
-				KeyCode::SHIFT_R, ModifierFlag::SHIFT_L,
-				KeyCode::VK_JIS_TOGGLE_EISUU_KANA
-			</autogen>
-		</item>
-		<item>
-			<name>[filco minila]Volume Mute</name>
-			<identifier>remap.wanashi.minilaVolumeMute</identifier>
-			<autogen>
-				__KeyToKey__
-				KeyCode::KEY_0, ModifierFlag::OPTION_R,
-				ConsumerKeyCode::VOLUME_MUTE
-			</autogen>
-		</item>
-		<item>
-			<name>[filco minila]Volume Down</name>
-			<identifier>remap.wanashi.minilaVolumeDown</identifier>
-			<autogen>
-				__KeyToKey__
-				KeyCode::EQUAL, ModifierFlag::OPTION_R,
-				ConsumerKeyCode::VOLUME_UP
-			</autogen>
-		</item>
-		<item>
-			<name>[filco minila]Volume Up</name>
-			<identifier>remap.wanashi.minilaVolumeUp</identifier>
-			<autogen>
-				__KeyToKey__
-				KeyCode::MINUS, ModifierFlag::OPTION_R,
-				ConsumerKeyCode::VOLUME_DOWN
-			</autogen>
-		</item>
-		<item>
-			<name>[filco minila]Show Desktop</name>
-			<identifier>remap.wanashi.minilaShowDesktop</identifier>
-			<autogen>
-				__KeyToKey__
-				KeyCode::KEY_5, ModifierFlag::OPTION_R,
-				KeyCode::F11
-			</autogen>
-		</item>
-		<item>
-			<name>[filco minila]Vim KeyBind With Ctrl</name>
-			<identifier>remap.wanashi.minilVimKeyBindWithCtrl</identifier>
-			<autogen>__KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_L, KeyCode::CURSOR_LEFT</autogen>
-			<autogen>__KeyToKey__ KeyCode::J, ModifierFlag::CONTROL_L, KeyCode::CURSOR_DOWN</autogen>
-			<autogen>__KeyToKey__ KeyCode::K, ModifierFlag::CONTROL_L, KeyCode::CURSOR_UP</autogen>
-			<autogen>__KeyToKey__ KeyCode::L, ModifierFlag::CONTROL_L, KeyCode::CURSOR_RIGHT</autogen>
 		</item>
 	</list>
 </root>

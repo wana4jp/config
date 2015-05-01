@@ -39,6 +39,7 @@ NeoBundle 'supasorn/vim-easymotion'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'eagletmt/ghcmod-vim'
+NeoBundle 'tyru/restart.vim'
 
 " -----------
 " environment
@@ -104,7 +105,6 @@ au FileType php :set dictionary=~/.vim/dict/php.dict
 " mappings
 " --------
 let g:mapleader = ','
-nnoremap <silent> <LEADER>memo :<C-u>edit ~/Dropbox/text/memo.mkd<CR>
 nnoremap <silent> <LEADER>vrc :<C-u>edit $MYVIMRC<CR>
 nnoremap <LEADER>v :<C-u>vsp<CR>
 nnoremap sh <C-w>h
@@ -131,9 +131,10 @@ nnoremap Q <Nop>
 nnoremap <CR> o<Esc>
 command! EditVimrc :e ~/.vimrc
 command! EditGvimrc :e ~/.gvimrc
+" auto reload .vimrc
 augroup source-vimrc
   autocmd!
-  autocmd BufWritePost *vimrc source $MYVIMRC
+  autocmd BufWritePost *vimrc source $MYVIMRC | set foldmethod=marker
   autocmd BufWritePost *gvimrc if has('gui_running') source $MYGVIMRC
 augroup END
 function! s:closeBuffer()
@@ -155,15 +156,43 @@ command! MyCloseBuffer call s:closeBuffer()
 nnoremap sd :<C-u>MyCloseBuffer<CR>
 
 " for plugins
-nnoremap <silent> <LEADER>f :<C-u>NERDTreeToggle<CR>
 nnoremap <silent> <LEADER>uo :<C-u>Unite<Space>outline<CR>
 
+
+" -----------------
+" plugin : Unite
+" -----------------
+
+" insert modeで開始
+let g:unite_enable_start_insert = 1
+
+" 大文字小文字を区別しない
+let g:unite_enable_ignore_case = 1
+let g:unite_enable_smart_case = 1
+
+" grep検索
+nnoremap <silent> <LEADER>gr  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+
+" カーソル位置の単語をgrep検索
+" nnoremap <silent> <LEADER>cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+
+" grep検索結果の再呼出
+" nnoremap <silent> <LEADER>r  :<C-u>UniteResume search-buffer<CR>
+
+" unite grep に ag(The Silver Searcher) を使う
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
 
 " -----------------
 " plugin : nerdtree
 " -----------------
 let g:NERDChristmasTree  = 1
 let g:NERDTreeShowHidden = 1
+
+nnoremap <silent> <LEADER>f :<C-u>NERDTreeToggle<CR>
 
 
 " ------------------

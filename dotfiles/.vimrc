@@ -16,30 +16,21 @@ endif
 filetype plugin indent on
 
 NeoBundle 'Shougo/neocomplcache.git'
-NeoBundle 'Shougo/unite-outline'
-NeoBundle 'Shougo/vimproc', {
-  \ 'build' : {
-  \ 'windows' : 'make -f make_mingw32.mak',
-    \ 'cygwin' : 'make -f make_cygwin.mak',
-    \ 'mac' : 'make -f make_mac.mak',
-    \ 'unix' : 'make -f make_unix.mak',
-  \ },
-\ }
-NeoBundle 'bling/vim-airline'
+NeoBundle 'git://github.com/Shougo/vimproc.git', {
+\	'build': {
+\		'mac':  'make -f make_mac.mak',
+\		'unix': 'make -f make_unix.mak',
+\	},
+\}
+NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'git://github.com/Shougo/unite.vim'
-NeoBundle 'git://github.com/guileen/simple-javascript-indenter'
 NeoBundle 'git://github.com/kien/ctrlp.vim'
 NeoBundle 'git://github.com/mattn/emmet-vim.git'
 NeoBundle 'git://github.com/scrooloose/nerdtree.git'
 NeoBundle 'git://github.com/scrooloose/syntastic.git'
-NeoBundle 'git://github.com/cohama/lexima.vim'
-NeoBundle 'pyte'
-NeoBundle 'phd'
-NeoBundle 'supasorn/vim-easymotion'
+NeoBundle 'szw/vim-tags'
 NeoBundle 'tomasr/molokai'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'eagletmt/ghcmod-vim'
-NeoBundle 'tyru/restart.vim'
+
 
 " -----------
 " environment
@@ -63,12 +54,10 @@ endif
 " --------
 " settings
 " --------
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-syntax enable
-set background=dark
 colorscheme molokai
+syntax enable
 set ambiwidth=double
+set background=dark
 set clipboard=unnamed
 set completeopt=menuone
 set directory=$HOME/vswap
@@ -101,24 +90,22 @@ au BufNewFile,BufRead *.vimrc setl sw=2 sts=2 ts=2 et
 au BufNewFile,BufRead *.bashrc setl sw=2 sts=2 ts=2 et
 au FileType php :set dictionary=~/.vim/dict/php.dict
 
+" ctags設定
+" 拡張子で読み込みタグ変更
+au BufNewFile,BufRead *.php set tags+=$HOME/php.tags
+" Tagファイルの生成コマンド (:TagsGenerate で実行する)
+au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags --languages=php -f ~/php.tags `pwd` 2>/dev/null &"
+" tagsジャンプの時に複数ある時は一覧表示
+nnoremap <C-]> g<C-]>
+
 " --------
 " mappings
 " --------
 let g:mapleader = ','
 nnoremap <silent> <LEADER>vrc :<C-u>edit $MYVIMRC<CR>
 nnoremap <LEADER>v :<C-u>vsp<CR>
-nnoremap sh <C-w>h
-nnoremap sj <C-w>j
-nnoremap sk <C-w>k
-nnoremap sl <C-w>l
-nnoremap sp :<C-u>bp<CR>
 nnoremap sn :<C-u>bn<CR>
-nnoremap <C-y> :<C-u>MyToggleSimpleDisplay<CR>
-function! s:toggleSimpleDisplay()
-  set number!
-  set list!
-endfunction
-command! MyToggleSimpleDisplay call s:toggleSimpleDisplay()
+nnoremap sp :<C-u>bp<CR>
 nnoremap j gj
 nnoremap k gk
 vnoremap u <Nop>
@@ -129,8 +116,7 @@ nnoremap ZZ <Nop>
 nnoremap ZQ <Nop>
 nnoremap Q <Nop>
 nnoremap <CR> o<Esc>
-command! EditVimrc :e ~/.vimrc
-command! EditGvimrc :e ~/.gvimrc
+command! EditVimrc  :e ~/.vimrc
 " auto reload .vimrc
 augroup source-vimrc
   autocmd!
@@ -154,9 +140,6 @@ function! s:closeBuffer()
 endfunction
 command! MyCloseBuffer call s:closeBuffer()
 nnoremap sd :<C-u>MyCloseBuffer<CR>
-
-" for plugins
-nnoremap <silent> <LEADER>uo :<C-u>Unite<Space>outline<CR>
 
 
 " -----------------
@@ -227,30 +210,3 @@ let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_dictionary_filetype_lists = {
   \ 'default' : '',
   \ }
-
-
-" ----------------------
-" plugin : vim-easymotion
-" ----------------------
-let g:EasyMotion_leader_key = ';'
-let g:EasyMotion_keys='hsdgyuiopqwertnmzxcvb;:f'
-hi link EasyMotionTarget ErrorMsg
-hi link EasyMotionShade  Comment
-let g:EasyMotion_special_select_line = 0
-let g:EasyMotion_special_select_phrase = 0
-
-
-" ----------------------
-" plugin : ghcmod-vim
-" ----------------------
-let g:haskell_jmacro  = 0
-let g:haskell_conceal = 0
-let g:haskell_multiline_strings = 1
-
-
-" -------------
-" local
-" -------------
-if filereadable(expand('~/.vimrc.local'))
-  source ~/.vimrc.local
-endif

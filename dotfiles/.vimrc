@@ -106,6 +106,10 @@ nnoremap <silent> <LEADER>vrc :<C-u>edit $MYVIMRC<CR>
 nnoremap <LEADER>v :<C-u>vsp<CR>
 nnoremap sn :<C-u>bn<CR>
 nnoremap sp :<C-u>bp<CR>
+nnoremap sh <C-w>h
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
 nnoremap j gj
 nnoremap k gk
 vnoremap u <Nop>

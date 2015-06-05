@@ -9,6 +9,6 @@ do
 done
 
 source ~/.bashrc
-if [ ! -d ~/vswap ]; then
-    mkdir ~/vswap
+if [ ! -d ~/vimswap ]; then
+    mkdir ~/vimswap
 fi

@@ -79,6 +79,7 @@ popd()
 case "${OSTYPE}" in
   darwin*)
     alias ls="ls -laG"
+    alias mvi='/Applications/MacVim.app/Contents/MacOS/mvim'
     ;;
   linux*)
     alias ls='ls -la --color'
@@ -91,9 +92,7 @@ alias up='cd ..'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
-alias mvi='/Applications/MacVim.app/Contents/MacOS/mvim'
 
-#alias vi='mvi'
 alias v='vi'
 alias g='git'
 alias c='cd'
@@ -109,9 +108,6 @@ alias gl='git log'
 alias glo='git log --oneline'
 alias gpl='git pull'
 alias gst='git status'
-
-allgrep() { find ./ -name "*" -exec grep $1 "{}" \;; }
-phpgrep() { find ./ -name "*.php" -exec grep $1 "{}" \;; }
 
 
 # local settings

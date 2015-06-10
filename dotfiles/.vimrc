@@ -158,7 +158,10 @@ let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
 
 " grep検索
-nnoremap <silent> <LEADER>gr  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent> <LEADER>ug :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+
+" バッファ一覧
+nnoremap <silent> <LEADER>ub :<C-u>Unite buffer -buffer-name=file<CR>
 
 " カーソル位置の単語をgrep検索
 " nnoremap <silent> <LEADER>cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>

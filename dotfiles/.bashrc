@@ -114,3 +114,6 @@ alias gst='git status'
 if [ -f ~/.bashrc.local ]; then
   source ~/.bashrc.local
 fi
+
+# facd
+eval "$(fasd --init auto)"

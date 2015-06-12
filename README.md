@@ -7,3 +7,5 @@ git submodule update
 ./init.sh
 v -c ":NeoBundleInstall"
 ```
+
+brew install fasd

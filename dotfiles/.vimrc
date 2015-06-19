@@ -98,6 +98,13 @@ au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags --langu
 " tagsジャンプの時に複数ある時は一覧表示
 nnoremap <C-]> g<C-]>
 
+" html / js のインデントはスペース2
+au BufNewFile,BufRead *.html set expandtab tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.js   set expandtab tabstop=2 shiftwidth=2
+
+au BufNewFile,BufRead *.php  set noexpandtab tabstop=4 shiftwidth=4
+
+
 " --------
 " mappings
 " --------

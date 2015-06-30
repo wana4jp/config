@@ -9,5 +9,7 @@ v -c ":NeoBundleInstall"
 ```
 
 brew install fasd
+
 brew install ctags
+
 brew install ag

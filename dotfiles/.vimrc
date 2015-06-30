@@ -30,6 +30,8 @@ NeoBundle 'git://github.com/scrooloose/nerdtree.git'
 NeoBundle 'git://github.com/scrooloose/syntastic.git'
 NeoBundle 'szw/vim-tags'
 NeoBundle 'tomasr/molokai'
+NeoBundle 'git://github.com/terryma/vim-expand-region.git'
+NeoBundle 'vim-scripts/gitignore'
 
 
 " -----------
@@ -108,9 +110,15 @@ au BufNewFile,BufRead *.php  set noexpandtab tabstop=4 shiftwidth=4
 " --------
 " mappings
 " --------
-let g:mapleader = ','
-nnoremap <silent> <LEADER>vrc :<C-u>edit $MYVIMRC<CR>
-nnoremap <LEADER>v :<C-u>vsp<CR>
+let mapleader = ','
+nnoremap <silent> <Leader>vrc :<C-u>edit $MYVIMRC<CR>
+nnoremap <Leader>v :<C-u>vsp<CR>
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+nnoremap <BS> gg
 nnoremap sn :<C-u>bn<CR>
 nnoremap sp :<C-u>bp<CR>
 nnoremap sh <C-w>h
@@ -151,7 +159,16 @@ function! s:closeBuffer()
 endfunction
 command! MyCloseBuffer call s:closeBuffer()
 nnoremap sd :<C-u>MyCloseBuffer<CR>
-
+" vp doesn't replace paste buffer
+function! RestoreRegister()
+  let @" = s:restore_reg
+  return ''
+endfunction
+function! s:Repl()
+  let s:restore_reg = @"
+  return "p@=RestoreRegister()\<cr>"
+endfunction
+vmap <silent> <expr> p <sid>Repl()
 
 " -----------------
 " plugin : Unite
@@ -165,16 +182,16 @@ let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
 
 " grep検索
-nnoremap <silent> <LEADER>ug :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent> <Leader>ug :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 
 " バッファ一覧
-nnoremap <silent> <LEADER>ub :<C-u>Unite buffer -buffer-name=file<CR>
+nnoremap <silent> <Leader>ub :<C-u>Unite buffer -buffer-name=file<CR>
 
 " カーソル位置の単語をgrep検索
-" nnoremap <silent> <LEADER>cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+" nnoremap <silent> <Leader>cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
 
 " grep検索結果の再呼出
-" nnoremap <silent> <LEADER>r  :<C-u>UniteResume search-buffer<CR>
+" nnoremap <silent> <Leader>r  :<C-u>UniteResume search-buffer<CR>
 
 " unite grep に ag(The Silver Searcher) を使う
 if executable('ag')
@@ -189,7 +206,7 @@ endif
 let g:NERDChristmasTree  = 1
 let g:NERDTreeShowHidden = 1
 
-nnoremap <silent> <LEADER>f :<C-u>NERDTreeToggle<CR>
+nnoremap <silent> <Leader>f :<C-u>NERDTreeToggle<CR>
 
 
 " ------------------
@@ -206,6 +223,19 @@ let g:syntastic_mode_map = {
 " plugin : ctrlp
 " --------------
 "let g:ctrlp_working_path_mode = 0
+let g:ctrlp_use_caching = 0
+" CtrlPでのgit または The Silver Searcher を使用する
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+else
+  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+  let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
+    \ }
+endif
+
 
 
 " ----------------------
@@ -224,3 +254,11 @@ let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_dictionary_filetype_lists = {
   \ 'default' : '',
   \ }
+
+
+" --------------------------
+" plugin : vim-expand-region
+" --------------------------
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+

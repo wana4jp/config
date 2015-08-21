@@ -217,6 +217,7 @@ let g:syntastic_mode_map = {
   \'active_filetypes': ['php'],
   \'passive_filetypes': [],
   \}
+let g:syntastic_php_checkers = ['php']
 
 
 " --------------

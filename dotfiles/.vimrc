@@ -32,7 +32,7 @@ NeoBundle 'szw/vim-tags'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'git://github.com/terryma/vim-expand-region.git'
 NeoBundle 'vim-scripts/gitignore'
-
+NeoBundle 'fatih/vim-go'
 
 " -----------
 " environment

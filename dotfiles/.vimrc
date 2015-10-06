@@ -119,6 +119,10 @@ vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 nnoremap <BS> gg
+nnoremap <C-a> <Home>
+nnoremap <C-e> <End>
+nnoremap <C-b> <Left>
+nnoremap <C-f> <Right>
 nnoremap sn :<C-u>bn<CR>
 nnoremap sp :<C-u>bp<CR>
 nnoremap sh <C-w>h

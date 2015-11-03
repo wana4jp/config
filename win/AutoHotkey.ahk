@@ -1,7 +1,7 @@
-; ---------
+; / ----- /
 ; functions
-; ---------
-IME_SET(SetSts, WinTitle="A")    {
+; / ----- /
+IMESet(SetSts, WinTitle="A")    {
     ControlGet,hwnd,HWND,,,%WinTitle%
     if  (WinActive(WinTitle))   {
         ptrSize := !A_PtrSize ? 4 : A_PtrSize
@@ -17,18 +17,55 @@ IME_SET(SetSts, WinTitle="A")    {
           ,  Int, 0x006  ;wParam  : IMC_SETOPENSTATUS
           ,  Int, SetSts) ;lParam  : 0 or 1
 }
+PushLeft()
+{
+   SysGet, m, MonitorWorkArea, 1
+   mX := mLeft
+   mY := mTop
+   mW := mRight - mLeft
+   mH := mBottom - mTop
 
-; ---------
+   WinGetPos,X,Y,W,H,A
+   WinMove,A,,0,0,(mW / 2),mH
+}
+PushRight()
+{
+   SysGet, m, MonitorWorkArea, 1
+   mX := mLeft
+   mY := mTop
+   mW := mRight - mLeft
+   mH := mBottom - mTop
+
+   WinGetPos,X,Y,W,H,A
+   WinMove,A,,(mW / 2),0,(mW / 2),mH
+}
+PushWhole()
+{
+   SysGet, m, MonitorWorkArea, 1
+   mX := mLeft
+   mY := mTop
+   mW := mRight - mLeft
+   mH := mBottom - mTop
+
+   WinGetPos,X,Y,W,H,A
+   WinMove,A,,0,0,mW,mH
+}
+
+
+; / ----- /
 ; mappings
-; ---------
-vk1Dsc07B :: IME_SET(0)
-vkF2sc070 :: IME_SET(1)
-vk1Csc079 :: IME_SET(1)
+; / ----- /
+vk1Dsc07B :: IMESet(0)
+vkF2sc070 :: IMESet(1)
+vk1Csc079 :: IMESet(1)
 vk1Dsc07B & h::Send,{Blind}{Left}
 vk1Dsc07B & j::Send,{Blind}{Down}
 vk1Dsc07B & k::Send,{Blind}{Up}
 vk1Dsc07B & l::Send,{Blind}{Right}
 
+#LEFT::PushLeft()
+#RIGHT::PushRight()
+#UP::PushWhole()
 
 ; Vim でESC時にIMEをOFFにする
 GroupAdd Terminal, ahk_class PuTTY
@@ -37,12 +74,12 @@ GroupAdd Terminal, ahk_class VTWin32 ; teraterm
 
 #IfWinActive ahk_group Terminal
   $Esc::
-  IME_SET(0)
+  IMESet(0)
   Send {Esc}
   return
 
   ^[::
-  IME_SET(0)
+  IMESet(0)
   Send {Esc}
-  return 
+  return
 #IfWinActive

@@ -68,11 +68,12 @@ vk1Dsc07B & l::Send,{Blind}{Right}
 #UP::PushWhole()
 
 ; Vim でESC時にIMEをOFFにする
-GroupAdd Terminal, ahk_class PuTTY
-GroupAdd Terminal, ahk_class mintty ; cygwin
-GroupAdd Terminal, ahk_class VTWin32 ; teraterm
+GroupAdd Vim, ahk_class PuTTY
+GroupAdd Vim, ahk_class mintty ; cygwin
+GroupAdd Vim, ahk_class VTWin32 ; teraterm
 
-#IfWinActive ahk_group Terminal
+if WinActive("ahk_group Vim") or WinActive("ahk_exe idea.exe")
+{
   $Esc::
   IMESet(0)
   Send {Esc}
@@ -82,4 +83,4 @@ GroupAdd Terminal, ahk_class VTWin32 ; teraterm
   IMESet(0)
   Send {Esc}
   return
-#IfWinActive
+}

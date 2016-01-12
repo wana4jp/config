@@ -95,11 +95,9 @@
 			</autogen>
 		</item>
 		<item>
-			<name>Disable Call HotKey For Skype</name>
-			<identifier>remap.wanashi.disableCallHotKey</identifier>
-			<only>SKYPE</only>
-			<autogen>__KeyToKey__ KeyCode::R, VK_COMMAND | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
-			<autogen>__KeyToKey__ KeyCode::R, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::R, ModifierFlag::COMMAND_L</autogen>
+			<name>Switch App to MissionControl</name>
+			<identifier>remap.wanashi.SwitchAppToMissionControl</identifier>
+			<autogen>__KeyToKey__ KeyCode::TAB, VK_COMMAND | ModifierFlag::NONE, KeyCode::MISSION_CONTROL</autogen>
 		</item>
 	</list>
 </root>

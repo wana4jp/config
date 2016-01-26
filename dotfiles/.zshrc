@@ -1,4 +1,5 @@
 export LANG=ja_JP.UTF-8
+export EDITOR="/usr/bin/vim"
 
 # 色の設定を可能にする
 autoload -Uz colors

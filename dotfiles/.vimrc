@@ -76,7 +76,9 @@ set laststatus=2
 set list
 set listchars=tab:>-,trail:_,extends:<,precedes:>
 set nobackup
+set noignorecase
 set noexpandtab
+set backupskip=/tmp/*,/private/tmp/*
 set nowrapscan
 set number
 set shiftwidth=4

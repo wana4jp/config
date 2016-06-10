@@ -1,2 +1,10 @@
 set clipboard=unnamed
 set vb
+
+nnoremap <Leader>v :<C-u>vsp<CR>
+nnoremap sl <C-w>l
+nnoremap sh <C-w>h
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap <CR> o<Esc>
+nnoremap f <C-;>

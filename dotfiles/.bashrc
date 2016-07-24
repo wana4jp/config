@@ -7,6 +7,8 @@ if [ -f ~/.git-completion.sh ]; then
   source ~/.git-completion.sh
 fi
 
+export PATH=/usr/local/bin:$PATH
+export EDITOR="/usr/local/bin/vim"
 
 # settings
 set -o noclobber

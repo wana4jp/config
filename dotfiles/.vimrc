@@ -1,30 +1,25 @@
-"dein Scripts-----------------------------
 if &compatible
-  set nocompatible               " Be iMproved
+  set nocompatible
 endif
 
-" Required:
-set runtimepath^=dotfiles/.vim/plugins/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.vim/plugins/repos/github.com/Shougo/dein.vim
 
-" Required:
-call dein#begin(expand('dotfiles/.vim/plugins'))
+if dein#load_state(expand('~/.vim/plugins'))
+    call dein#begin(expand('~/.vim/plugins'))
 
-call dein#add('Shougo/neocomplete.vim')
-call dein#add('Shougo/unite.vim')
-call dein#add('Shougo/unite-outline')
-call dein#add('altercation/vim-colors-solarized')
-call dein#add('kien/ctrlp.vim')
-call dein#add('scrooloose/nerdtree')
-call dein#add('scrooloose/syntastic')
-call dein#add('tomasr/molokai')
+    let g:dein_dir = expand('~/.vim')
+    let s:toml = g:dein_dir . '/dein.toml'
+    let s:lazy_toml = g:dein_dir . '/dein_lazy.toml'
 
-" Required:
-call dein#end()
+    call dein#load_toml(s:toml, {'lazy': 0})
+    call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-" Required:
+    call dein#end()
+    call dein#save_state()
+endif
+
 filetype plugin indent on
 
-" If you want to install not installed plugins on startup.
 if dein#check_install()
   call dein#install()
 endif

@@ -59,7 +59,7 @@ S.bind(util.key('9'), function(win) {
   win.move(next.visibleRect());
 });
 
-S.bind(util.key('down'), S.operation('chain', {
+S.bind(util.key('j'), S.operation('chain', {
   operations: _.map(['top-right', 'bottom-right', 'bottom-left', 'top-left'], function(d) {
     return S.operation('corner', {
       direction: d,
@@ -69,18 +69,18 @@ S.bind(util.key('down'), S.operation('chain', {
   })
 }));
 
-S.bind(util.key('up'), function(win) {
+S.bind(util.key('k'), function(win) {
   if (!win) return;
   var bounds = win.screen().visibleRect();
   win.doOperation('move', bounds);
 });
 
-S.bind(util.key('left'), S.operation('push', {
+S.bind(util.key('l'), S.operation('push', {
   direction: 'left',
   style: 'bar-resize:screenSizeX/2'
 }));
 
-S.bind(util.key('right'), S.operation('push', {
+S.bind(util.key('h'), S.operation('push', {
   direction: 'right',
   style: 'bar-resize:screenSizeX/2'
 }));
@@ -89,28 +89,3 @@ S.bind(util.key('h'), S.operation('focus', { direction: 'left' }));
 S.bind(util.key('j'), S.operation('focus', { direction: 'down' }));
 S.bind(util.key('k'), S.operation('focus', { direction: 'up' }));
 S.bind(util.key('l'), S.operation('focus', { direction: 'right' }));
-
-
-// -------
-// layouts
-// -------
-
-var focusITerm = S.operation("focus", { "app" : "iTerm" });
-
-var leftBottomLeft = S.operation("move", {
-  "x" : "screenOriginX",
-  "y" : "screenOriginY+(screenSizeY/2)",
-  "width" : "screenSizeX/2",
-  "height": "screenSizeY/2"
-});
-
-var firstMonitorLayout = S.layout("threeMonitors", {
-  "_after_" : {
-    "operations" : focusITerm
-  },
- "MacVim" : {
-    "operations" : leftBottomLeft
-  }
-});
-
-S.bind(util.key('a'), S.operation("layout", {"name" : firstMonitorLayout}));

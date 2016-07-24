@@ -75,12 +75,12 @@ S.bind(util.key('k'), function(win) {
   win.doOperation('move', bounds);
 });
 
-S.bind(util.key('l'), S.operation('push', {
+S.bind(util.key('h'), S.operation('push', {
   direction: 'left',
   style: 'bar-resize:screenSizeX/2'
 }));
 
-S.bind(util.key('h'), S.operation('push', {
+S.bind(util.key('l'), S.operation('push', {
   direction: 'right',
   style: 'bar-resize:screenSizeX/2'
 }));

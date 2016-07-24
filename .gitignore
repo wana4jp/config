@@ -1,2 +1,2 @@
-dotfiles/.vim/bundle/
-dotfiles/.vim/.netrwhist
+dotfiles/.vim/plugins
+.cache*

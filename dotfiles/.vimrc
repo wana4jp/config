@@ -1,38 +1,33 @@
-"  __      ____ _ _ __   __ _ ___| |__ (_)
-"  \ \ /\ / / _` | '_ \ / _` / __| '_ \| |
-"   \ V  V / (_| | | | | (_| \__ \ | | | |
-"    \_/\_/ \__,_|_| |_|\__,_|___/_| |_|_|
-
-set nocompatible
-
-" -------
-" plugins
-" -------
-filetype plugin indent off
-if has('vim_starting')
-  set runtimepath+=~/.vim/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
 endif
+
+" Required:
+set runtimepath^=dotfiles/.vim/plugins/repos/github.com/Shougo/dein.vim
+
+" Required:
+call dein#begin(expand('dotfiles/.vim/plugins'))
+
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/unite-outline')
+call dein#add('altercation/vim-colors-solarized')
+call dein#add('kien/ctrlp.vim')
+call dein#add('scrooloose/nerdtree')
+call dein#add('scrooloose/syntastic')
+call dein#add('tomasr/molokai')
+
+" Required:
+call dein#end()
+
+" Required:
 filetype plugin indent on
 
-NeoBundle 'Shougo/neocomplcache.git'
-NeoBundle 'git://github.com/Shougo/vimproc.git', {
-\	'build': {
-\		'mac':  'make -f make_mac.mak',
-\		'unix': 'make -f make_unix.mak',
-\	},
-\}
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'git://github.com/Shougo/unite.vim'
-NeoBundle 'git://github.com/kien/ctrlp.vim'
-NeoBundle 'git://github.com/mattn/emmet-vim.git'
-NeoBundle 'git://github.com/scrooloose/nerdtree.git'
-NeoBundle 'git://github.com/scrooloose/syntastic.git'
-NeoBundle 'szw/vim-tags'
-NeoBundle 'tomasr/molokai'
-NeoBundle 'git://github.com/terryma/vim-expand-region.git'
-NeoBundle 'vim-scripts/gitignore'
-NeoBundle 'fatih/vim-go'
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
 
 " -----------
 " environment
@@ -177,24 +172,12 @@ vmap <silent> <expr> p <sid>Repl()
 " plugin : Unite
 " -----------------
 
-" insert modeで開始
-let g:unite_enable_start_insert = 1
-
-" 大文字小文字を区別しない
 let g:unite_enable_ignore_case = 1
 let g:unite_enable_smart_case = 1
 
-" grep検索
 nnoremap <silent> <Leader>ug :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-
-" バッファ一覧
 nnoremap <silent> <Leader>ub :<C-u>Unite buffer -buffer-name=file<CR>
-
-" カーソル位置の単語をgrep検索
-" nnoremap <silent> <Leader>cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
-
-" grep検索結果の再呼出
-" nnoremap <silent> <Leader>r  :<C-u>UniteResume search-buffer<CR>
+nnoremap <silent> <Leader>uo :<C-u>Unite outline <CR>
 
 " unite grep に ag(The Silver Searcher) を使う
 if executable('ag')
@@ -226,9 +209,8 @@ let g:syntastic_php_checkers = ['php']
 " --------------
 " plugin : ctrlp
 " --------------
-"let g:ctrlp_working_path_mode = 0
 let g:ctrlp_use_caching = 0
-" CtrlPでのgit または The Silver Searcher を使用する
+" use `The Silver Searcher`
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
@@ -239,30 +221,3 @@ else
     \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
     \ }
 endif
-
-
-
-" ----------------------
-" plugin : neocomplcache
-" ----------------------
-let g:neocomplcache_plugin_disable = {
-  \ 'syntax_complete' : 1,
-  \ }
-let g:neocomplcache_enable_camel_case_completion = 0
-let g:neocomplcache_enable_underbar_completion = 0
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_max_list = 20
-let g:neocomplcache_auto_completion_start_length = 2
-let g:neocomplcache_enable_ignore_case = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_dictionary_filetype_lists = {
-  \ 'default' : '',
-  \ }
-
-
-" --------------------------
-" plugin : vim-expand-region
-" --------------------------
-vmap v <Plug>(expand_region_expand)
-vmap <C-v> <Plug>(expand_region_shrink)
-

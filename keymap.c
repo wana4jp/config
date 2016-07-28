@@ -10,7 +10,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |  ~`    |   1  |   2  |   3  |   4  |   5  |   6  |           |  7   |   8  |   9  |   0  |   +  |   =  |  EJC   |
+ * |  ~`    |   1  |   2  |   3  |   4  |   5  |   6  |           |  7   |   8  |   9  |   0  |   -  |   =  |  EJC   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * | Tab    |   Q  |   W  |   E  |   R  |   T  |      |           |  Del |   Y  |   U  |   I  |   O  |   P  | BKSpace|
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                         KC_HOME,
                                         KC_LANG2,KC_SPC, KC_END,
         // right hand
-             KC_7,        KC_8,   KC_9,    KC_0,    KC_PLUS,KC_EQL,   KC_EJCT,
+             KC_7,        KC_8,   KC_9,    KC_0,    KC_MINS,KC_EQL,   KC_EJCT,
              KC_DEL,      KC_Y,   KC_U,    KC_I,    KC_O,   KC_P,     KC_BSPC,
                           KC_H,   KC_J,    KC_K,    KC_L,   KC_LBRC,  KC_ENT,
              KC_NO,       KC_N,   KC_M,    KC_SCLN, KC_QUOT,KC_RBRC,  KC_RSFT,

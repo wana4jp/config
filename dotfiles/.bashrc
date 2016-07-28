@@ -12,7 +12,6 @@ export EDITOR="/usr/local/bin/vim"
 
 # settings
 set -o noclobber
-export EDITOR=/usr/bin/vim
 export HISTFILESIZE=100000
 export HISTSIZE=100000
 export IGNOREEOF=10

@@ -1,3 +1,8 @@
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
-insert = 1
+repo = 'Shougo/neocomplete'
+if = 'has("lua")'
+on_i = 1
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+on_ft = ['markdown']

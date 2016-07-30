@@ -5,17 +5,17 @@ endif
 set runtimepath+=~/.vim/plugins/repos/github.com/Shougo/dein.vim
 
 if dein#load_state(expand('~/.vim/plugins'))
-    call dein#begin(expand('~/.vim/plugins'))
+  call dein#begin(expand('~/.vim/plugins'))
 
-    let g:dein_dir = expand('~/.vim')
-    let s:toml = g:dein_dir . '/dein.toml'
-    let s:lazy_toml = g:dein_dir . '/dein_lazy.toml'
+  let g:dein_dir = expand('~/.vim')
+  let s:toml = g:dein_dir . '/dein.toml'
+  let s:lazy_toml = g:dein_dir . '/dein_lazy.toml'
 
-    call dein#load_toml(s:toml, {'lazy': 0})
-    call dein#load_toml(s:lazy_toml, {'lazy': 1})
+  call dein#load_toml(s:toml, {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-    call dein#end()
-    call dein#save_state()
+  call dein#end()
+  call dein#save_state()
 endif
 
 filetype plugin indent on
@@ -37,16 +37,16 @@ elseif OSTYPE == "Linux\n"
   set t_Co=256
 endif
 
-if has("gui_running")
-  source ~/.gvimrc
-  autocmd GUIEnter * set visualbell t_vb=
-endif
-
+let g:scheme = 'molokai'
+augroup guicolorscheme
+  autocmd!
+  execute 'autocmd GUIEnter * colorscheme' scheme
+augroup END
+execute 'colorscheme' scheme
 
 " --------
 " settings
 " --------
-colorscheme molokai
 syntax enable
 set ambiwidth=double
 set background=dark
@@ -182,6 +182,13 @@ if executable('ag')
 endif
 
 " -----------------
+" plugin : vim-markdown
+" -----------------
+let g:vim_markdown_math = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_toc_autofit = 1
+
+" -----------------
 " plugin : nerdtree
 " -----------------
 let g:NERDChristmasTree  = 1
@@ -189,17 +196,15 @@ let g:NERDTreeShowHidden = 1
 
 nnoremap <silent> <Leader>f :<C-u>NERDTreeToggle<CR>
 
-
 " ------------------
 " plugin : syntastic
 " ------------------
 let g:syntastic_mode_map = {
-  \'mode': 'passive',
-  \'active_filetypes': ['php'],
-  \'passive_filetypes': [],
-  \}
+      \'mode': 'passive',
+      \'active_filetypes': ['php'],
+      \'passive_filetypes': [],
+      \}
 let g:syntastic_php_checkers = ['php']
-
 
 " --------------
 " plugin : ctrlp
@@ -213,6 +218,6 @@ if executable('ag')
 else
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
   let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
-    \ }
+        \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
+        \ }
 endif

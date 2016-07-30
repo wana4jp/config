@@ -14,10 +14,19 @@ repo = 'tomasr/molokai'
 repo = 'altercation/vim-colors-solarized'
 
 [[plugins]]
-repo = 'kien/ctrlp.vim'
+repo = 'ctrlpvim/ctrlp.vim'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
 repo = 'scrooloose/syntastic'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'LeafCage/foldCC.vim'
+
+[[plugins]]
+repo = 'ervandew/supertab'

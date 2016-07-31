@@ -4,5 +4,9 @@ if = 'has("lua")'
 on_i = 1
 
 [[plugins]]
+repo = 'godlygeek/tabular'
+
+[[plugins]]
 repo = 'plasticboy/vim-markdown'
 on_ft = ['markdown']
+depends = ['tabular']

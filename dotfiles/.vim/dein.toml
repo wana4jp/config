@@ -26,7 +26,4 @@ repo = 'scrooloose/syntastic'
 repo = 'itchyny/lightline.vim'
 
 [[plugins]]
-repo = 'LeafCage/foldCC.vim'
-
-[[plugins]]
 repo = 'ervandew/supertab'

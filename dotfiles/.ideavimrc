@@ -9,3 +9,4 @@ nnoremap sk <C-w>k
 nnoremap <CR> o<Esc>
 nnoremap <SPACE> i<SPACE><Esc>
 nnoremap f <C-;>
+map ; :

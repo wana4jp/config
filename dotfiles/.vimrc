@@ -88,6 +88,7 @@ vnoremap gU <Nop>
 nnoremap ZZ <Nop>
 nnoremap ZQ <Nop>
 nnoremap Q <Nop>
+map ; :
 nnoremap <CR> o<Esc>
 nnoremap <SPACE> i<SPACE><Esc>
 command! EditVimrc  :e ~/.vimrc " auto reload .vimrc

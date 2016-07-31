@@ -43,6 +43,7 @@ set fileformats=unix,dos,mac
 set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,cp932,utf-16,utf-16le
 set noexpandtab
 set tabstop=4
+set autoread
 
 " Search and Replace
 set hlsearch
@@ -169,6 +170,9 @@ else
         \ 'AcceptSelection("e")': ['<space>', '<cr>', '<2-LeftMouse>'],
         \ }
 endif
+
+" vim-auto-save
+let g:auto_save = 1
 
 " }}}1
 

@@ -5,11 +5,12 @@ if &compatible
   set nocompatible
 endif
 set runtimepath+=~/.vim/plugins/repos/github.com/Shougo/dein.vim
+
 if dein#load_state(expand('~/.vim/plugins'))
-  call dein#begin(expand('~/.vim/plugins'))
   let g:dein_dir = expand('~/.vim')
   let s:toml = g:dein_dir . '/dein.toml'
   let s:lazy_toml = g:dein_dir . '/dein_lazy.toml'
+  call dein#begin(expand('~/.vim/plugins'), [$MYVIMRC, s:toml, s:lazy_toml])
   call dein#load_toml(s:toml, {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
   call dein#end()

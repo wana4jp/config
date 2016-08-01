@@ -99,5 +99,19 @@
 			<identifier>remap.wanashi.SwitchAppToMissionControl</identifier>
 			<autogen>__KeyToKey__ KeyCode::TAB, VK_COMMAND | ModifierFlag::NONE, KeyCode::MISSION_CONTROL</autogen>
 		</item>
-	</list>
+		<item>
+			<name>Option to IME On/Off</name>
+			<identifier>remap.wanashi.OptionToIme</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::OPTION_R,
+				KeyCode::JIS_KANA
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::OPTION_L,
+				KeyCode::JIS_EISUU
+			</autogen>
+		</item>
+</list>
 </root>

@@ -97,7 +97,7 @@
 		</item>
 		<item>
 			<name>For HHK Settings</name>
-			<identifier>remap.wanashi.OptionToIme</identifier>
+			<identifier>remap.wanashi.ForHHK</identifier>
 			<autogen>
 				__KeyToKey__
 				KeyCode::OPTION_R,
@@ -112,6 +112,25 @@
 				__KeyToKey__
 				KeyCode::COMMAND_R,
 				KeyCode::OPTION_R
+			</autogen>
+		</item>
+		<item>
+			<name>For Mac US keyboard Settings(https://pqrs.org/osx/karabiner/faq.html.ja#exchange-caps-lock-and-left-control)</name>
+			<identifier>remap.wanashi.ForMacUS</identifier>
+			<autogen>
+				__KeyToKey__
+				KeyCode::COMMAND_R,
+				KeyCode::JIS_KANA
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::COMMAND_L,
+				KeyCode::JIS_EISUU
+			</autogen>
+			<autogen>
+				__KeyToKey__
+				KeyCode::OPTION_L,
+				KeyCode::COMMAND_L
 			</autogen>
 		</item>
 </list>

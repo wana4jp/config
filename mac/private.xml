@@ -62,15 +62,6 @@
 			<autogen>__KeyToKey__ KeyCode::T, VK_COMMAND | VK_SHIFT | ModifierFlag::NONE, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
 		</item>
 		<item>
-			<name>Vim KeyBind With Eisu</name>
-			<identifier>remap.wanashi.eisuVimBind</identifier>
-			<autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
-			<autogen>__KeyToKey__ KeyCode::H, ModifierFlag::EXTRA1, KeyCode::CURSOR_LEFT</autogen>
-			<autogen>__KeyToKey__ KeyCode::J, ModifierFlag::EXTRA1, KeyCode::CURSOR_DOWN</autogen>
-			<autogen>__KeyToKey__ KeyCode::K, ModifierFlag::EXTRA1, KeyCode::CURSOR_UP</autogen>
-			<autogen>__KeyToKey__ KeyCode::L, ModifierFlag::EXTRA1, KeyCode::CURSOR_RIGHT</autogen>
-		</item>
-		<item>
 			<name>Map F19 To Hyper</name>
 			<identifier>remap.wanashi.f19ToHyper</identifier>
 			<autogen>--KeyToKey-- KeyCode::F19, KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L</autogen>
@@ -132,6 +123,16 @@
 				KeyCode::OPTION_L,
 				KeyCode::COMMAND_L
 			</autogen>
+		</item>
+		<!-- need to set at the bottom of the file -->
+		<item>
+			<name>Vim KeyBind With Eisu</name>
+			<identifier>remap.wanashi.eisuVimBind</identifier>
+			<autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
+			<autogen>__KeyToKey__ KeyCode::H, ModifierFlag::EXTRA1, KeyCode::CURSOR_LEFT</autogen>
+			<autogen>__KeyToKey__ KeyCode::J, ModifierFlag::EXTRA1, KeyCode::CURSOR_DOWN</autogen>
+			<autogen>__KeyToKey__ KeyCode::K, ModifierFlag::EXTRA1, KeyCode::CURSOR_UP</autogen>
+			<autogen>__KeyToKey__ KeyCode::L, ModifierFlag::EXTRA1, KeyCode::CURSOR_RIGHT</autogen>
 		</item>
 </list>
 </root>

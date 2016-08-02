@@ -6,7 +6,7 @@
 		<equal>com.googlecode.iterm2</equal>
 	</appdef>
 	<appdef>
-		<appname>MACVIM</appname>
+		<appname>MacVim</appname>
 		<equal>org.vim.MacVim</equal>
 	</appdef>
 	<appdef>
@@ -17,15 +17,11 @@
 		<appname>Atom</appname>
 		<equal>com.github.atom</equal>
 	</appdef>
-	<appdef>
-		<appname>SublimeText3</appname>
-		<equal>com.sublimetext.3</equal>
-	</appdef>
 	<list>
 		<item>
 			<name>Leave InsertMode With Eisuu For Vim</name>
 			<identifier>remap.wanashi.vimEscWithEisuu</identifier>
-			<only>TERMINAL,MACVIM,PhpStorm,Atom,SublimeText3</only>
+			<only>TERMINAL,MacVim,PhpStorm,Atom</only>
 			<autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
 			<autogen>--KeyToKey-- KeyCode::[, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
 			<autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
@@ -80,18 +76,18 @@
 			<autogen>--KeyToKey-- KeyCode::F19, KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L</autogen>
 		</item>
 		<item>
-			<name>Switch Tab For Terminal</name>
+			<name>Terminal Shortcuts</name>
 			<identifier>remap.wanashi.switchTabForTerminal</identifier>
 			<only>TERMINAL</only>
 			<autogen>
 				--KeyToKey--
 				KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
-				KeyCode::BACKSLASH, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_R
+				KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_R
 			</autogen>
 			<autogen>
 				--KeyToKey--
 				KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_R,
-				KeyCode::[, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_R
+				KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_R | ModifierFlag::SHIFT_R
 			</autogen>
 		</item>
 		<item>

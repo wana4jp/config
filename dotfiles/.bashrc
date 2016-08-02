@@ -94,6 +94,7 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
 
+alias vi='vim'
 alias v='vi'
 alias g='git'
 alias c='cd'

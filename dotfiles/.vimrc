@@ -45,6 +45,7 @@ set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,cp932,utf-16,utf-16le
 set noexpandtab
 set tabstop=4
 set autoread
+autocmd FileType * setlocal textwidth=0
 
 " Search and Replace
 set hlsearch
@@ -173,7 +174,7 @@ else
 endif
 
 " vim-auto-save
-let g:auto_save = 1
+autocmd FileType markdown let g:auto_save = 1
 
 " }}}1
 

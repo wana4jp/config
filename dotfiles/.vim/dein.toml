@@ -27,3 +27,6 @@ repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 repo = 'ervandew/supertab'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'

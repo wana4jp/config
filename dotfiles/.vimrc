@@ -147,6 +147,7 @@ let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_folding_level = 6
 let g:vim_markdown_new_list_item_indent = 2
+let g:vim_markdown_folding_disabled = 1
 
 " nerdtree
 let g:NERDChristmasTree  = 1
@@ -174,8 +175,16 @@ else
 endif
 
 " vim-auto-save
-autocmd FileType markdown let g:auto_save = 1
+autocmd FileType * call s:autoSaveSetting()
 
+function! s:autoSaveSetting()
+  let l:file_type = &ft
+  if 'markdown' == l:file_type
+    let g:auto_save = 1
+  else
+    let g:auto_save = 0
+  endif
+endfunction
 " }}}1
 
 " vim: foldmethod=marker

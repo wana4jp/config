@@ -10,7 +10,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |  ~`    |   1  |   2  |   3  |   4  |   5  |   6  |           |  7   |   8  |   9  |   0  |   -  |   =  |  EJC   |
+ * |  ~`    |   1  |   2  |   3  |   4  |   5  |   6  |           |   7  |   8  |   9  |   0  |   -  |   =  |  EJC   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * | Tab    |   Q  |   W  |   E  |   R  |   T  |  ESC |           |  Del |   Y  |   U  |   I  |   O  |   P  | BKSpace|
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
@@ -21,11 +21,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   | L1   | Caps | LAlt |      | LGui |                                        |   ,  |   .  |   /  |   \  |  L2  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                       ,--------------.       ,---------------.
- *                                       | Left  | Right|       | Down |   Up   |
+ *                                       |  Home |  End |       | Left |  Right |
  *                                ,------|-------|------|       |------+--------+------.
- *                                |      |       | Home |       | PgUp |        |      |
+ *                                |      |       | PgUp |       |  Up  |        |      |
  *                                | MHEN | Space |------|       |------|  Space |  HEN |
- *                                |      |       | End  |       | PgDn |        |      |
+ *                                |      |       | PgDn |       | Down |        |      |
  *                                `---------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
@@ -37,18 +37,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTRL,       KC_A,     KC_S,    KC_D,   KC_F,   KC_G,
         KC_LSFT,        KC_Z,     KC_X,    KC_C,   KC_V,   KC_B,   KC_NO,
         LT(SYMB,KC_NO), KC_CAPS,  KC_LALT, KC_NO,  KC_LGUI,
-                                                   KC_LEFT,KC_RGHT,
-                                                           KC_HOME,
-                                        KC_LANG2,  KC_SPC, KC_END,
+                                                   KC_HOME,KC_END,
+                                                           KC_PGUP,
+                                        KC_LANG2,  KC_SPC, KC_PGDN,
         // right hand
              KC_7,        KC_8,   KC_9,    KC_0,    KC_MINS,KC_EQL,   KC_EJCT,
              KC_DEL,      KC_Y,   KC_U,    KC_I,    KC_O,   KC_P,     KC_BSPC,
                           KC_H,   KC_J,    KC_K,    KC_L,   KC_LBRC,  KC_ENT,
              KC_NO,       KC_N,   KC_M,    KC_SCLN, KC_QUOT,KC_RBRC,  KC_RSFT,
                                   KC_COMM, KC_DOT,  KC_SLSH,KC_BSLS,  LT(MDIA,KC_NO),
-             KC_DOWN,    KC_UP,
-             KC_PGUP,
-             KC_PGDN,   KC_SPC,   KC_LANG1
+             KC_LEFT,     KC_RGHT,
+             KC_UP,
+             KC_DOWN,     KC_SPC,   KC_LANG1
     ),
 /* Keymap 1: Symbol Layer
  *

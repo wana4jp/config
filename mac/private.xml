@@ -111,6 +111,30 @@
 			<autogen>__KeyOverlaidModifier__ KeyCode::COMMAND_L, KeyCode::COMMAND_L, KeyCode::JIS_EISUU</autogen>
 			<autogen>__KeyOverlaidModifier__ KeyCode::COMMAND_R, KeyCode::COMMAND_R, KeyCode::JIS_KANA</autogen>
 		</item>
+		<item>
+			<name>Ctrl + ijkl to Arrow</name>
+			<identifier>remap.wanashi.ctrlijklToArrow</identifier>
+			<autogen>
+					--KeyToKey--
+					KeyCode::J, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+					KeyCode::CURSOR_LEFT
+			</autogen>
+			<autogen>
+					--KeyToKey--
+					KeyCode::K, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+					KeyCode::CURSOR_DOWN
+			</autogen>
+			<autogen>
+					--KeyToKey--
+					KeyCode::I, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+					KeyCode::CURSOR_UP
+			</autogen>
+			<autogen>
+					--KeyToKey--
+					KeyCode::L, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+					KeyCode::CURSOR_RIGHT
+			</autogen>
+		</item>
 		<!-- need to set at the bottom of the file -->
 		<item>
 			<name>Vim KeyBind With Eisu</name>

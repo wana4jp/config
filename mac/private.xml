@@ -106,8 +106,7 @@
 			</autogen>
 		</item>
 		<item>
-			<name>For Mac US keyboard Settings</name>
-			<appendix>require additional setting with Seil : https://pqrs.org/osx/karabiner/faq.html.ja#exchange-caps-lock-and-left-control</appendix>
+			<name>Command Key to change IME</name>
 			<identifier>remap.wanashi.commandKeyForImeOnAndOff</identifier>
 			<autogen>__KeyOverlaidModifier__ KeyCode::COMMAND_L, KeyCode::COMMAND_L, KeyCode::JIS_EISUU</autogen>
 			<autogen>__KeyOverlaidModifier__ KeyCode::COMMAND_R, KeyCode::COMMAND_R, KeyCode::JIS_KANA</autogen>

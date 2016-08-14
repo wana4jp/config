@@ -24,6 +24,7 @@
 			<only>TERMINAL,MacVim,PhpStorm,Atom</only>
 			<autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
 			<autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, VK_CONTROL, KeyCode::BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
+			<autogen>--KeyToKey-- KeyCode::[, VK_CONTROL, KeyCode::BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
 			<autogen>--KeyToKey-- KeyCode::BRACKET_RIGHT, VK_CONTROL, KeyCode::BRACKET_RIGHT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
 			<autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
 		</item>

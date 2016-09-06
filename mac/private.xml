@@ -107,36 +107,35 @@
 			</autogen>
 		</item>
 		<item>
-			<name>Command Key to change IME</name>
+			<name>Command Key to change IME(press twice)</name>
 			<identifier>remap.wanashi.commandKeyForImeOnAndOff</identifier>
-			<autogen>__KeyOverlaidModifier__ KeyCode::COMMAND_L, KeyCode::COMMAND_L, KeyCode::JIS_EISUU</autogen>
-			<autogen>__KeyOverlaidModifier__ KeyCode::COMMAND_R, KeyCode::COMMAND_R, KeyCode::JIS_KANA</autogen>
+			<autogen>__DoublePressModifier__ KeyCode::COMMAND_L, KeyCode::COMMAND_L, KeyCode::JIS_EISUU</autogen>
+			<autogen>__DoublePressModifier__ KeyCode::COMMAND_R, KeyCode::COMMAND_R, KeyCode::JIS_KANA</autogen>
 		</item>
 		<item>
-			<name>Command + hjkl to Arrow</name>
+			<name>Ctrl + hjkl to Arrow</name>
 			<identifier>remap.wanashi.ctrlijklToArrow</identifier>
 			<autogen>
 					--KeyToKey--
-					KeyCode::H, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
+					KeyCode::H, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
 					KeyCode::CURSOR_LEFT
 			</autogen>
 			<autogen>
 					--KeyToKey--
-					KeyCode::J, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
+					KeyCode::J, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
 					KeyCode::CURSOR_DOWN
 			</autogen>
 			<autogen>
 					--KeyToKey--
-					KeyCode::K, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
+					KeyCode::K, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
 					KeyCode::CURSOR_UP
 			</autogen>
 			<autogen>
 					--KeyToKey--
-					KeyCode::L, ModifierFlag::COMMAND_L | ModifierFlag::NONE,
+					KeyCode::L, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
 					KeyCode::CURSOR_RIGHT
 			</autogen>
 		</item>
-		<!-- need to set at the bottom of the file -->
 		<item>
 			<name>Vim KeyBind With Eisu</name>
 			<identifier>remap.wanashi.eisuVimBind</identifier>

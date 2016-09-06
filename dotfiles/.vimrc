@@ -86,11 +86,12 @@ nnoremap j gj
 nnoremap k gk
 vnoremap u <nop>
 vnoremap U <Nop>
-vnoremap gu <Nop>
-vnoremap gU <Nop>
-nnoremap ZZ <Nop>
-nnoremap ZQ <Nop>
+nnoremap K <Nop>
 nnoremap Q <Nop>
+nnoremap ZQ <Nop>
+nnoremap ZZ <Nop>
+vnoremap gU <Nop>
+vnoremap gu <Nop>
 map ; :
 nnoremap <CR> o<Esc>
 nnoremap <SPACE> i<SPACE><Esc>

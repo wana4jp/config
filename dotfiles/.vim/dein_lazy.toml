@@ -10,7 +10,3 @@ repo = 'godlygeek/tabular'
 repo = 'plasticboy/vim-markdown'
 on_ft = ['markdown']
 depends = ['tabular']
-
-[[plugins]]
-repo = '907th/vim-auto-save'
-on_ft = ['markdown']

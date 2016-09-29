@@ -1,5 +1,5 @@
 export LANG=ja_JP.UTF-8
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$HOME/bin:$PATH
 export EDITOR="/usr/local/bin/vim"
 
 # 色の設定を可能にする

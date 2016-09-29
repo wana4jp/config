@@ -18,4 +18,7 @@ rm installer.sh
 
 # symlink for GoogleIME
 ln -s ~/Dropbox/JapaneseInput /Users/wanashi/Library/Application\ Support/Google
+
+# symlink for TODO text 
+ln -s Dropbox/tasks/ tasks
 ```

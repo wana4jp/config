@@ -1,0 +1,14 @@
+#!/bin/bash
+# vim: filetype=sh
+
+FORCE_PUSH="force|delete|-f"
+PROTECTED_BRANCHES="(master|develop)"  # force push を禁止するブランチ
+PUSH_COMMAND=`ps -ocommand= -p $PPID`
+
+while read local_ref local_sha1 remote_ref remote_sha1
+do
+  if [[ "${remote_ref##refs/heads/}" =~ $PROTECTED_BRANCHES && "$PUSH_COMMAND" =~ $FORCE_PUSH ]]; then
+    echo "This force-push to the ${remote_ref##refs/heads/} branch has been blocked."
+    exit 1
+  fi
+done

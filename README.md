@@ -11,6 +11,7 @@ brew install fasd
 brew install ctags
 brew install ag
 brew install shellcheck
+brew install s3cmd
 
 # vim
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh

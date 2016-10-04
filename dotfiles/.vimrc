@@ -142,6 +142,15 @@ if executable('ag')
   let g:unite_source_grep_recursive_opt = ''
 endif
 
+" vim-proc
+let g:quickrun_config = {
+\   "_" : {
+\       "runner" : "vimproc",
+\       "runner/vimproc/updatetime" : 60
+\   },
+\}
+nnoremap <silent> <Leader>q :<C-u>QuickRun <CR>
+
 " vim-markdown
 let g:vim_markdown_math = 1
 let g:vim_markdown_frontmatter = 1

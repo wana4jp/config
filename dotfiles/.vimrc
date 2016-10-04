@@ -61,6 +61,7 @@ set ttyfast
 set vb t_vb=
 au BufNewFile,BufRead *.html set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.js   set expandtab tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.sh   set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.rb   set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.erb  set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.json set expandtab tabstop=2 shiftwidth=2
@@ -142,7 +143,7 @@ if executable('ag')
   let g:unite_source_grep_recursive_opt = ''
 endif
 
-" vim-proc
+" vim-quickrun
 let g:quickrun_config = {
 \   "_" : {
 \       "runner" : "vimproc",

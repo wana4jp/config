@@ -33,7 +33,7 @@
 [core]
 	editor = vim -c \"set fenc=utf-8\"
 [user]
-	name = Shinji Kaneko
+	name = wanashi
 	email = contact@wanashi.com
 [init]
 	templatedir = /Users/wanashi/.git_template

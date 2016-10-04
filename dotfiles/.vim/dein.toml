@@ -8,6 +8,10 @@ repo = 'Shougo/unite.vim'
 repo = 'Shougo/unite-outline'
 
 [[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
 repo = 'tomasr/molokai'
 
 [[plugins]]

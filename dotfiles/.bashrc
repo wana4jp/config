@@ -16,7 +16,6 @@ export HISTFILESIZE=100000
 export HISTSIZE=100000
 export IGNOREEOF=10
 
-
 # prompt
 prompt_setup() {
   local c_reset='\[\e[0m\]'

@@ -10,6 +10,7 @@ brew install vim --with-lua # lua is for 'neocomplete'
 brew install fasd
 brew install ctags
 brew install ag
+brew install shellcheck
 
 # vim
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh

@@ -165,12 +165,16 @@ let g:NERDTreeShowHidden = 1
 nnoremap <silent> <Leader>f :<C-u>NERDTreeToggle<CR>
 
 " syntastic
-let g:syntastic_mode_map = {
-      \'mode': 'passive',
-      \'active_filetypes': ['php'],
-      \'passive_filetypes': [],
-      \}
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 let g:syntastic_php_checkers = ['php']
+let g:syntastic_sh_checkers = ['shellcheck']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " ctrlp
 let g:ctrlp_use_caching = 0

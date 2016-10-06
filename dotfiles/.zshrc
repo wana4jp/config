@@ -168,3 +168,5 @@ eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-wcomp)"
 
 # vim:set ft=zsh:
 export PATH=$(brew --prefix)/bin:$PATH
+
+set -g default-terminal "xterm"

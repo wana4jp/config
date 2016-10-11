@@ -1,25 +1,24 @@
 [color]
-	status = auto
-	diff = auto
 	branch = auto
-	interactive = auto
+	diff = auto
 	grep = auto
+	interactive = auto
+	status = auto
 	ui = true
 [merge]
 	tool = vimdiff
 [alias]
 	co = checkout
-	lg = log --stat
 	cob = checkout -b
-	bD = branch -d
 	com = checkout master
 	a = add
-	chep = cherry-pick
 [gc]
 	auto = 0
 [user]
-	name = Shinji Kaneko
+	name = wanashi
 	email = contact@wanashi.com
+[push]
+	 default = current
 [color "diff"]
 	meta = yellow
 	frag = cyan

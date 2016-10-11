@@ -170,3 +170,5 @@ eval "$(fasd --init posix-alias zsh-hook zsh-ccomp zsh-wcomp)"
 export PATH=$(brew --prefix)/bin:$PATH
 
 set -g default-terminal "xterm"
+
+export PATH=$HOME/.nodebrew/current/bin:$PATH

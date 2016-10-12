@@ -37,3 +37,6 @@ repo = 'ervandew/supertab'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'rhysd/committia.vim'

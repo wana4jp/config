@@ -1,9 +1,8 @@
 #!/bin/sh
 
-cd $(dirname $0)
 for dotfile in `ls -A dotfiles/`
 do
-	ln -Fis "$PWD/dotfiles/$dotfile" $HOME
+	ln -Fis "$PWD/dotfiles/$dotfile" "$HOME"
 done
 
 if [ ! -d ~/vimswap ]; then

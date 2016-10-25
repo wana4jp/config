@@ -3,7 +3,7 @@ Set Up
 
 # common
 
-```
+```shell
 # dotfiles
 ./init.sh
 
@@ -13,11 +13,10 @@ sh ./installer.sh ~/config/dotfiles/.vim/plugins
 rm installer.sh
 
 # symlink for TODO text 
-
 ln -s ~/Dropbox/tasks/ tasks
 ```
 
 # particular operating system
 
-[Windows](config/env/Windows/README.md)
-[macOS](config/env/macOS/README.md)
+- [Windows](env/Windows/README.md)
+- [macOS](env/macOS/README.md)

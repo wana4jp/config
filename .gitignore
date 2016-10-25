@@ -1,4 +1,5 @@
+*.un~
+.DS_Store
+.cache*
 dotfiles/.vim/.netrwhist
 dotfiles/.vim/plugins
-.cache*
-*.un~

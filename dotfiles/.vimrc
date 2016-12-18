@@ -96,6 +96,7 @@ vnoremap gu <Nop>
 map ; :
 nnoremap <CR> o<Esc>
 nnoremap <SPACE> i<SPACE><Esc>
+nnoremap <silent><Esc><Esc> :<C-u>nohlsearch<CR>
 command! EditVimrc  :e ~/.vimrc " auto reload .vimrc
 augroup source-vimrc
   autocmd!

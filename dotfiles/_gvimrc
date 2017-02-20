@@ -1,0 +1,12 @@
+set encoding=utf-8
+set ttyfast
+set vb t_vb=
+set clipboard=unnamed,autoselect
+set backupdir=~/AppData/Local/Temp
+set directory=~/AppData/Local/Temp
+set undodir=~/AppData/Local/Temp
+set viminfo+=n~/AppData/Local/Temp
+
+nnoremap sn :<C-u>bn<CR>
+nnoremap sp :<C-u>bp<CR>
+nnoremap <CR> o<Esc>

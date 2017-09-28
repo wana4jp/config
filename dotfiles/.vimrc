@@ -1,6 +1,6 @@
-" Basic Settings {{{1
+" Basic Settings
 
-" Plugin Manager {{{2
+" Plugin Manager
 if &compatible
   set nocompatible
 endif
@@ -67,10 +67,11 @@ au BufNewFile,BufRead *.erb  set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.json set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.php  set noexpandtab tabstop=4 shiftwidth=4
 
-" }}}1
-" Key mappings {{{1
+" Key mappings
 let mapleader = ','
+map ; :
 nnoremap <silent> <Leader>vrc :<C-u>edit $MYVIMRC<CR>
+
 nnoremap <Leader>v :<C-u>vsp<CR>
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
@@ -130,7 +131,7 @@ function! s:Repl()
 endfunction
 vmap <silent> <expr> p <sid>Repl()
 
-" Plugin Settings {{{1
+" Plugin Settings
 
 " Unite
 let g:unite_enable_ignore_case = 1
@@ -202,8 +203,3 @@ function! s:autoSaveSetting()
     let g:auto_save = 0
   endif
 endfunction
-" }}}1
-
-" vim: foldmethod=marker
-" vim: foldcolumn=3
-" vim: foldlevel=0

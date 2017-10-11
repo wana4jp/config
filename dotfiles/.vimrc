@@ -20,7 +20,8 @@ filetype plugin indent on
 if dein#check_install()
   call dein#install()
 endif
-" 2}}}
+
+" let OSTYPE = system('uname')
 
 " Appearance
 let g:scheme = 'molokai'
@@ -36,6 +37,7 @@ set laststatus=2   " 2 : always
 set ambiwidth=double
 set showtabline=2
 set listchars=tab:>-,trail:_,extends:<,precedes:>
+set list
 syntax enable
 
 " Edit

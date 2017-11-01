@@ -1,39 +1,39 @@
 {
-    "title": "Don't exit when pressing LCommand + q",
-    "rules": [
+  "title": "Don't quit App when pressing LCommand + q",
+  "rules": [
+    {
+      "description": "Don't quit App when pressing LCommand + q",
+      "manipulators": [
         {
-            "description": "Remap LCommand + q to q", 
-            "manipulators": [
-                {
-                    "conditions": [
-                        {
-                            "bundle_identifiers": [
-                                "^com\.apple\.Terminal$",
-                                "^com\.apple\.iTunes$",
-                                "^com\.evernote\.Evernote$",
-                                "^com\.google\.Chrome$",
-                                "^com\.zive\.kiwi$",
-                                "^org\.vim\."
-                            ],
-                            "type": "frontmost_application_if"
-                        }
-                    ], 
-                    "from": {
-                        "key_code": "q",
-                        "modifiers": {
-                            "mandatory": [
-                                "left_command"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "q"
-                        }
-                    ],
-                    "type": "basic"
-                }
-            ]
+          "type": "basic",
+          "from": {
+            "key_code": "q",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "q"
+            }
+          ],
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com.apple.Terminal$",
+                "^com.apple.iTunes$",
+                "^com.evernote.Evernote$",
+                "^com.google.Chrome$",
+                "^com.zive.kiwi$",
+                "^org.vim."
+              ],
+              "type": "frontmost_application_if"
+            }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }

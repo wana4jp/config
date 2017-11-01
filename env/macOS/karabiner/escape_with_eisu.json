@@ -1,14 +1,15 @@
 {
+    "title": "IME off when escape from insert mode",
     "rules": [
         {
-            "description": "[vim]eisable IME when escape insert mode",
+            "description": "IME off when escape from insert mode",
             "manipulators": [
                 {
                     "conditions": [
                         {
                             "bundle_identifiers": [
-                                "^com\.apple\.Terminal$",
-                                "^org\.vim\."
+                                "^com.apple.Terminal$",
+                                "^org.vim."
                             ],
                             "type": "frontmost_application_if"
                         }
@@ -17,7 +18,8 @@
                         "key_code": "escape",
                         "modifiers": {
                             "optional": [
-                                "any" ]
+                                "any"
+                            ]
                         }
                     },
                     "to": [
@@ -34,8 +36,8 @@
                     "conditions": [
                         {
                             "bundle_identifiers": [
-                                "^com\.apple\.Terminal$",
-                                "^org\.vim\."
+                                "^com.apple.Terminal$",
+                                "^org.vim."
                             ],
                             "type": "frontmost_application_if"
                         }
@@ -60,6 +62,5 @@
                 }
             ]
         }
-    ],
-    "title": "[vim]eisable IME when escape insert mode"
+    ]
 }

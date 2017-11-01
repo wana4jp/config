@@ -62,12 +62,14 @@ set swapfile
 set ttyfast
 set vb t_vb=
 au BufNewFile,BufRead *.html set expandtab tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.svg  set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.js   set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.sh   set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.rb   set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.erb  set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.json set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.php  set noexpandtab tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.blade.php set expandtab tabstop=2 shiftwidth=2
 
 " Key mappings
 let mapleader = ','
@@ -77,6 +79,7 @@ nnoremap <silent> <Leader>vrc :<C-u>edit $MYVIMRC<CR>
 nnoremap <Leader>v :<C-u>vsp<CR>
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
+vnoremap <leader>p "_dP
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]

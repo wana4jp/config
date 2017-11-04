@@ -32,4 +32,4 @@
 	name = kanekoelastic
 	email = m@shinji-kaneko.com
 [init]
-	templatedir = ~/.git_template
+	templatedir = /Users/kanekoshinji/.git_template

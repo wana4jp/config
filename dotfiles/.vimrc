@@ -61,6 +61,7 @@ set directory=$HOME/vimswap
 set swapfile
 set ttyfast
 set vb t_vb=
+au BufNewFile,BufRead *.txt  set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.html set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.svg  set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.js   set expandtab tabstop=2 shiftwidth=2
@@ -146,7 +147,7 @@ nnoremap <silent> <Leader>ub :<C-u>Unite buffer -buffer-name=file<CR>
 nnoremap <silent> <Leader>uo :<C-u>Unite outline <CR>
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column -U'
   let g:unite_source_grep_recursive_opt = ''
 endif
 
@@ -189,7 +190,7 @@ let g:syntastic_check_on_wq = 0
 let g:ctrlp_use_caching = 0
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" -U'
 else
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
   let g:ctrlp_prompt_mappings = {

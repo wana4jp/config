@@ -1,12 +1,11 @@
 [[plugins]]
-repo = 'Shougo/neocomplete'
-if = 'has("lua")'
-on_i = 1
-
-[[plugins]]
 repo = 'godlygeek/tabular'
 
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
 on_ft = ['markdown']
 depends = ['tabular']
+
+[[plugins]]
+repo = 'vim-ruby/vim-ruby'
+on_ft = ['ruby']

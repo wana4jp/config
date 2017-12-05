@@ -1,9 +1,5 @@
 #!/bin/sh
-MAKE_LINK_LIST=".slate.js"
-for dotfile in $MAKE_LINK_LIST
+for file in `ls -A ~/config/env/macOS/karabiner/`
 do
-	ln -Fis "$PWD/$dotfile" "$HOME"
+  ln -Fis ~/config/env/macOS/karabiner/$file ~/.config/karabiner/assets/complex_modifications/
 done
-
-# KeyRemap4MacBook
-ln -Fis "$PWD/private.xml" "$HOME/Library/Application Support/Karabiner"

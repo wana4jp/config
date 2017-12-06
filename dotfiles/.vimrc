@@ -61,6 +61,7 @@ set directory=$HOME/vimswap
 set swapfile
 set ttyfast
 set vb t_vb=
+au BufNewFile,BufRead *.es6 setfiletype javascript
 au BufNewFile,BufRead *.txt  set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.html set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.svg  set expandtab tabstop=2 shiftwidth=2
@@ -200,7 +201,6 @@ endif
 
 " vim-auto-save
 autocmd FileType * call s:autoSaveSetting()
-
 function! s:autoSaveSetting()
   let l:file_type = &ft
   if 'markdown' == l:file_type
@@ -209,3 +209,19 @@ function! s:autoSaveSetting()
     let g:auto_save = 0
   endif
 endfunction
+
+" javascript-libraries-syntax
+augroup MyVimrc
+  autocmd!
+augroup END
+function! EnableJavascript()
+  " Setup used libraries
+  let g:used_javascript_libs = 'jquery,underscore,react,flux,jasmine,d3'
+  let b:javascript_lib_use_jquery = 1
+  let b:javascript_lib_use_underscore = 1
+  let b:javascript_lib_use_react = 1
+  let b:javascript_lib_use_flux = 1
+  let b:javascript_lib_use_jasmine = 1
+  let b:javascript_lib_use_d3 = 1
+endfunction
+autocmd MyVimrc FileType javascript,javascript.jsx call EnableJavascript()

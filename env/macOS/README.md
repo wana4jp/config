@@ -22,3 +22,6 @@ https://pqrs.org/osx/karabiner/
 
 # create symlink
 `./init.sh`
+
+# change default shell
+`chsh -s /bin/zsh`

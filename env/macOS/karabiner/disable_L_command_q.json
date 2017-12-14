@@ -23,11 +23,10 @@
             {
               "bundle_identifiers": [
                 "^com.apple.Terminal$",
-                "^com.apple.iTunes$",
                 "^com.evernote.Evernote$",
                 "^com.google.Chrome$",
                 "^com.zive.kiwi$",
-                "^org.vim."
+                "^com.tinyspeck.slackmacgap$"
               ],
               "type": "frontmost_application_if"
             }

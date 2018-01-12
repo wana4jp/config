@@ -134,6 +134,8 @@ alias glo='git log --oneline'
 alias gpl='git pull'
 alias gst='git status'
 
+alias vssh='vagrant ssh'
+
 ########################################
 # OS 別の設定
 case ${OSTYPE} in

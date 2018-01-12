@@ -72,6 +72,7 @@ au BufNewFile,BufRead *.rb   set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.sh   set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.svg  set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.txt  set expandtab tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.yml  set expandtab tabstop=2 shiftwidth=2
 
 " Key mappings
 let mapleader = ','

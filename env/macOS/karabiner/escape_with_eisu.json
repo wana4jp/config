@@ -9,7 +9,8 @@
                         {
                             "bundle_identifiers": [
                                 "^com.apple.Terminal$",
-                                "^org.vim."
+                                "^org.vim.",
+                                "^com.maisin.boost$"
                             ],
                             "type": "frontmost_application_if"
                         }
@@ -37,7 +38,8 @@
                         {
                             "bundle_identifiers": [
                                 "^com.apple.Terminal$",
-                                "^org.vim."
+                                "^org.vim.",
+                                "^com.maisin.boost$"
                             ],
                             "type": "frontmost_application_if"
                         }
@@ -65,7 +67,8 @@
                         {
                             "bundle_identifiers": [
                                 "^com.apple.Terminal$",
-                                "^org.vim."
+                                "^org.vim.",
+                                "^com.maisin.boost$"
                             ],
                             "type": "frontmost_application_if"
                         }

@@ -25,3 +25,10 @@ https://pqrs.org/osx/karabiner/
 
 # change default shell
 `chsh -s /bin/zsh`
+
+# set boostnote vim mapping
+
+```
+CodeMirror.Vim.map(';', ':', 'normal');
+CodeMirror.Vim.map('<CR>', 'o<Esc>', 'normal');
+```

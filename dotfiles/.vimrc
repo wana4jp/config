@@ -62,12 +62,12 @@ set swapfile
 set ttyfast
 set vb t_vb=
 au BufNewFile,BufRead *.es6 setfiletype javascript
-au BufNewFile,BufRead *.blade.php set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.erb  set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.html set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.js   set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.json set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.php  set noexpandtab tabstop=4 shiftwidth=4
+au BufNewFile,BufRead *.blade.php set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.rb   set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.sh   set expandtab tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.svg  set expandtab tabstop=2 shiftwidth=2

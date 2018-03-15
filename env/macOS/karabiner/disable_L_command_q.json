@@ -23,10 +23,12 @@
             {
               "bundle_identifiers": [
                 "^com.apple.Terminal$",
+                "^com.apple.dt.Xcode$",
                 "^com.evernote.Evernote$",
                 "^com.google.Chrome$",
-                "^com.zive.kiwi$",
-                "^com.tinyspeck.slackmacgap$"
+                "^com.google.android.studio$",
+                "^com.tinyspeck.slackmacgap$",
+                "^com.zive.kiwi$"
               ],
               "type": "frontmost_application_if"
             }

@@ -28,7 +28,8 @@
                 "^com.google.Chrome$",
                 "^com.google.android.studio$",
                 "^com.tinyspeck.slackmacgap$",
-                "^com.zive.kiwi$"
+                "^com.zive.kiwi$",
+                "^org.mozilla.firefox$"
               ],
               "type": "frontmost_application_if"
             }

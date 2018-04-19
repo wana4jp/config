@@ -1,35 +1,69 @@
+[alias]
+	# Show verbose output about tags, branches or remotes
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+
+	# View abbreviated SHA, description, and history graph of the latest 20 commits
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+
+	# View the current working tree status using the short format
+	s = status -s
+
+	# Show the diff between the latest commit and the current state
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+
+	# Switch to a branch, creating it if necessary
+	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+
+	# Remove branches that have already been merged with master
+	# a.k.a. ‘delete merged’
+	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+[core]
+	# Speed up commands involving untracked files such as `git status`.
+	# https://git-scm.com/docs/git-update-index#_untracked_cache
+	untrackedCache = true
+
 [color]
-	branch = auto
-	diff = auto
-	grep = auto
-	interactive = auto
-	status = auto
-	ui = true
+	# Use colors in Git commands that are capable of colored output when
+	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+	ui = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold # line info
+	old = red # deletions
+	new = green # additions
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[help]
+	# Automatically correct and execute mistyped commands
+	autocorrect = 1
+
 [merge]
 	tool = vimdiff
-[alias]
-	co = checkout
-	cob = checkout -b
-	com = checkout master
-	a = add
+
+	# Include summaries of merged commits in newly created merge commit messages
+	log = true
+
 [gc]
 	auto = 0
+
 [push]
-	 default = current
-[color "diff"]
-	meta = yellow
-	frag = cyan
-	old = red
-	new = green
-[color "status"]
-	meta = yellow
-	frag = cyan
-	old = pink
-	new = green
-[core]
-	editor = vim -c \"set fenc=utf-8\"
+	# https://git-scm.com/docs/git-config#git-config-pushdefault
+	default = simple
+	# Make `git push` push relevant annotated tags when pushing branches out.
+	followTags = true
 [user]
-	name = kanekoelastic
-	email = m@shinji-kaneko.com
-[init]
-	templatedir = /Users/kanekoshinji/.git_template
+	name = Shinji Kaneko
+	email = contact@kanekoelastic.org

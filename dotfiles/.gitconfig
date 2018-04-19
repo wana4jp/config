@@ -52,7 +52,6 @@
 
 [merge]
 	tool = vimdiff
-
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 
@@ -64,6 +63,7 @@
 	default = simple
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
+
 [user]
 	name = Shinji Kaneko
 	email = contact@kanekoelastic.org

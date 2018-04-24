@@ -20,12 +20,16 @@
 	# a.k.a. ‘delete merged’
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
-	b = branch
 	a = add
 	ap = add -p
+	b = branch
+	bd = branch -d
+	bD = branch -D
+	c = commit
 	co = checkout
 	cob = checkout -b
 	com = checkout master
+	p = push
 
 [core]
 	# Speed up commands involving untracked files such as `git status`.

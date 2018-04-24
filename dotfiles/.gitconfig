@@ -29,7 +29,8 @@
 	co = checkout
 	cob = checkout -b
 	com = checkout master
-	p = push
+	ps = push
+	pl = pull
 
 [core]
 	# Speed up commands involving untracked files such as `git status`.

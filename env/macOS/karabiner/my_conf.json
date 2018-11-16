@@ -1,0 +1,197 @@
+{
+  "title": "My Config",
+  "rules": [
+    {
+      "description": "Don't quit App when pressing LCommand + q",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "q",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "q"
+            }
+          ],
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com.apple.Terminal$",
+                "^com.evernote.Evernote$",
+                "^com.google.Chrome$",
+                "^com.zive.kiwi$",
+                "^com.tinyspeck.slackmacgap$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "IME off when escape from insert mode",
+      "manipulators": [
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com.apple.Terminal$",
+                "^com.google.android.studio$",
+                "^com.jetbrains.",
+                "^com.maisin.boost$",
+                "^org.vim."
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "escape",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "japanese_eisuu"
+            },
+            {
+              "key_code": "escape"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com.apple.Terminal$",
+                "^com.google.android.studio$",
+                "^com.jetbrains.",
+                "^com.maisin.boost$",
+                "^org.vim."
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "open_bracket",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "japanese_eisuu"
+            },
+            {
+              "key_code": "escape"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com.apple.Terminal$",
+                "^com.google.android.studio$",
+                "^com.jetbrains.",
+                "^com.maisin.boost$",
+                "^org.vim."
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "japanese_eisuu"
+            },
+            {
+              "key_code": "escape"
+            },
+            {
+              "key_code": "c",
+              "modifiers": [ "left_control" ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Left Control + o => Toggle IME",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "select_input_source": {
+                "input_source_id": "^com\\.apple\\.inputmethod\\.Kotoeri\\.Japanese$"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [
+                { "language": "en" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "select_input_source": {
+                "input_source_id": "^com\\.apple\\.inputmethod\\.Kotoeri\\.Roman$"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [
+                { "language": "ja" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

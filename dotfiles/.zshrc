@@ -166,4 +166,4 @@ export PATH=$(brew --prefix)/bin:$PATH
 
 set -g default-terminal "xterm"
 
-eval "$(rbenv init -)"
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local

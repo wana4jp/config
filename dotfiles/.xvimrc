@@ -1,3 +1,6 @@
+set clipboard=unnamed
+set vb
+
 nnoremap <Leader>v :<C-u>vsp<CR>
 nnoremap sl <C-w>l
 nnoremap sh <C-w>h

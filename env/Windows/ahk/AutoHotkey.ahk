@@ -1,5 +1,4 @@
 #include IME.ahk
-
 ; / ----- /
 ; 関数定義
 ; / ----- /
@@ -69,4 +68,4 @@ GroupAdd Vim, ahk_exe Code.exe
   IME_SET(0)
   Send {^c}
   return 
- #If
+ #if

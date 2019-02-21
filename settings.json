@@ -1,0 +1,17 @@
+{
+    "editor.wordWrap": "on", // 右端で折り返す,
+    "editor.fontFamily": "\"MS Gothic\", Consolas, 'Courier New', monospace",
+    "editor.renderLineHighlight": "all", // 選択中の行を強調する,
+    "editor.links": true, // リンクをクリック可能に,
+    "vim.useSystemClipboard": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [";"],
+            "after": [":"],
+        },
+        {
+            "before": ["<CR>"],
+            "after": ["o", "<Esc>"],
+        }
+    ]
+}

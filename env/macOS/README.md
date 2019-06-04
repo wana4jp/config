@@ -1,34 +1,25 @@
 Set Up for macOS
 -------
 
-# setup Homebrew
+## Install Dropbox
+
+https://www.dropbox.com/install
+
+## Setup github ssh key
+
+## Clone this repository
+
+## Download Terminal Theme (& Restart)
+https://draculatheme.com/terminal/
+
+## Install Homebrew
 https://brew.sh/
 
-# install
-```
-brew install ag
-brew install ctags
-brew install fasd
-brew install reattach-to-user-namespace
-brew install shellcheck
-brew install ssh-copy-id
-brew install s3cmd
-brew install tmux
-brew install vim --with-lua # lua is for 'neocomplete'
-```
-
-# setup Karabiner Elements
-https://pqrs.org/osx/karabiner/
-
-# create symlink
+## Create symlink
 `./init.sh`
 
-# change default shell
+## Install applications
+`brew bundle install --global`
+
+## change default shell
 `chsh -s /bin/zsh`
-
-# set boostnote vim mapping
-
-```
-CodeMirror.Vim.map(';', ':', 'normal');
-CodeMirror.Vim.map('<CR>', 'o<Esc>', 'normal');
-```

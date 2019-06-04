@@ -123,8 +123,9 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
 
-alias vi='vim'
-alias v='vi'
+alias v="/usr/local/bin/vim"
+alias vi="/usr/local/bin/vim"
+alias vim="/usr/local/bin/vim"
 alias g='git'
 
 alias vssh='vagrant ssh'

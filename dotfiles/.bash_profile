@@ -146,6 +146,11 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+# Always for vim(Installed with Homebrew)
+alias v=/usr/local/bin/vim
+alias vi=/usr/local/bin/vim
+alias vim=/usr/local/bin/vim
+
 # Google Chrome
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'

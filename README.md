@@ -1,7 +1,7 @@
 Set Up
 -------
 
-# common
+# Common
 
 ```shell
 # dotfiles
@@ -14,7 +14,7 @@ rm installer.sh
 
 ```
 
-# particular operating system
+# Operating System
 
 - [Windows](env/Windows/README.md)
 - [macOS](env/macOS/README.md)

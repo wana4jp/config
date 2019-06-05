@@ -23,6 +23,7 @@ cask "google-japanese-ime"
 cask "karabiner-elements"
 cask "slack"
 cask "spectacle"
+cask "spotify"
 
 cask "phpstorm"
 cask "sequel-pro"

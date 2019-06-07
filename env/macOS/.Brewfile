@@ -14,6 +14,7 @@ brew "ssh-copy-id"
 brew "the_silver_searcher"
 brew "zsh"
 
+# Common
 cask "evernote"
 cask "firefox"
 cask "1password"
@@ -25,10 +26,14 @@ cask "karabiner-elements"
 cask "slack"
 cask "spectacle"
 cask "spotify"
-cask "uhk-agent"
 
+# Development
 cask "phpstorm"
 cask "sequel-pro"
 cask "slack"
 cask "vagrant"
 cask "virtualbox"
+
+# Driver
+cask "uhk-agent"
+cask "kensington-trackball-works"

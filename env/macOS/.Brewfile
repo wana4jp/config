@@ -35,7 +35,7 @@ mas "LINE", id: 539883307
 
 # Development
 cask "jetbrains-toolbox"
-cask "phpstorm"
+# cask "phpstorm"
 cask "sequel-pro"
 cask "slack"
 cask "vagrant"

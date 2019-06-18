@@ -34,6 +34,7 @@ mas "LINE", id: 539883307
 # mas "Slack", id: 803453959
 
 # Development
+cask "jetbrains-toolbox"
 cask "phpstorm"
 cask "sequel-pro"
 cask "slack"

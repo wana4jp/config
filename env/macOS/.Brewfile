@@ -32,12 +32,14 @@ cask "skype"
 cask "slack"
 cask "spectacle"
 cask "spotify"
+cask "zoomus"
 # mas "1Password", id: 443987910
 # mas "Evernote", id: 406056744
 mas "LINE", id: 539883307
 # mas "Slack", id: 803453959
 
 # Development
+cask "adobe-creative-cloud"
 cask "jetbrains-toolbox"
 cask "sequel-pro"
 cask "slack"

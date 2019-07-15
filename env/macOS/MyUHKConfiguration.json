@@ -4134,11 +4134,6 @@
                   "switchLayerMode": "hold"
                 },
                 {
-                  "keyActionType": "switchLayer",
-                  "layer": "fn",
-                  "switchLayerMode": "hold"
-                },
-                {
                   "keyActionType": "keystroke",
                   "type": "basic",
                   "modifierMask": 128
@@ -4147,6 +4142,11 @@
                   "keyActionType": "keystroke",
                   "type": "basic",
                   "modifierMask": 64
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 16
                 },
                 {
                   "keyActionType": "keystroke",
@@ -4437,7 +4437,6 @@
                   "layer": "mod",
                   "switchLayerMode": "hold"
                 },
-                null,
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
@@ -4447,6 +4446,11 @@
                   "keyActionType": "keystroke",
                   "type": "basic",
                   "modifierMask": 64
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 16
                 },
                 {
                   "keyActionType": "keystroke",
@@ -4622,11 +4626,6 @@
                 null,
                 null,
                 {
-                  "keyActionType": "switchLayer",
-                  "layer": "fn",
-                  "switchLayerMode": "hold"
-                },
-                {
                   "keyActionType": "keystroke",
                   "type": "basic",
                   "modifierMask": 128
@@ -4635,6 +4634,11 @@
                   "keyActionType": "keystroke",
                   "type": "basic",
                   "modifierMask": 64
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 16
                 },
                 {
                   "keyActionType": "keystroke",
@@ -4808,7 +4812,6 @@
                   "keyActionType": "mouse",
                   "mouseAction": "rightClick"
                 },
-                null,
                 {
                   "keyActionType": "keystroke",
                   "type": "basic",
@@ -4818,6 +4821,11 @@
                   "keyActionType": "keystroke",
                   "type": "basic",
                   "modifierMask": 64
+                },
+                {
+                  "keyActionType": "keystroke",
+                  "type": "basic",
+                  "modifierMask": 16
                 },
                 {
                   "keyActionType": "keystroke",

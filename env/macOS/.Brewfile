@@ -10,6 +10,7 @@ brew "fasd"
 brew "mas"
 brew "nodebrew"
 brew "pyenv"
+brew "prettier"
 brew "reattach-to-user-namespace"
 brew "s3cmd"
 brew "shellcheck"
@@ -21,24 +22,27 @@ brew "zsh"
 # Common
 # cask "dropbox"
 cask "1password"
-cask "evernote"
+# cask "evernote"
 cask "firefox"
 cask "google-chrome"
-cask "google-chrome-canary"
+# cask "google-chrome-canary"
 cask "google-japanese-ime"
 cask "karabiner-elements"
 cask "keepassxc"
 cask "microsoft-office"
+cask "notion"
 cask "skype"
 cask "slack"
 cask "spectacle"
 cask "spotify"
+cask "zoomus"
 # mas "1Password", id: 443987910
 # mas "Evernote", id: 406056744
 mas "LINE", id: 539883307
 # mas "Slack", id: 803453959
 
 # Development
+cask "adobe-creative-cloud"
 cask "jetbrains-toolbox"
 cask "sequel-pro"
 cask "slack"

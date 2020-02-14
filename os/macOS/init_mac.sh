@@ -1,6 +1,6 @@
 #!/bin/sh
-ln -Fis ~/config/env/macOS/karabiner/my_conf.json ~/.config/karabiner/assets/complex_modifications
-ln -Fis ~/config/env/macOS/.Brewfile ~/.Brewfile
+ln -Fis ~/config/os/macOS/karabiner/my_conf.json ~/.config/karabiner/assets/complex_modifications
+ln -Fis ~/config/os/macOS/.Brewfile ~/.Brewfile
 
 
 VSCODE_SETTING_DIR=~/Library/Application\ Support/Code/User

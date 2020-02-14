@@ -67,6 +67,7 @@
                 "^com.google.android.studio$",
                 "^com.jetbrains.",
                 "^com.maisin.boost$",
+                "^com.microsoft.VSCode$",
                 "^org.vim."
               ],
               "type": "frontmost_application_if"
@@ -99,6 +100,7 @@
                 "^com.google.android.studio$",
                 "^com.jetbrains.",
                 "^com.maisin.boost$",
+                "^com.microsoft.VSCode$",
                 "^org.vim."
               ],
               "type": "frontmost_application_if"
@@ -131,6 +133,7 @@
                 "^com.google.android.studio$",
                 "^com.jetbrains.",
                 "^com.maisin.boost$",
+                "^com.microsoft.VSCode$",
                 "^org.vim."
               ],
               "type": "frontmost_application_if"

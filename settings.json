@@ -1,24 +1,3 @@
 {
-    "editor.wordWrap": "on", // 右端で折り返す,
-    "editor.fontFamily": "\"MS Gothic\", Consolas, 'Courier New', monospace",
-    "editor.links": true, // リンクをクリック可能に,
-    "vim.useSystemClipboard": true,
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [";"],
-            "after": [":"],
-        },
-        {
-            "before": ["<CR>"],
-            "after": ["o", "<Esc>"],
-        },
-        {
-            "before": ["j"],
-            "after": ["g", "j"],
-        },
-        {
-            "before": ["k"],
-            "after": ["g", "k"],
-        },
-    ]
+    "editor.formatOnSave": true
 }

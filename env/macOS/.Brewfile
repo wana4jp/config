@@ -35,6 +35,7 @@ cask "skype"
 cask "slack"
 cask "spectacle"
 cask "spotify"
+cask "visual-studio-code"
 cask "zoomus"
 # mas "1Password", id: 443987910
 # mas "Evernote", id: 406056744

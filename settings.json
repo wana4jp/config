@@ -1,5 +1,4 @@
 {
-    "editor.formatOnSave":, true
     "editor.wordWrap": "on", // 右端で折り返す,
     "editor.links": true, // リンクをクリック可能に,
     "vim.useSystemClipboard": true,
@@ -20,5 +19,10 @@
             "before": ["k"],
             "after": ["g", "k"],
         },
-    ]
+    ],
+    "editor.fontSize": 15,
+    "editor.formatOnSave": true,
+    "window.zoomLevel": 0,
+    "vsnotes.defaultNotePath": "/Users/shinjikaneko/Dropbox/1_note",
+    "workbench.iconTheme": "vscode-icons"
 }

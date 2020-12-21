@@ -22,6 +22,9 @@
     ],
     "editor.fontSize": 15,
     "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
     "window.zoomLevel": 0,
     "vsnotes.defaultNotePath": "/Users/shinjikaneko/Dropbox/1_note",
     "workbench.iconTheme": "vscode-icons"

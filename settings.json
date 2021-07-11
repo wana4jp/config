@@ -1,7 +1,4 @@
 {
-    "editor.wordWrap": "on", // 右端で折り返す,
-    "editor.links": true, // リンクをクリック可能に,
-    "vim.useSystemClipboard": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [";"],
@@ -20,12 +17,36 @@
             "after": ["g", "k"],
         },
     ],
-    "editor.fontSize": 15,
+    "editor.fontSize": 16,
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
     },
-    "window.zoomLevel": 0,
     "vsnotes.defaultNotePath": "/Users/shinjikaneko/Dropbox/1_note",
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "dart.flutterSdkPath": "/Users/shinjikaneko/flutter",
+    "salesforcedx-vscode-apex.java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.renderControlCharacters": true,
+    "cSpell.userWords": [
+        "kintone"
+    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "workbench.colorTheme": "GitHub Dark Default",
+    "editor.tabSize": 8,
+    "editor.cursorStyle": "line",
+    "editor.insertSpaces": false,
+    "editor.lineNumbers": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "[dart]": {
+        "editor.defaultFormatter": "Dart-Code.dart-code",
+        "editor.formatOnSave": true,
+    },
+    "vim.useSystemClipboard": true
 }

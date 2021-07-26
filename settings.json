@@ -48,5 +48,8 @@
         "editor.defaultFormatter": "Dart-Code.dart-code",
         "editor.formatOnSave": true,
     },
-    "vim.useSystemClipboard": true
+    "vim.useSystemClipboard": true,
+    "files.associations": {
+        ".textlintrc": "json"
+    }
 }

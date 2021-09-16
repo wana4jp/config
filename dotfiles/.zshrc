@@ -1,7 +1,6 @@
 export LANG=ja_JP.UTF-8
 export PATH=/usr/local/bin:$HOME/bin:$PATH
 export PATH=$HOME/Library/Android/sdk/platform-tools:$PATH
-export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
 export EDITOR="/usr/local/bin/vim"
 
@@ -169,3 +168,6 @@ export PATH=$(brew --prefix)/bin:$PATH
 set -g default-terminal "xterm"
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+

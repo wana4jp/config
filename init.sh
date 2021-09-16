@@ -5,6 +5,9 @@ do
    ln -Fis "$PWD/dotfiles/$dotfile" "$HOME"
 done
 
+# Neovim
+ln -Fis ~/config/dotfiles/init.vimrc "$HOME/.config/nvim/init.vimrc"
+
 if [ ! -d ~/vimswap ]; then
     mkdir ~/vimswap
 fi

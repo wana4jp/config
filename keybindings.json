@@ -1,0 +1,18 @@
+[
+  {
+    "key": "ctrl+e t",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "snippet": "<Trans>$TM_SELECTED_TEXT</Trans>"
+    }
+  },
+  {
+    "key": "ctrl+e l",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "snippet": "t`$TM_SELECTED_TEXT`"
+    }
+  }
+]

@@ -51,5 +51,6 @@
     "vim.useSystemClipboard": true,
     "files.associations": {
         ".textlintrc": "json"
-    }
+    },
+    "editor.fontFamily": "HackGen35, Menlo, Monaco, 'Courier New', monospace"
 }

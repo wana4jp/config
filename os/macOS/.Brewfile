@@ -20,7 +20,6 @@ brew "tig"
 brew "zsh"
 
 # Common
-cask "dotnet-sdk"
 # cask "dropbox"
 cask "1password"
 # cask "evernote"
@@ -34,6 +33,7 @@ cask "keepassxc"
 cask "libreoffice"
 cask "microsoft-office"
 cask "notion"
+cask "obsidian"
 cask "skype"
 cask "slack"
 cask "spectacle"
@@ -49,7 +49,11 @@ mas "LINE", id: 539883307
 
 # Development
 cask "adobe-creative-cloud"
+cask "android-studio"
+cask "docker"
+cask "dotnet-sdk"
 cask "jetbrains-toolbox"
+cask "intellij-idea"
 cask "sequel-pro"
 cast "sfdx"
 cask "slack"

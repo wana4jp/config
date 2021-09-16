@@ -12,7 +12,7 @@ repo = 'Shougo/vimproc.vim'
 build = 'make'
 
 [[plugins]]
-repo = 'tomasr/molokai'
+repo = 'patstockwell/vim-monokai-tasty'
 
 [[plugins]]
 repo = 'altercation/vim-colors-solarized'

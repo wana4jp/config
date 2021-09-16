@@ -24,7 +24,7 @@ endif
 " let OSTYPE = system('uname')
 
 " Appearance
-let g:scheme = 'molokai'
+let g:scheme = 'vim-monokai-tasty'
 augroup guicolorscheme
   autocmd!
   execute 'autocmd GUIEnter * colorscheme' scheme

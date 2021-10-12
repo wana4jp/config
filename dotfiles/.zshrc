@@ -127,6 +127,7 @@ alias vi="/usr/local/bin/vim"
 alias vim="/usr/local/bin/vim"
 alias g='git'
 alias c='code'
+alias o='open'
 
 alias vssh='vagrant ssh'
 

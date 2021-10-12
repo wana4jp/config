@@ -22,15 +22,11 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
     },
-    "vsnotes.defaultNotePath": "/Users/shinjikaneko/Dropbox/1_note",
     "workbench.iconTheme": "vscode-icons",
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
-    "dart.flutterSdkPath": "/Users/shinjikaneko/flutter",
     "salesforcedx-vscode-apex.java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home",
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+
     "editor.renderControlCharacters": true,
     "cSpell.userWords": [
         "kintone"
@@ -48,9 +44,22 @@
         "editor.defaultFormatter": "Dart-Code.dart-code",
         "editor.formatOnSave": true,
     },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
     "vim.useSystemClipboard": true,
     "files.associations": {
         ".textlintrc": "json"
     },
-    "editor.fontFamily": "HackGen35, Menlo, Monaco, 'Courier New', monospace"
+    "editor.fontFamily": "HackGen35, Menlo, Monaco, 'Courier New', monospace",
+    "diffEditor.renderSideBySide": false,
+    "editor.formatOnPaste": true
 }

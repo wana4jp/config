@@ -304,6 +304,27 @@
           ]
         }
       ]
+    },
+    {
+      "description": "6. Disable Ctrl + space",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -16,7 +16,7 @@ https://draculatheme.com/terminal/
 https://brew.sh/
 
 ## Create symlink
-`./init.sh`
+`./init_mac.sh`
 
 ## Install applications
 `brew bundle install --global`

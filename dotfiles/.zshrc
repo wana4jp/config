@@ -111,7 +111,7 @@ bindkey '^R' history-incremental-pattern-search-backward
 ########################################
 # エイリアス
 
-alias ll='ls -l'
+alias ll='ls -la'
 
 alias mkdir='mkdir -p'
 
@@ -172,3 +172,5 @@ set -g default-terminal "xterm"
 
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'

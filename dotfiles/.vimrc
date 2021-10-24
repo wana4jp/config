@@ -23,13 +23,7 @@ endif
 
 " let OSTYPE = system('uname')
 
-" Appearance
-let g:scheme = 'vim-monokai-tasty'
-augroup guicolorscheme
-  autocmd!
-  execute 'autocmd GUIEnter * colorscheme' scheme
-augroup END
-execute 'colorscheme' scheme
+colorscheme vim-monokai-tasty
 set background=dark
 set number
 set nowrap
@@ -87,6 +81,7 @@ vnoremap <leader>p "_dP
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
+nnoremap nmap <silent> * "syiw<Esc>: let @/ = @s<CR> " *で検索時に、次の検索候補へのジャンプをしない
 nnoremap sn :<C-u>bn<CR>
 nnoremap sp :<C-u>bp<CR>
 nnoremap sh <C-w>h

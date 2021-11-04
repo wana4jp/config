@@ -2,7 +2,6 @@ Set Up for macOS
 -------
 
 ## Install Dropbox
-
 https://www.dropbox.com/install
 
 ## Setup github ssh key
@@ -21,5 +20,6 @@ https://brew.sh/
 ## Install applications
 `brew bundle install --global`
 
-## change default shell
-`chsh -s /bin/zsh`
+## Setup Nodejs
+
+Install prettier globally

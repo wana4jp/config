@@ -15,7 +15,7 @@ build = 'make'
 repo = 'patstockwell/vim-monokai-tasty'
 
 [[plugins]]
-repo = 'altercation/vim-colors-solarized'
+repo = 'jdkanani/vim-material-theme'
 
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'

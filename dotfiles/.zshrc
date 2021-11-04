@@ -128,6 +128,7 @@ alias vim="/usr/local/bin/vim"
 alias g='git'
 alias c='code'
 alias o='open'
+alias t='tmux'
 
 alias vssh='vagrant ssh'
 

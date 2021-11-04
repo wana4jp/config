@@ -3,4 +3,6 @@
 cd ~/Dropbox/1_text
 set gfn=Monaco:h19
 
-colorscheme torte
+colorscheme material-theme 
+
+let g:NERDTreeWinSize = 20

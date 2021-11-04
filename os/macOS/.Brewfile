@@ -22,7 +22,7 @@ brew "zsh"
 # Common
 # cask "dropbox"
 cask "1password"
-# cask "evernote"
+cask "evernote"
 cask "firefox"
 cask "google-chrome"
 # cask "google-chrome-canary"
@@ -34,7 +34,6 @@ cask "libreoffice"
 cask "microsoft-office"
 cask "notion"
 cask "obsidian"
-cask "raindropio"
 cask "skype"
 cask "slack"
 cask "spectacle"
@@ -43,10 +42,7 @@ cask "visual-studio-code"
 cask "vagrant"
 cask "virtualbox"
 cask "zoomus"
-# mas "1Password", id: 443987910
-# mas "Evernote", id: 406056744
 mas "LINE", id: 539883307
-# mas "Slack", id: 803453959
 
 # Development
 cask "adobe-creative-cloud"

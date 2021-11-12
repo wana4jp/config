@@ -6,7 +6,7 @@ do
 done
 
 # Neovim
-ln -Fis ~/config/dotfiles/init.vimrc "$HOME/.config/nvim/init.vimrc"
+# ln -Fis ~/config/dotfiles/init.vimrc "$HOME/.config/nvim/init.vimrc"
 
 if [ ! -d ~/vimswap ]; then
     mkdir ~/vimswap

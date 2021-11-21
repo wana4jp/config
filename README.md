@@ -18,11 +18,11 @@ rm installer.sh
 
 - [Windows](env/Windows/README.md)
 - [macOS](env/macOS/README.md)
-  i
+
 
 ## vim
 
-### プラグインアップデート
+### update plugin
 
 `:call dein#update()`
 

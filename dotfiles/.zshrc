@@ -1,8 +1,9 @@
 export LANG=ja_JP.UTF-8
-export PATH=/usr/local/bin:$HOME/bin:$PATH
+export PATH=/opt/homebrew/bin:$PATH
+# export PATH=/usr/local/bin:$HOME/bin:$PATH
 export PATH=$HOME/Library/Android/sdk/platform-tools:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
-export EDITOR="/usr/local/bin/vim"
+export EDITOR="/opt/homebrew/bin/vim"
 
 # 色の設定を可能にする
 autoload -Uz colors
@@ -122,9 +123,7 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
 
-alias v="/usr/local/bin/vim"
-alias vi="/usr/local/bin/vim"
-alias vim="/usr/local/bin/vim"
+alias v="vim"
 alias g='git'
 alias c='code'
 alias o='open'

@@ -72,3 +72,5 @@
 [user]
 	name = Shinji Kaneko
 	email = 1516579+wana4@users.noreply.github.com
+[init]
+	templatedir = /Users/shinji.kaneko/.git_template

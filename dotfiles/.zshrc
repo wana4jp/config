@@ -1,8 +1,16 @@
 export LANG=ja_JP.UTF-8
+
+# Path
+## Homebrew
 export PATH=/opt/homebrew/bin:$PATH
 # export PATH=/usr/local/bin:$HOME/bin:$PATH
+## Android
 export PATH=$HOME/Library/Android/sdk/platform-tools:$PATH
-export PATH=$HOME/.rbenv/bin:$PATH
+## Ruby
+# export PATH=$HOME/.rbenv/bin:$PATH
+## Rust
+export PATH=$HOME/.cargo/bin:$PATH
+
 export EDITOR="/opt/homebrew/bin/vim"
 
 # 色の設定を可能にする
@@ -174,3 +182,4 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+eval "$(pyenv init -)"

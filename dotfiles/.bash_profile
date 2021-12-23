@@ -164,3 +164,4 @@ alias rm='rm -iv'
 
 # facd
 # eval "$(fasd --init auto)"
+. "$HOME/.cargo/env"

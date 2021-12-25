@@ -20,9 +20,8 @@ if [ ! -f ~/.zshrc.local ]; then
 fi
 
 if [ ! -d ~/.ssh ]; then
-    mkdir ~/.ssh
-    touch ~/.ssh/config
-    chmod 600 ~/.ssh/config
+    ln -Fis ~/Dropbox/2_security/_ssh/ ~/.ssh
+    chmod 600 ~/.ssh/keys/github
 fi
 
 # copy fook scripts when create new git repository

@@ -6,20 +6,47 @@ https://www.dropbox.com/install
 
 ## Setup github ssh key
 
+`ln -Fis ~/Dropbox/2_security/_ssh/ ~/.ssh`
+`chmod 600 ~/.ssh/keys/github`
+
 ## Clone this repository
 
-## Download Terminal Theme (& Restart)
-https://draculatheme.com/terminal/
+`git clone git@github.com:wana4jp/config.git`
 
 ## Install Homebrew
 https://brew.sh/
 
+## Download Terminal Theme (& Restart)
+https://draculatheme.com/terminal/
+
 ## Create symlink
+
+### Common
+
+`./init.sh`
+
+### For Mac
+
 `./init_mac.sh`
 
+## Log in App Store
+
 ## Install applications
-`brew bundle install --global`
 
-## Setup Nodejs
+`brew bundle`
 
-Install prettier globally
+## Set up vim
+
+## Setup Programming Languages
+
+### Node.js
+
+TBD
+
+### Rust
+
+TBD
+
+### Dart / Flutter
+
+TBD

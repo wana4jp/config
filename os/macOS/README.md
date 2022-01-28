@@ -37,6 +37,14 @@ https://draculatheme.com/terminal/
 
 ## Set up vim
 
+## Set up IDE
+
+- VSCode
+  - Log in with my account and sync settings VSCode
+- IntelliJ / Android studio
+  - https://www.jetbrains.com/help/idea/settings-tools-settings-repository.html
+  - https://github.com/wana4jp/IntelliJ
+
 ## Setup Programming Languages
 
 ### Node.js

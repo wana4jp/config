@@ -35,15 +35,25 @@ https://draculatheme.com/terminal/
 
 `brew bundle`
 
-## Set up vim
+## Set up applications
+### Set up vim
 
-## Set up IDE
+TODO
 
-- VSCode
-  - Log in with my account and sync settings VSCode
-- IntelliJ / Android studio
-  - https://www.jetbrains.com/help/idea/settings-tools-settings-repository.html
-  - https://github.com/wana4jp/IntelliJ
+### Set up iterm2
+
+import `myconf.itermkeymap`
+
+### Set up VSCode
+
+Log in with my account and sync settings VSCode
+
+### Set up IntelliJ / Android studio
+
+Setting Repository
+https://www.jetbrains.com/help/idea/settings-tools-settings-repository.html
+
+URL: https://github.com/wana4jp/IntelliJ
 
 ## Setup Programming Languages
 

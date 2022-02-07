@@ -180,6 +180,10 @@ set -g default-terminal "xterm"
 
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# Java8 (temurin8)
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home
+PATH=${JAVA_HOME}/bin:${PATH}
+
 # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 eval "$(pyenv init -)"

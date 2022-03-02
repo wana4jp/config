@@ -1,6 +1,10 @@
 Set Up for macOS
 -------
 
+## Disable sound effect
+
+System Preference -> Sound
+
 ## Install Dropbox
 https://www.dropbox.com/install
 
@@ -40,7 +44,7 @@ https://draculatheme.com/terminal/
 
 TODO
 
-### Set up iterm2
+### Set up iTerm2
 
 import `myconf.itermkeymap`
 
@@ -71,4 +75,12 @@ https://github.com/oae/asdf-flutter
 
 TBD
 
+### Python
 
+https://github.com/danhper/asdf-python
+
+`asdf plugin add python`
+
+`asdf list all python`
+
+`asdf install python 3.10.2`

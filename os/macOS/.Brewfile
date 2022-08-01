@@ -26,6 +26,7 @@ brew "wget"
 # Apps
 cask "1password"
 cask "android-studio"
+cask "blender"
 cask "cocoapods" # M1 Macでcocoapodsを使うためにBrewでインストールする必要がある
 cask "datagrip"
 cask "deepl"
